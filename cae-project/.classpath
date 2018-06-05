@@ -32,5 +32,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/Exporter"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Importer"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ToolBox"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UserInterface"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Utilities"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

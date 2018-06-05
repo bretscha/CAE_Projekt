@@ -6,10 +6,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>Importer</module>
-  	<module>Exporter</module>
-  	<module>Toolbox</module>
-  	<module>Utilities</module>
     <module>UserInterface</module>
   </modules>
 </project>

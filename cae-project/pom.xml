@@ -7,5 +7,9 @@
   <packaging>pom</packaging>
   <modules>
     <module>UserInterface</module>
+    <module>Importer</module>
+    <module>Exporter</module>
+    <module>ToolBox</module>
+    <module>Utilities</module>
   </modules>
 </project>

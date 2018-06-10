@@ -7,9 +7,7 @@
     <artifactId>cae-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.tu-dresden.cae-project</groupId>
   <artifactId>UserInterface</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>UserInterface</name>
   <url>http://maven.apache.org</url>
   <properties>

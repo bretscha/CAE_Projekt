@@ -1,0 +1,3126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile FileName="Manifest.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation AutomationMLVersion="2.0" />
+	<InstanceHierarchy Name="HMI">
+		<InternalElement Name="Bedienbild" RefBaseSystemUnitPath="MTPHMISUCLib/Picture" ID="f741f2a0-ba55-49b0-9566-5c0c8349b855">
+			<Attribute Name="Width" AttributeDataType="xs:Integer">
+				<Value>800</Value>
+			</Attribute>
+			<Attribute Name="Height" AttributeDataType="xs:Integer">
+				<Value>600</Value>
+			</Attribute>
+			<Attribute Name="HierarchyLevel" AttributeDataType="xs:string">
+				<Value>0</Value>
+			</Attribute>
+			<InternalElement Name="PL4" RefBaseSystemUnitPath="MTPHMISUCLib/Connection/Pipe" ID="70b11af3-4701-4cc6-88a4-20af36b71d90">
+				<Attribute Name="Edgepath" AttributeDataType="xs:string">
+					<Value>616,295;616,292;444,292;</Value>
+				</Attribute>
+				<InternalElement Name="Nozzle1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="c7cc5add-3d8b-4a8e-aa7f-245fed8b6ac9">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>444</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>291</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="7acd8cf1-7f26-42f3-97c1-55930f91722f" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="Nozzle2" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="8022b98c-c835-484d-8641-b46d3c32c571">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>615</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>295</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="36f08b5d-a609-4c45-972c-340f4c999b98" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="PL3" RefBaseSystemUnitPath="MTPHMISUCLib/Connection/Pipe" ID="d9343e4a-6ca9-4aeb-92ff-efc6178d5c91">
+				<Attribute Name="Edgepath" AttributeDataType="xs:string">
+					<Value>430,206;430,249;392,249;392,292;412,292;</Value>
+				</Attribute>
+				<InternalElement Name="Nozzle1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="99b6071f-2b9a-4018-87bd-af4fbcca3601">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>429</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>206</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="467df7ef-5f3a-4961-b62c-4ac835428b9d" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="Nozzle2" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="d7376b64-542c-48cb-a3f4-3bacd8482390">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>411</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>291</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="c7c45191-f959-45d8-8af7-915d69b13858" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="PL2" RefBaseSystemUnitPath="MTPHMISUCLib/Connection/Pipe" ID="9459c97a-7c3a-4f13-988b-b06c18f48d60">
+				<Attribute Name="Edgepath" AttributeDataType="xs:string">
+					<Value>288,178;348,178;348,158;408,158;</Value>
+				</Attribute>
+				<InternalElement Name="Nozzle1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="40f853a5-30b6-4120-866d-23ae92128544">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>288</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>178</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="797504d5-424f-4260-92f8-93198e536f0c" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="Nozzle2" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="2a9a6482-df8e-4604-a7bd-dc09664a0e25">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>408</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>157</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="069d4d46-b11a-4a36-a4e3-72dcb35014a8" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="PL1" RefBaseSystemUnitPath="MTPHMISUCLib/Connection/Pipe" ID="cc37d7a0-f3c6-469a-a8b4-426ab07a6c3a">
+				<Attribute Name="Edgepath" AttributeDataType="xs:string">
+					<Value>176,175;211,175;211,178;246,178;</Value>
+				</Attribute>
+				<InternalElement Name="Nozzle1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="29de1c25-d8d8-41a6-b414-7a07d3377e90">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>175</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>175</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="1f128051-056f-49c4-a89f-f3e51b3fbb59" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="Nozzle2" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="8dfcf92e-e81c-4654-839c-750d3ac2ef26">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>246</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>178</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="573e6300-5132-4dca-b8fb-a5b692408e94" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="PL0" RefBaseSystemUnitPath="MTPHMISUCLib/Connection/Pipe" ID="c1b24b32-dba6-4c8b-a677-ccdc47f48095">
+				<Attribute Name="Edgepath" AttributeDataType="xs:string">
+					<Value>30,174;30,175;142,175;</Value>
+				</Attribute>
+				<InternalElement Name="Nozzle1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="bf12c965-8592-4788-9f33-029955c4c8a9">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>29</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>174</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="fabf5930-9c99-40ea-9f3c-9322c1b41c42" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="Nozzle2" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="0a8707dc-9a4a-47b2-8340-82e5fe1f4b53">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>142</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>175</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="32ee6a19-867a-4184-b9db-cc10a2b8af3e" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Ausgang" RefBaseSystemUnitPath="MTPHMISUCLib/TopologyObject/Termination/Sink" ID="d2f11f77-726e-4526-ac4d-192374a447c3">
+				<Attribute Name="X" AttributeDataType="xs:double">
+					<Value>599</Value>
+				</Attribute>
+				<Attribute Name="Y" AttributeDataType="xs:double">
+					<Value>284</Value>
+				</Attribute>
+				<InternalElement Name="Nozzle" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="98af484d-6592-4937-ab2f-be0cbef8ecc0">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>615</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>295</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="1c54ca3a-2d0f-46a5-95e2-70957d617529" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="V002" RefBaseSystemUnitPath="MTPHMISUCLib/VisualObject" ID="e769d6dc-ac98-41a8-b6b3-c05e9c98e399">
+				<Attribute Name="Width" AttributeDataType="xs:double">
+					<Value>33</Value>
+				</Attribute>
+				<Attribute Name="Height" AttributeDataType="xs:double">
+					<Value>25</Value>
+				</Attribute>
+				<Attribute Name="X" AttributeDataType="xs:double">
+					<Value>411</Value>
+				</Attribute>
+				<Attribute Name="Y" AttributeDataType="xs:double">
+					<Value>279</Value>
+				</Attribute>
+				<Attribute Name="Rotation" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="eClassVersion" AttributeDataType="xs:string">
+					<Value>9.1</Value>
+				</Attribute>
+				<Attribute Name="eClassClassificationClass" AttributeDataType="xs:string">
+					<Value>37010203</Value>
+				</Attribute>
+				<Attribute Name="eClassIRDI" AttributeDataType="xs:string" />
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value>b2698b8c-fc63-4120-a23d-5ebad13fc6e4</Value>
+				</Attribute>
+				<InternalElement Name="V002_N1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="55b16dad-4823-46b4-a713-ca91f59c52a5">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>444</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>291</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="8fc10165-7be4-4a29-84c7-419ca0df0dca" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="V002_N0" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="26aebe25-0999-47b8-8dde-097618e1cd66">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>411</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>291</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="185034eb-7d96-4b21-a7ee-2fe9e4e40fce" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="B001" RefBaseSystemUnitPath="MTPHMISUCLib/VisualObject" ID="fd2f9977-3d04-4ec2-b457-d979f86ebde4">
+				<Attribute Name="Width" AttributeDataType="xs:double">
+					<Value>41</Value>
+				</Attribute>
+				<Attribute Name="Height" AttributeDataType="xs:double">
+					<Value>79</Value>
+				</Attribute>
+				<Attribute Name="X" AttributeDataType="xs:double">
+					<Value>408</Value>
+				</Attribute>
+				<Attribute Name="Y" AttributeDataType="xs:double">
+					<Value>127</Value>
+				</Attribute>
+				<Attribute Name="Rotation" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="eClassVersion" AttributeDataType="xs:string">
+					<Value>9.1</Value>
+				</Attribute>
+				<Attribute Name="eClassClassificationClass" AttributeDataType="xs:string">
+					<Value>36030101</Value>
+				</Attribute>
+				<Attribute Name="eClassIRDI" AttributeDataType="xs:string" />
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value>832e968a-4cc9-4ff9-8c38-a43c1d247597</Value>
+				</Attribute>
+				<InternalElement Name="B001_N1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="713cb3f0-f7bf-422d-9e18-cc0179f0a92a">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>429</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>206</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="7bb66d0b-0f52-49c9-9e08-67aad2331c8b" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="B001_N0" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="bbd9b089-9928-409b-8625-d7c664c81d37">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>408</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>157</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="b0688fe0-070d-45ad-ac61-3d1fab06407b" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="P001" RefBaseSystemUnitPath="MTPHMISUCLib/VisualObject" ID="ad2c9c85-bc2c-4a03-9657-cc2e5358f78b">
+				<Attribute Name="Width" AttributeDataType="xs:double">
+					<Value>42</Value>
+				</Attribute>
+				<Attribute Name="Height" AttributeDataType="xs:double">
+					<Value>42</Value>
+				</Attribute>
+				<Attribute Name="X" AttributeDataType="xs:double">
+					<Value>246</Value>
+				</Attribute>
+				<Attribute Name="Y" AttributeDataType="xs:double">
+					<Value>157</Value>
+				</Attribute>
+				<Attribute Name="Rotation" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="eClassVersion" AttributeDataType="xs:string">
+					<Value>9.1</Value>
+				</Attribute>
+				<Attribute Name="eClassClassificationClass" AttributeDataType="xs:string">
+					<Value>36410000</Value>
+				</Attribute>
+				<Attribute Name="eClassIRDI" AttributeDataType="xs:string" />
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value>07bf972e-7b93-456d-af89-b552332bb4cd</Value>
+				</Attribute>
+				<InternalElement Name="P001_N1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="fdd738b4-6ef9-4e83-8d97-51fa50af596e">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>288</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>178</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="1d2acdfb-4c02-473e-b02b-9e614eaa8325" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="P001_N0" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="0e3f60a7-6b0d-4012-b34e-a976565b70b7">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>246</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>178</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="0e9760e3-ad23-409e-bc9e-f9d085441545" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Eingang" RefBaseSystemUnitPath="MTPHMISUCLib/TopologyObject/Termination/Source" ID="1112e408-2970-42ce-9fc7-6baa69ffe8ea">
+				<Attribute Name="X" AttributeDataType="xs:double">
+					<Value>13</Value>
+				</Attribute>
+				<Attribute Name="Y" AttributeDataType="xs:double">
+					<Value>163</Value>
+				</Attribute>
+				<InternalElement Name="Nozzle" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="f0f2a5b5-6cdc-4310-9a13-c33411360f4e">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>29</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>174</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="aa69533c-1069-4341-90e9-e09ac2653cda" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="V001" RefBaseSystemUnitPath="MTPHMISUCLib/VisualObject" ID="1838aaf9-055c-424a-9b87-842ec76b0914">
+				<Attribute Name="Width" AttributeDataType="xs:double">
+					<Value>33</Value>
+				</Attribute>
+				<Attribute Name="Height" AttributeDataType="xs:double">
+					<Value>18</Value>
+				</Attribute>
+				<Attribute Name="X" AttributeDataType="xs:double">
+					<Value>142</Value>
+				</Attribute>
+				<Attribute Name="Y" AttributeDataType="xs:double">
+					<Value>166</Value>
+				</Attribute>
+				<Attribute Name="Rotation" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="eClassVersion" AttributeDataType="xs:string">
+					<Value>9.1</Value>
+				</Attribute>
+				<Attribute Name="eClassClassificationClass" AttributeDataType="xs:string">
+					<Value>37010201</Value>
+				</Attribute>
+				<Attribute Name="eClassIRDI" AttributeDataType="xs:string" />
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value>3e1f9960-d757-4510-bb7f-30e7cddcc430</Value>
+				</Attribute>
+				<InternalElement Name="V001_N1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="c254b1c7-0e7f-4b6a-a18f-a0a2a209060d">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>175</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>175</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="18fda8f1-23b9-4982-824b-9b26778aa464" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="V001_N0" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="ce1458af-d75f-4279-af8d-7447f64bb2d1">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value>142</Value>
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value>175</Value>
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="956a7e7f-10aa-4ada-8892-8b22a5e8f98e" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="8022b98c-c835-484d-8641-b46d3c32c571:Connector" RefPartnerSideB="98af484d-6592-4937-ab2f-be0cbef8ecc0:Connector" ID="732bc898-1bb5-463c-958c-27f9541eeb50" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="c7cc5add-3d8b-4a8e-aa7f-245fed8b6ac9:Connector" RefPartnerSideB="55b16dad-4823-46b4-a713-ca91f59c52a5:Connector" ID="a5e77af7-72c5-4285-acb9-4f30c7cd77f3" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="d7376b64-542c-48cb-a3f4-3bacd8482390:Connector" RefPartnerSideB="26aebe25-0999-47b8-8dde-097618e1cd66:Connector" ID="7fa9ec01-3b5a-4027-808e-bfea424b7d22" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="99b6071f-2b9a-4018-87bd-af4fbcca3601:Connector" RefPartnerSideB="713cb3f0-f7bf-422d-9e18-cc0179f0a92a:Connector" ID="67c3f87a-0c29-41cd-9b6d-f391b14004a4" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="2a9a6482-df8e-4604-a7bd-dc09664a0e25:Connector" RefPartnerSideB="bbd9b089-9928-409b-8625-d7c664c81d37:Connector" ID="464ad2fe-d432-4050-b10b-4d6b5addd3c1" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="40f853a5-30b6-4120-866d-23ae92128544:Connector" RefPartnerSideB="fdd738b4-6ef9-4e83-8d97-51fa50af596e:Connector" ID="2976fd48-db34-458a-9e77-7d8800bb049e" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="8dfcf92e-e81c-4654-839c-750d3ac2ef26:Connector" RefPartnerSideB="0e3f60a7-6b0d-4012-b34e-a976565b70b7:Connector" ID="98d9fa37-8e71-4e95-91f8-2b29081b2e27" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="29de1c25-d8d8-41a6-b414-7a07d3377e90:Connector" RefPartnerSideB="c254b1c7-0e7f-4b6a-a18f-a0a2a209060d:Connector" ID="44b63813-4be2-4a81-bd39-2b8b184e2d1b" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="0a8707dc-9a4a-47b2-8340-82e5fe1f4b53:Connector" RefPartnerSideB="ce1458af-d75f-4279-af8d-7447f64bb2d1:Connector" ID="b96edd4a-af1f-46ed-a7f0-8850ad4a948d" />
+			<InternalLink Name="Connector_Connector" RefPartnerSideA="bf12c965-8592-4788-9f33-029955c4c8a9:Connector" RefPartnerSideB="f0f2a5b5-6cdc-4310-9a13-c33411360f4e:Connector" ID="27fabad8-ba47-41b0-b9d6-acddff62697b" />
+		</InternalElement>
+	</InstanceHierarchy>
+	<InstanceHierarchy Name="Services">
+		<InternalElement Name="Ablassen" RefBaseSystemUnitPath="MTPServiceSUCLib/Service" ID="96251aed-c32f-4a24-bf62-148687895035">
+			<Attribute Name="OperationMode" AttributeDataType="xs:string" />
+			<Attribute Name="Status" AttributeDataType="xs:string" />
+			<Attribute Name="Command" AttributeDataType="xs:string" />
+			<Attribute Name="ParameterStatus" AttributeDataType="xs:string" />
+			<Attribute Name="ParameterCommand" AttributeDataType="xs:string" />
+			<Attribute Name="RefID" AttributeDataType="xs:ID" />
+			<InternalElement Name="RunningState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/RunningState" ID="a9e9398a-e1eb-46d3-ac3f-da8d5727b686">
+				<Attribute Name="RefID" AttributeDataType="xs:ID" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="IdleState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/IdleState" ID="c5eee164-3b5a-452f-99d6-727f32fd036c">
+				<Attribute Name="RefID" AttributeDataType="xs:ID" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="AbortingState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/AbortingState" ID="20001e0c-f0b4-4c1b-8b04-ea9bc036bc99">
+				<Attribute Name="RefID" AttributeDataType="xs:ID" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="AbortedState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/AbortedState" ID="03037a7b-ec1d-4b5a-a583-580d3b6a2462">
+				<Attribute Name="RefID" AttributeDataType="xs:ID" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="CompleteState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/CompleteState" ID="bed7de07-bbee-4cc4-b1a3-15102d9ea36f">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Running" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/RunningState" ID="645bbe98-c9ac-41e0-866f-e8ee9761ab26">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Idle" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/IdleState" ID="73f0bccf-1742-401d-bf1c-705773fd495c">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</InternalElement>
+		<InternalElement Name="Fuellen" RefBaseSystemUnitPath="MTPServiceSUCLib/Service" ID="e5cb4743-999e-4fd0-aaac-d809de3a7ca9">
+			<Attribute Name="OperationMode" AttributeDataType="xs:string" />
+			<Attribute Name="Status" AttributeDataType="xs:string" />
+			<Attribute Name="Command" AttributeDataType="xs:string" />
+			<Attribute Name="ParameterStatus" AttributeDataType="xs:string" />
+			<Attribute Name="ParameterCommand" AttributeDataType="xs:string" />
+			<Attribute Name="RefID" AttributeDataType="xs:ID" />
+			<InternalElement Name="RunningState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/RunningState" ID="6f711905-4ace-4533-84c5-c7a4345de25c">
+				<Attribute Name="RefID" AttributeDataType="xs:ID" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="IdleState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/IdleState" ID="c632d855-72a5-4537-8305-c0d6bd2af671">
+				<Attribute Name="RefID" AttributeDataType="xs:ID" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="AbortingState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/AbortingState" ID="5d15fc97-9533-4d93-a661-42f8b7a931cd">
+				<Attribute Name="RefID" AttributeDataType="xs:ID" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="AbortedState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/AbortedState" ID="51b90063-58e5-4975-b80d-e0c6a89b9c26">
+				<Attribute Name="RefID" AttributeDataType="xs:ID" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="CompleteState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/CompleteState" ID="4290deb0-db48-42b6-b555-a2baa75b8018">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Running" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/RunningState" ID="021a4997-34c2-4558-ab52-fa01e8009535">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Idle" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/IdleState" ID="8559ebd6-54da-4cb7-8a65-69bef39ab961">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</InternalElement>
+	</InstanceHierarchy>
+	<InstanceHierarchy Name="ModuleTypePackage">
+		<InternalElement Name="CAE_AC500" ID="404f0950-059b-443a-b15f-d2b884c844d2">
+			<InternalElement Name="Tag List" RefBaseSystemUnitPath="MTPSUCLib/CommunicationSet" ID="3388546a-c143-4d00-a6af-5b653e68a9c8">
+				<InternalElement Name="SourceList" RefBaseSystemUnitPath="MTPSUCLib/CommunicationSet/SourceList" ID="5f2665d9-32af-4a64-a06e-39f681aabb1e">
+					<InternalElement Name="AC500OPC" RefBaseSystemUnitPath="MTPCommunicationSUCLib/ServerAssembly/OPCUAServer" ID="f3b840fd-9fd2-453f-ae2d-e4178daf2e18">
+						<Attribute Name="Endpoint" AttributeDataType="xs:string">
+							<Value>opcda://localhost/CoDeSys.OPC.DA</Value>
+						</Attribute>
+						<ExternalInterface Name="V002_WQC" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="f75a4f7c-e760-4578-84db-e5f3eb308419">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_WQC</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_SafePos" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="7cc0898c-e88a-4a8b-93d8-c15b958c8cb3">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_SafePos</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_ResetOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="7ad3d344-af51-4493-b4bf-0ea8d1dac5fa">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ResetOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_ResetLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="4024c12a-9a4e-4020-b88d-b963eeed697e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ResetLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_ProtEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="5a395ca2-8356-46f0-bb3b-a13ea4d8d28c">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ProtEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_Protect" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="a9e8fd59-477e-40f0-a0d0-ab81c2492bac">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Protect</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosUnit" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="b11db40b-2bd9-48c1-8c70-173d7ae3172a">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosUnit</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosSclMin" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="b33ba136-f788-48b0-812a-1687d683715e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosSclMin</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosSclMax" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="05dd0efc-2f3a-4fea-8e68-49633a64a0bd">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosSclMax</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosReachedFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="bd447d4f-4a3c-442b-bfce-0098b636ba8d">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosReachedFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosOpngFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="2d74b690-ae03-49d2-bf97-9099ef3bff44">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosOpngFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosMin" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="38dcd1d3-9caa-45ac-b7e0-85d229600fb2">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosMin</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosMax" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="dcdbb35a-f812-42b7-aed9-79c2ae09e947">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosMax</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosInt" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="aaa327a9-ce97-45c4-87dc-bfbbc01d52d3">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosInt</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosFbkEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="3abeff27-2128-44a8-bb67-3a4bbd322364">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosFbkEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="d5caf6e0-2dfa-4ab9-8ecf-86f003f7bc3a">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosExt" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="2e508db5-48d8-4fb5-9179-19e7d03eda7a">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosExt</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosDiOpen" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="f5d89724-7728-42c0-876a-a5b444df2584">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosDiOpen</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosDiClose" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="028a229d-66db-4900-a644-5d096f5c5485">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosDiClose</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosDeadband" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="5d30c851-81ab-4ea3-b4fe-afe7645e7d02">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosDeadband</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosCtrl" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="50147836-de75-4b75-b10e-259ea32addb9">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosCtrl</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PosClsngFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="f7385114-d626-406c-b99f-cf6bde8a8118">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PosClsngFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_Permit" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="33882348-407f-4214-aec6-5dc753af3bef">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Permit</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_PermEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="83a7111a-964a-4727-a80d-7f59c3fce4a7">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PermEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_OSLevel" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="d074e147-8b76-410b-a120-e9d2359bc354">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OSLevel</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_OpMode" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="df123737-90c0-4886-aa54-bc80be12fbc8">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpMode</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_OpenOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="452cae41-266a-4522-a21f-6fb0911f9aba">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpenOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_OpenLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="c8e032ce-3252-4361-8ed4-9c1fb3fb4a66">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpenLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_OpenFbkEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="e52da2b4-b666-42f8-992d-859231f8e91c">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpenFbkEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_OpenFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="65346e83-d0b9-4f9c-b1ee-e58460e6ecc0">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpenFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_MonTiPos" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="e458a8e8-dae5-4e8d-beab-f1372fee55e3">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonTiPos</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_MonStatTi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="fbfda5bd-8ffe-4ee6-9b9e-176e70029f96">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonStatTi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_MonStatErr" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="bd485090-9e6a-4869-bcee-cf6582f06643">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonStatErr</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_MonSafePos" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="b026f29b-6f4d-4979-a655-959748c7bd7a">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonSafePos</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_MonPosErr" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="160939c2-dcda-4375-a4c1-73b7bb0c2dd6">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonPosErr</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_MonEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="d71f2e4c-055d-4dbe-9cf2-ddcf3595727a">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_MonDynTi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="47e8879e-a7fc-495e-9db7-5f25e7f4cdd4">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonDynTi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_MonDynErr" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="5bce9836-ba5a-47c8-8762-b0a8ad6db89b">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonDynErr</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_IntlEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="fc1a31a2-f6f7-41ea-bace-69215e9aca33">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_IntlEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_Interlock" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="b0861d30-bc5d-4da2-838a-6b7326926085">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Interlock</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_Ctrl" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="99da2e2d-513f-4cc8-b9d1-c25d02c8b71e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Ctrl</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_CloseOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="4f1d7c65-2c50-4ace-b754-4eaef079c3d1">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_CloseOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_CloseLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="08073548-e225-478c-be50-bf61b3ab8fd4">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_CloseLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_CloseFbkEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="83aead61-69ff-459a-bc43-86306383c3b8">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_CloseFbkEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V002_CloseFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="0fb94c0c-af84-4de1-9bff-4d484719b9e5">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_CloseFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V002</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_WQC" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="c85a75dc-d9ef-433f-8a7f-87c58ef315d1">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_WQC</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_SafePos" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="6b51136f-cd36-4756-81ec-510b59009b3e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_SafePos</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_ResetOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="bdb4311a-36b6-4b0d-aa61-b6f2b15db697">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ResetOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_ResetLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="587ca378-b9fc-4c0d-a549-3be78ba21a12">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ResetLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_ProtEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="215d141d-9097-4f6a-b4ab-9bc78776b9ad">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ProtEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_Protect" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="954b7e88-5dad-480a-a1bb-563602e17334">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Protect</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_Permit" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="a9d453d6-5382-439e-adc4-0809d76a4493">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Permit</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_PermEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="321cccef-d82f-4772-9831-329ce2a1be27">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PermEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_OSLevel" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="0170ac42-0667-4b5a-935c-62208ca73b7a">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OSLevel</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_OpMode" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="183f9998-4fc6-4c15-8a83-1945acc450ae">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpMode</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_OpenOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="19a80de3-21fb-4a04-a1bb-678a9e3621d4">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpenOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_OpenLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="f36b89f3-32da-42bd-a7f6-7d47d69d365a">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpenLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_OpenFbkEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="c9381233-cae4-4346-8182-e1d3cbac6913">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpenFbkEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_OpenFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="33f8f374-0f2f-4d38-9fb1-023cd592a27e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpenFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_MonTiStat" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="b3010535-3471-47e5-8d11-4040d13e6b22">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonTiStat</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_MonTiDyn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="d9323f8b-162a-4907-b0a4-d274ee1a0f85">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonTiDyn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_MonStatErr" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="23171fa7-da34-45c6-800e-dd3e66b36e93">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonStatErr</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_MonSafePos" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="911e83cb-6dfd-4813-b01f-a0c721a066ad">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonSafePos</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_MonEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="0c79cb0a-e202-46a6-8626-b3695bbc5ae5">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_MonDynErr" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="bcfe3d9f-7d9c-4642-a63a-da508238d021">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonDynErr</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_IntlEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="40cf3c1f-2fce-4ad8-bb30-3d6f89e47ef8">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_IntlEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_Interlock" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="d89c98c1-7217-4476-9f67-ebb1e58afd75">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Interlock</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_Ctrl" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="f296ab16-b777-4a38-b091-fc2b74c04e4c">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Ctrl</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_CloseOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="ff59396f-c39a-4704-8e86-6eedbcc6c0f5">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_CloseOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_CloseLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="dcf36242-e6f6-4c60-aaf4-005f20416e3f">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_CloseLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_CloseFbkEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="f97fdd4b-f88a-42db-a53a-70e21f83ba69">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_CloseFbkEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="V001_CloseFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="532fc21e-ab9e-4d4b-b8e7-47c5d61abfbd">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_CloseFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..V001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_WQC" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="a64b50e5-ddde-416e-9e22-8c64e31a050e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_WQC</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_Trip" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="a3cb270c-4d34-4ce3-b28e-e5e43cdb35d9">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Trip</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_StoppingFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="1bb906e8-48e8-4f66-a5ca-687b7326c329">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_StoppingFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_StopOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="3f84c0b7-dc5a-4b46-9186-96ac74dffb66">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_StopOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_StopLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="b0d2e1e5-b00c-41c2-b057-613a44990cef">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_StopLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_StartingFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="2da16e20-6bd0-40fc-8679-78243635b64b">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_StartingFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmUnit" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="37f04b07-8813-46b0-84b8-8aeb476f205d">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmUnit</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmSclMin" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="51f936b4-e72c-4385-a8f6-b2880237e35d">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmSclMin</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmSclMax" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="cbe1875d-702e-4324-91ac-e102b3a6b0b1">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmSclMax</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmMin" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="3f533a11-25bb-4bdc-8de5-ac8a2bdca2c7">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmMin</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmMax" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="42056fcc-ad03-467c-b6a4-9e9e92711ed3">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmMax</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmInt" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="61c9d91b-9f4e-48cc-b32b-284541104751">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmInt</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="b8c98ca1-1930-4fd7-b342-286118770e4d">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmExt" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="cf0d4aca-01ac-460a-9877-e6601e384174">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmExt</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmErr" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="158281ea-a514-4d8a-aebb-0fb77f406fc0">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmErr</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmALLim" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="497d03e6-9f2e-499e-8b77-25dfdaf514d8">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmALLim</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmALEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="f438ad40-0c1c-4f7d-8bea-c3c64b6cde5e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmALEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmALAct" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="ae856f3b-a4ed-4d74-baf9-bdc9522eb157">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmALAct</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmAHLim" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="815aa052-d784-4852-b4e5-04ecd7b0dd8e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmAHLim</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmAHEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="93f4aab3-6378-4704-9132-5aec9026e7e9">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmAHEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RpmAHAct" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="5260c308-10ad-4300-bfa4-0f9753d58461">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RpmAHAct</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_Rpm" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="a06ab641-37ba-42b7-88d9-71579cae73f9">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Rpm</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RevOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="5a1a1573-932e-4c26-9c88-9831bb4feb8d">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RevOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RevLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="c9e9bb69-e3c4-4337-b305-2970ce574834">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RevLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RevFbkEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="a42981fb-6fad-4f49-9471-89ececb2e9c7">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RevFbkEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RevFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="4819239f-04cb-4190-a931-d9d69a125982">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RevFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_RevCtrl" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="5bef9bf7-af00-4a8f-a312-c9dac1b60d9b">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_RevCtrl</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_ResetOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="708972ff-9632-469a-bb3a-dc75c62cf78d">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ResetOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_ResetLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="46c7f13f-cd94-4800-a57f-5c7b0b1c019e">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ResetLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_ProtEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="e99acbcb-aa36-4cb2-9842-52a9a2799c6c">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_ProtEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_Protect" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="6f333f96-42e4-4dbe-9604-627083749362">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Protect</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_Permit" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="a622cac0-9eb8-4135-b7e3-f63620355f84">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Permit</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_PermEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="fa110e86-f9c3-4660-a784-a888cb3c56c4">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_PermEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_OSLevel" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="5a47204c-19c3-4bc8-829f-347f684e8d56">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OSLevel</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_OpMode" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="039b055d-a2d9-4d35-a001-d85fa4a66ed2">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_OpMode</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_MonStatTi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="def8d0b8-000b-40a1-aeca-46014496cfd0">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonStatTi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_MonStatErr" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="678a19f5-e30c-41d7-9779-8425d26c5f59">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonStatErr</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_MonSafePos" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="c8d97eca-e62a-41b9-ac74-7af7ef8bc1f9">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonSafePos</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_MonEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="54ac3e01-d500-4947-bd60-0364d7037df1">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_MonDynTi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="32b42267-7c17-4cbc-a6a4-ec3513f8eeaa">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonDynTi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_MonDynErr" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="42a51bbd-2805-49ff-a3db-a7c6514704bf">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_MonDynErr</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_IntlEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="910fe664-362e-4f4e-92a3-28850dfcf14f">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_IntlEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_Interlock" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="e4287c83-90a1-454a-97f6-7aae941b4220">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_Interlock</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_FwdOp" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="791f0402-dfe2-433c-9171-d0b4b76744d1">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_FwdOp</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_FwdLi" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="219b808b-53ea-40b8-a896-f4e7d859bba3">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_FwdLi</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_FwdFbkEn" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="d356c039-27ed-4c40-bed1-b9a637eb7a5b">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_FwdFbkEn</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_FwdFbk" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="52767328-2c54-45ad-a3c5-f66030042ecd">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_FwdFbk</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<ExternalInterface Name="P001_FwdCtrl" RefBaseClassPath="MTPCommunicationICLib/DataItem/OPCUAItem" ID="6666d7d2-a09c-46f4-87ca-b060bb1d9609">
+							<Attribute Name="Identifier">
+								<Attribute Name="Identifier" Unit="" AttributeDataType="xs:string">
+									<Value>_FwdCtrl</Value>
+								</Attribute>
+							</Attribute>
+							<Attribute Name="Namespace">
+								<Value>PLC_GW3..P001</Value>
+							</Attribute>
+							<Attribute Name="Access">
+								<Value>R/W</Value>
+							</Attribute>
+						</ExternalInterface>
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</InternalElement>
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="InstanceList" RefBaseSystemUnitPath="MTPSUCLib/CommunicationSet/InstanceList" ID="1515d2b7-b676-4f5c-8b76-4f74f3e04f47">
+					<InternalElement Name="V002" RefBaseSystemUnitPath="MTPDataObjectSUCLib/DataAssembly/AnaVlv/LockAnaVlv/MonAnaVlv" ID="a222fb9b-c27d-483b-9034-dc01be2d0d6e">
+						<Attribute Name="MonEn" AttributeDataType="xs:boolean">
+							<Value>d71f2e4c-055d-4dbe-9cf2-ddcf3595727a</Value>
+						</Attribute>
+						<Attribute Name="MonSafePos" AttributeDataType="xs:boolean">
+							<Value>b026f29b-6f4d-4979-a655-959748c7bd7a</Value>
+						</Attribute>
+						<Attribute Name="MonStatErr" AttributeDataType="xs:boolean">
+							<Value>bd485090-9e6a-4869-bcee-cf6582f06643</Value>
+						</Attribute>
+						<Attribute Name="MonDynErr" AttributeDataType="xs:boolean">
+							<Value>5bce9836-ba5a-47c8-8762-b0a8ad6db89b</Value>
+						</Attribute>
+						<Attribute Name="MonStatTi" AttributeDataType="xs:double">
+							<Value>fbfda5bd-8ffe-4ee6-9b9e-176e70029f96</Value>
+						</Attribute>
+						<Attribute Name="MonDynTi" AttributeDataType="xs:double">
+							<Value>47e8879e-a7fc-495e-9db7-5f25e7f4cdd4</Value>
+						</Attribute>
+						<Attribute Name="PosOpngFbk" AttributeDataType="xs:boolean">
+							<Value>2d74b690-ae03-49d2-bf97-9099ef3bff44</Value>
+						</Attribute>
+						<Attribute Name="PosClsngFbk" AttributeDataType="xs:boolean">
+							<Value>f7385114-d626-406c-b99f-cf6bde8a8118</Value>
+						</Attribute>
+						<Attribute Name="PosReachedFbk" AttributeDataType="xs:boolean">
+							<Value>bd447d4f-4a3c-442b-bfce-0098b636ba8d</Value>
+						</Attribute>
+						<Attribute Name="PosDeadband" AttributeDataType="xs:double">
+							<Value>5d30c851-81ab-4ea3-b4fe-afe7645e7d02</Value>
+						</Attribute>
+						<Attribute Name="PosDiClose" AttributeDataType="xs:double">
+							<Value>028a229d-66db-4900-a644-5d096f5c5485</Value>
+						</Attribute>
+						<Attribute Name="PosDiOpen" AttributeDataType="xs:double">
+							<Value>f5d89724-7728-42c0-876a-a5b444df2584</Value>
+						</Attribute>
+						<Attribute Name="MonTiPos" AttributeDataType="xs:double">
+							<Value>e458a8e8-dae5-4e8d-beab-f1372fee55e3</Value>
+						</Attribute>
+						<Attribute Name="MonPosErr" AttributeDataType="xs:boolean">
+							<Value>160939c2-dcda-4375-a4c1-73b7bb0c2dd6</Value>
+						</Attribute>
+						<Attribute Name="PermEn" AttributeDataType="xs:boolean">
+							<Value>83a7111a-964a-4727-a80d-7f59c3fce4a7</Value>
+						</Attribute>
+						<Attribute Name="Permit" AttributeDataType="xs:boolean">
+							<Value>33882348-407f-4214-aec6-5dc753af3bef</Value>
+						</Attribute>
+						<Attribute Name="IntlEn" AttributeDataType="xs:boolean">
+							<Value>fc1a31a2-f6f7-41ea-bace-69215e9aca33</Value>
+						</Attribute>
+						<Attribute Name="Interlock" AttributeDataType="xs:boolean">
+							<Value>b0861d30-bc5d-4da2-838a-6b7326926085</Value>
+						</Attribute>
+						<Attribute Name="ProtEn" AttributeDataType="xs:boolean">
+							<Value>5a395ca2-8356-46f0-bb3b-a13ea4d8d28c</Value>
+						</Attribute>
+						<Attribute Name="Protect" AttributeDataType="xs:boolean">
+							<Value>a9e8fd59-477e-40f0-a0d0-ab81c2492bac</Value>
+						</Attribute>
+						<Attribute Name="ResetOp" AttributeDataType="xs:boolean">
+							<Value>7ad3d344-af51-4493-b4bf-0ea8d1dac5fa</Value>
+						</Attribute>
+						<Attribute Name="ResetLi" AttributeDataType="xs:boolean">
+							<Value>4024c12a-9a4e-4020-b88d-b963eeed697e</Value>
+						</Attribute>
+						<Attribute Name="OpenOp" AttributeDataType="xs:boolean">
+							<Value>452cae41-266a-4522-a21f-6fb0911f9aba</Value>
+						</Attribute>
+						<Attribute Name="CloseOp" AttributeDataType="xs:boolean">
+							<Value>4f1d7c65-2c50-4ace-b754-4eaef079c3d1</Value>
+						</Attribute>
+						<Attribute Name="OpenLi" AttributeDataType="xs:boolean">
+							<Value>c8e032ce-3252-4361-8ed4-9c1fb3fb4a66</Value>
+						</Attribute>
+						<Attribute Name="CloseLi" AttributeDataType="xs:boolean">
+							<Value>08073548-e225-478c-be50-bf61b3ab8fd4</Value>
+						</Attribute>
+						<Attribute Name="PosCtrl" AttributeDataType="xs:double">
+							<Value>50147836-de75-4b75-b10e-259ea32addb9</Value>
+						</Attribute>
+						<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong">
+							<Value>df123737-90c0-4886-aa54-bc80be12fbc8</Value>
+						</Attribute>
+						<Attribute Name="PosSclMin" AttributeDataType="xs:double">
+							<Value>b33ba136-f788-48b0-812a-1687d683715e</Value>
+						</Attribute>
+						<Attribute Name="PosSclMax" AttributeDataType="xs:double">
+							<Value>05dd0efc-2f3a-4fea-8e68-49633a64a0bd</Value>
+						</Attribute>
+						<Attribute Name="PosUnit" AttributeDataType="xs:integer">
+							<Value>b11db40b-2bd9-48c1-8c70-173d7ae3172a</Value>
+						</Attribute>
+						<Attribute Name="PosInt" AttributeDataType="xs:double">
+							<Value>aaa327a9-ce97-45c4-87dc-bfbbc01d52d3</Value>
+						</Attribute>
+						<Attribute Name="PosExt" AttributeDataType="xs:double">
+							<Value>2e508db5-48d8-4fb5-9179-19e7d03eda7a</Value>
+						</Attribute>
+						<Attribute Name="PosMin" AttributeDataType="xs:double">
+							<Value>38dcd1d3-9caa-45ac-b7e0-85d229600fb2</Value>
+						</Attribute>
+						<Attribute Name="PosMax" AttributeDataType="xs:double">
+							<Value>dcdbb35a-f812-42b7-aed9-79c2ae09e947</Value>
+						</Attribute>
+						<Attribute Name="SafePos" AttributeDataType="xs:double">
+							<Value>7cc0898c-e88a-4a8b-93d8-c15b958c8cb3</Value>
+						</Attribute>
+						<Attribute Name="PosFbk" AttributeDataType="xs:double">
+							<Value>d5caf6e0-2dfa-4ab9-8ecf-86f003f7bc3a</Value>
+						</Attribute>
+						<Attribute Name="OpenFbkEn" AttributeDataType="xs:boolean">
+							<Value>e52da2b4-b666-42f8-992d-859231f8e91c</Value>
+						</Attribute>
+						<Attribute Name="CloseFbkEn" AttributeDataType="xs:boolean">
+							<Value>83aead61-69ff-459a-bc43-86306383c3b8</Value>
+						</Attribute>
+						<Attribute Name="OpenFbk" AttributeDataType="xs:boolean">
+							<Value>65346e83-d0b9-4f9c-b1ee-e58460e6ecc0</Value>
+						</Attribute>
+						<Attribute Name="CloseFbk" AttributeDataType="xs:boolean">
+							<Value>0fb94c0c-af84-4de1-9bff-4d484719b9e5</Value>
+						</Attribute>
+						<Attribute Name="PosFbkEn" AttributeDataType="xs:boolean">
+							<Value>3abeff27-2128-44a8-bb67-3a4bbd322364</Value>
+						</Attribute>
+						<Attribute Name="Ctrl" AttributeDataType="xs:boolean">
+							<Value>99da2e2d-513f-4cc8-b9d1-c25d02c8b71e</Value>
+						</Attribute>
+						<Attribute Name="OSLevel" AttributeDataType="xs:byte">
+							<Value>d074e147-8b76-410b-a120-e9d2359bc354</Value>
+						</Attribute>
+						<Attribute Name="WQC" AttributeDataType="xs:byte">
+							<Value>f75a4f7c-e760-4578-84db-e5f3eb308419</Value>
+						</Attribute>
+						<Attribute Name="RefID" AttributeDataType="xs:ID">
+							<Value>b2698b8c-fc63-4120-a23d-5ebad13fc6e4</Value>
+						</Attribute>
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</InternalElement>
+					<InternalElement Name="V001" RefBaseSystemUnitPath="MTPDataObjectSUCLib/DataAssembly/BinVlv/LockBinVlv/MonBinVlv" ID="4da6431e-df35-499d-8efb-0ceb20eefe92">
+						<Attribute Name="MonEn" AttributeDataType="xs:boolean">
+							<Value>0c79cb0a-e202-46a6-8626-b3695bbc5ae5</Value>
+						</Attribute>
+						<Attribute Name="MonSafePos" AttributeDataType="xs:boolean">
+							<Value>911e83cb-6dfd-4813-b01f-a0c721a066ad</Value>
+						</Attribute>
+						<Attribute Name="MonStatErr" AttributeDataType="xs:boolean">
+							<Value>23171fa7-da34-45c6-800e-dd3e66b36e93</Value>
+						</Attribute>
+						<Attribute Name="MonDynErr" AttributeDataType="xs:boolean">
+							<Value>bcfe3d9f-7d9c-4642-a63a-da508238d021</Value>
+						</Attribute>
+						<Attribute Name="MonTiStat" AttributeDataType="xs:double">
+							<Value>b3010535-3471-47e5-8d11-4040d13e6b22</Value>
+						</Attribute>
+						<Attribute Name="MonTiDyn" AttributeDataType="xs:double">
+							<Value>d9323f8b-162a-4907-b0a4-d274ee1a0f85</Value>
+						</Attribute>
+						<Attribute Name="PermEn" AttributeDataType="xs:boolean">
+							<Value>321cccef-d82f-4772-9831-329ce2a1be27</Value>
+						</Attribute>
+						<Attribute Name="Permit" AttributeDataType="xs:boolean">
+							<Value>a9d453d6-5382-439e-adc4-0809d76a4493</Value>
+						</Attribute>
+						<Attribute Name="IntlEn" AttributeDataType="xs:boolean">
+							<Value>40cf3c1f-2fce-4ad8-bb30-3d6f89e47ef8</Value>
+						</Attribute>
+						<Attribute Name="Interlock" AttributeDataType="xs:boolean">
+							<Value>d89c98c1-7217-4476-9f67-ebb1e58afd75</Value>
+						</Attribute>
+						<Attribute Name="ProtEn" AttributeDataType="xs:boolean">
+							<Value>215d141d-9097-4f6a-b4ab-9bc78776b9ad</Value>
+						</Attribute>
+						<Attribute Name="Protect" AttributeDataType="xs:boolean">
+							<Value>954b7e88-5dad-480a-a1bb-563602e17334</Value>
+						</Attribute>
+						<Attribute Name="ResetOp" AttributeDataType="xs:boolean">
+							<Value>bdb4311a-36b6-4b0d-aa61-b6f2b15db697</Value>
+						</Attribute>
+						<Attribute Name="ResetLi" AttributeDataType="xs:boolean">
+							<Value>587ca378-b9fc-4c0d-a549-3be78ba21a12</Value>
+						</Attribute>
+						<Attribute Name="OpenOp" AttributeDataType="xs:boolean">
+							<Value>19a80de3-21fb-4a04-a1bb-678a9e3621d4</Value>
+						</Attribute>
+						<Attribute Name="CloseOp" AttributeDataType="xs:boolean">
+							<Value>ff59396f-c39a-4704-8e86-6eedbcc6c0f5</Value>
+						</Attribute>
+						<Attribute Name="OpenLi" AttributeDataType="xs:boolean">
+							<Value>f36b89f3-32da-42bd-a7f6-7d47d69d365a</Value>
+						</Attribute>
+						<Attribute Name="CloseLi" AttributeDataType="xs:boolean">
+							<Value>dcf36242-e6f6-4c60-aaf4-005f20416e3f</Value>
+						</Attribute>
+						<Attribute Name="Ctrl" AttributeDataType="xs:boolean">
+							<Value>f296ab16-b777-4a38-b091-fc2b74c04e4c</Value>
+						</Attribute>
+						<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong">
+							<Value>183f9998-4fc6-4c15-8a83-1945acc450ae</Value>
+						</Attribute>
+						<Attribute Name="OpenFbk" AttributeDataType="xs:boolean">
+							<Value>33f8f374-0f2f-4d38-9fb1-023cd592a27e</Value>
+						</Attribute>
+						<Attribute Name="CloseFbk" AttributeDataType="xs:boolean">
+							<Value>532fc21e-ab9e-4d4b-b8e7-47c5d61abfbd</Value>
+						</Attribute>
+						<Attribute Name="SafePos" AttributeDataType="xs:boolean">
+							<Value>6b51136f-cd36-4756-81ec-510b59009b3e</Value>
+						</Attribute>
+						<Attribute Name="OpenFbkEn" AttributeDataType="xs:boolean">
+							<Value>c9381233-cae4-4346-8182-e1d3cbac6913</Value>
+						</Attribute>
+						<Attribute Name="CloseFbkEn" AttributeDataType="xs:boolean">
+							<Value>f97fdd4b-f88a-42db-a53a-70e21f83ba69</Value>
+						</Attribute>
+						<Attribute Name="OSLevel" AttributeDataType="xs:byte">
+							<Value>0170ac42-0667-4b5a-935c-62208ca73b7a</Value>
+						</Attribute>
+						<Attribute Name="WQC" AttributeDataType="xs:byte">
+							<Value>c85a75dc-d9ef-433f-8a7f-87c58ef315d1</Value>
+						</Attribute>
+						<Attribute Name="RefID" AttributeDataType="xs:ID">
+							<Value>3e1f9960-d757-4510-bb7f-30e7cddcc430</Value>
+						</Attribute>
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</InternalElement>
+					<InternalElement Name="P001" RefBaseSystemUnitPath="MTPDataObjectSUCLib/DataAssembly/AnaDrv/LockAnaDrv/MonAnaDrv" ID="a55b503b-e802-4067-9f3c-64976615a7cc">
+						<Attribute Name="MonEn" AttributeDataType="xs:boolean">
+							<Value>54ac3e01-d500-4947-bd60-0364d7037df1</Value>
+						</Attribute>
+						<Attribute Name="MonSafePos" AttributeDataType="xs:boolean">
+							<Value>c8d97eca-e62a-41b9-ac74-7af7ef8bc1f9</Value>
+						</Attribute>
+						<Attribute Name="MonStatErr" AttributeDataType="xs:boolean">
+							<Value>678a19f5-e30c-41d7-9779-8425d26c5f59</Value>
+						</Attribute>
+						<Attribute Name="MonDynErr" AttributeDataType="xs:boolean">
+							<Value>42a51bbd-2805-49ff-a3db-a7c6514704bf</Value>
+						</Attribute>
+						<Attribute Name="MonStatTi" AttributeDataType="xs:double">
+							<Value>def8d0b8-000b-40a1-aeca-46014496cfd0</Value>
+						</Attribute>
+						<Attribute Name="MonDynTi" AttributeDataType="xs:double">
+							<Value>32b42267-7c17-4cbc-a6a4-ec3513f8eeaa</Value>
+						</Attribute>
+						<Attribute Name="RpmErr" AttributeDataType="xs:double">
+							<Value>158281ea-a514-4d8a-aebb-0fb77f406fc0</Value>
+						</Attribute>
+						<Attribute Name="RpmAHEn" AttributeDataType="xs:boolean">
+							<Value>93f4aab3-6378-4704-9132-5aec9026e7e9</Value>
+						</Attribute>
+						<Attribute Name="RpmALEn" AttributeDataType="xs:boolean">
+							<Value>f438ad40-0c1c-4f7d-8bea-c3c64b6cde5e</Value>
+						</Attribute>
+						<Attribute Name="RpmAHAct" AttributeDataType="xs:boolean">
+							<Value>5260c308-10ad-4300-bfa4-0f9753d58461</Value>
+						</Attribute>
+						<Attribute Name="RpmALAct" AttributeDataType="xs:boolean">
+							<Value>ae856f3b-a4ed-4d74-baf9-bdc9522eb157</Value>
+						</Attribute>
+						<Attribute Name="RpmAHLim" AttributeDataType="xs:double">
+							<Value>815aa052-d784-4852-b4e5-04ecd7b0dd8e</Value>
+						</Attribute>
+						<Attribute Name="RpmALLim" AttributeDataType="xs:double">
+							<Value>497d03e6-9f2e-499e-8b77-25dfdaf514d8</Value>
+						</Attribute>
+						<Attribute Name="StartingFbk" AttributeDataType="xs:boolean">
+							<Value>2da16e20-6bd0-40fc-8679-78243635b64b</Value>
+						</Attribute>
+						<Attribute Name="StoppingFbk" AttributeDataType="xs:boolean">
+							<Value>1bb906e8-48e8-4f66-a5ca-687b7326c329</Value>
+						</Attribute>
+						<Attribute Name="PermEn" AttributeDataType="xs:boolean">
+							<Value>fa110e86-f9c3-4660-a784-a888cb3c56c4</Value>
+						</Attribute>
+						<Attribute Name="Permit" AttributeDataType="xs:boolean">
+							<Value>a622cac0-9eb8-4135-b7e3-f63620355f84</Value>
+						</Attribute>
+						<Attribute Name="IntlEn" AttributeDataType="xs:boolean">
+							<Value>910fe664-362e-4f4e-92a3-28850dfcf14f</Value>
+						</Attribute>
+						<Attribute Name="Interlock" AttributeDataType="xs:boolean">
+							<Value>e4287c83-90a1-454a-97f6-7aae941b4220</Value>
+						</Attribute>
+						<Attribute Name="ProtEn" AttributeDataType="xs:boolean">
+							<Value>e99acbcb-aa36-4cb2-9842-52a9a2799c6c</Value>
+						</Attribute>
+						<Attribute Name="Protect" AttributeDataType="xs:boolean">
+							<Value>6f333f96-42e4-4dbe-9604-627083749362</Value>
+						</Attribute>
+						<Attribute Name="ResetOp" AttributeDataType="xs:boolean">
+							<Value>708972ff-9632-469a-bb3a-dc75c62cf78d</Value>
+						</Attribute>
+						<Attribute Name="ResetLi" AttributeDataType="xs:boolean">
+							<Value>46c7f13f-cd94-4800-a57f-5c7b0b1c019e</Value>
+						</Attribute>
+						<Attribute Name="StopOp" AttributeDataType="xs:boolean">
+							<Value>3f84c0b7-dc5a-4b46-9186-96ac74dffb66</Value>
+						</Attribute>
+						<Attribute Name="FwdOp" AttributeDataType="xs:boolean">
+							<Value>791f0402-dfe2-433c-9171-d0b4b76744d1</Value>
+						</Attribute>
+						<Attribute Name="RevOp" AttributeDataType="xs:boolean">
+							<Value>5a1a1573-932e-4c26-9c88-9831bb4feb8d</Value>
+						</Attribute>
+						<Attribute Name="StopLi" AttributeDataType="xs:boolean">
+							<Value>b0d2e1e5-b00c-41c2-b057-613a44990cef</Value>
+						</Attribute>
+						<Attribute Name="FwdLi" AttributeDataType="xs:boolean">
+							<Value>219b808b-53ea-40b8-a896-f4e7d859bba3</Value>
+						</Attribute>
+						<Attribute Name="RevLi" AttributeDataType="xs:boolean">
+							<Value>c9e9bb69-e3c4-4337-b305-2970ce574834</Value>
+						</Attribute>
+						<Attribute Name="FwdCtrl" AttributeDataType="xs:boolean">
+							<Value>6666d7d2-a09c-46f4-87ca-b060bb1d9609</Value>
+						</Attribute>
+						<Attribute Name="RevCtrl" AttributeDataType="xs:boolean">
+							<Value>5bef9bf7-af00-4a8f-a312-c9dac1b60d9b</Value>
+						</Attribute>
+						<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong">
+							<Value>039b055d-a2d9-4d35-a001-d85fa4a66ed2</Value>
+						</Attribute>
+						<Attribute Name="RevFbk" AttributeDataType="xs:boolean">
+							<Value>4819239f-04cb-4190-a931-d9d69a125982</Value>
+						</Attribute>
+						<Attribute Name="FwdFbk" AttributeDataType="xs:boolean">
+							<Value>52767328-2c54-45ad-a3c5-f66030042ecd</Value>
+						</Attribute>
+						<Attribute Name="FwdFbkEn" AttributeDataType="xs:boolean">
+							<Value>d356c039-27ed-4c40-bed1-b9a637eb7a5b</Value>
+						</Attribute>
+						<Attribute Name="RevFbkEn" AttributeDataType="xs:boolean">
+							<Value>a42981fb-6fad-4f49-9471-89ececb2e9c7</Value>
+						</Attribute>
+						<Attribute Name="Trip" AttributeDataType="xs:boolean">
+							<Value>a3cb270c-4d34-4ce3-b28e-e5e43cdb35d9</Value>
+						</Attribute>
+						<Attribute Name="RpmSclMin" AttributeDataType="xs:double">
+							<Value>51f936b4-e72c-4385-a8f6-b2880237e35d</Value>
+						</Attribute>
+						<Attribute Name="RpmSclMax" AttributeDataType="xs:double">
+							<Value>cbe1875d-702e-4324-91ac-e102b3a6b0b1</Value>
+						</Attribute>
+						<Attribute Name="RpmUnit" AttributeDataType="xs:integer">
+							<Value>37f04b07-8813-46b0-84b8-8aeb476f205d</Value>
+						</Attribute>
+						<Attribute Name="RpmInt" AttributeDataType="xs:double">
+							<Value>61c9d91b-9f4e-48cc-b32b-284541104751</Value>
+						</Attribute>
+						<Attribute Name="RpmExt" AttributeDataType="xs:double">
+							<Value>cf0d4aca-01ac-460a-9877-e6601e384174</Value>
+						</Attribute>
+						<Attribute Name="RpmMin" AttributeDataType="xs:double">
+							<Value>3f533a11-25bb-4bdc-8de5-ac8a2bdca2c7</Value>
+						</Attribute>
+						<Attribute Name="RpmMax" AttributeDataType="xs:double">
+							<Value>42056fcc-ad03-467c-b6a4-9e9e92711ed3</Value>
+						</Attribute>
+						<Attribute Name="Rpm" AttributeDataType="xs:double">
+							<Value>a06ab641-37ba-42b7-88d9-71579cae73f9</Value>
+						</Attribute>
+						<Attribute Name="RpmFbk" AttributeDataType="xs:double">
+							<Value>b8c98ca1-1930-4fd7-b342-286118770e4d</Value>
+						</Attribute>
+						<Attribute Name="OSLevel" AttributeDataType="xs:byte">
+							<Value>5a47204c-19c3-4bc8-829f-347f684e8d56</Value>
+						</Attribute>
+						<Attribute Name="WQC" AttributeDataType="xs:byte">
+							<Value>a64b50e5-ddde-416e-9e22-8c64e31a050e</Value>
+						</Attribute>
+						<Attribute Name="RefID" AttributeDataType="xs:ID">
+							<Value>07bf972e-7b93-456d-af89-b552332bb4cd</Value>
+						</Attribute>
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</InternalElement>
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Services" RefBaseSystemUnitPath="MTPSUCLib/MTPSet/ServiceSet" ID="3cf409bf-b9ea-4364-99f6-ca466efc4692">
+				<ExternalInterface Name="Services" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector" ID="2e0d04e9-fddf-4083-9482-56ff8d4cb1dd">
+					<Attribute Name="refURI">
+						<Value>Services/</Value>
+					</Attribute>
+				</ExternalInterface>
+				<ExternalInterface Name="ServiceReference" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector" ID="add1620d-3906-4963-9590-4cb2308e7b49">
+					<Attribute Name="refURI">
+						<Value />
+					</Attribute>
+				</ExternalInterface>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="HMIs" RefBaseSystemUnitPath="MTPSUCLib/MTPSet/HMISet" ID="d0258458-a474-4c8d-8b5e-fc8a431651c4">
+				<ExternalInterface Name="HMIInterfaces" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector" ID="d081e0b0-3acb-4ec2-87ee-851c40f3f4e6">
+					<Attribute Name="refURI">
+						<Value>HMI/</Value>
+					</Attribute>
+				</ExternalInterface>
+				<ExternalInterface Name="HMIReference" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector" ID="ae310c2a-9a8a-42bb-b412-bfbae65b9a01">
+					<Attribute Name="refURI">
+						<Value />
+					</Attribute>
+				</ExternalInterface>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+		</InternalElement>
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="AutomationMLInterfaceClassLib">
+		<Description>Standard Automation Markup Language Interface Class Library</Description>
+		<Version>2.2.0</Version>
+		<InterfaceClass Name="AutomationMLBaseInterface">
+			<InterfaceClass Name="AttachmentInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+			<InterfaceClass Name="ExternalDataConnector" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface">
+				<Attribute Name="refURI" />
+				<InterfaceClass Name="COLLADAInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector">
+					<Attribute Name="refType" />
+					<Attribute Name="target" />
+				</InterfaceClass>
+				<InterfaceClass Name="PLCopenXMLInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector" />
+			</InterfaceClass>
+			<InterfaceClass Name="Communication" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface">
+				<InterfaceClass Name="SignalInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Communication" />
+			</InterfaceClass>
+			<InterfaceClass Name="InterlockingConnector" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+			<InterfaceClass Name="Order" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface">
+				<Attribute Name="Direction" />
+			</InterfaceClass>
+			<InterfaceClass Name="PortConnector" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+			<InterfaceClass Name="PPRConnector" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<InterfaceClassLib Name="MTPHMIICLib">
+		<InterfaceClass Name="ConnectorInterface">
+			<InterfaceClass Name="InformationFlowConnector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface" />
+			<InterfaceClass Name="MassFlowConnector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface" />
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<InterfaceClassLib Name="MTPCommunicationICLib">
+		<InterfaceClass Name="DataItem">
+			<Attribute Name="Access" />
+			<InterfaceClass Name="OPCUAItem" RefBaseClassPath="MTPCommunicationICLib/DataItem">
+				<Attribute Name="Identifier" />
+				<Attribute Name="Namespace" />
+			</InterfaceClass>
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<SystemUnitClassLib Name="MTPServiceSUCLib">
+		<SystemUnitClass Name="ServiceState" RefBaseClassPath="MTPSUCLib/LinkedObject">
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="AbortedState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="AbortingState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="CompleteState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="IdleState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="RunningState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="HeldState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="HoldingState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="PausedState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="PausingState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="StoppedState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="StoppingState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="UnholdingState" RefBaseClassPath="MTPServiceSUCLib/ServiceState">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="Service" RefBaseClassPath="MTPSUCLib/LinkedObject">
+			<Attribute Name="OperationMode" AttributeDataType="xs:string" />
+			<Attribute Name="Status" AttributeDataType="xs:string" />
+			<Attribute Name="Command" AttributeDataType="xs:string" />
+			<Attribute Name="ParameterStatus" AttributeDataType="xs:string" />
+			<Attribute Name="ParameterCommand" AttributeDataType="xs:string" />
+			<InternalElement Name="CompleteState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/CompleteState" ID="aa8cded7-8087-4280-9c11-fcc7807fd286">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Running" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/RunningState" ID="cef0234f-f6cf-46ab-bc04-652ca73e2323">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="Idle" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState/IdleState" ID="eeb3f2f3-216f-4f3e-8c37-6ab9eb18d98c">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="ContinousService" RefBaseClassPath="MTPServiceSUCLib/Service">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="SelfcompletingService" RefBaseClassPath="MTPServiceSUCLib/Service">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="ServiceRelation">
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="DisableServiceRelation" RefBaseClassPath="MTPServiceSUCLib/ServiceRelation">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="EnableServiceRelation" RefBaseClassPath="MTPServiceSUCLib/ServiceRelation">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="ForceServiceRelation" RefBaseClassPath="MTPServiceSUCLib/ServiceRelation">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="SyncServiceRelation" RefBaseClassPath="MTPServiceSUCLib/ServiceRelation">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="RelatedTag" RefBaseClassPath="MTPSUCLib/LinkedObject">
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="ServiceParameter" RefBaseClassPath="MTPSUCLib/LinkedObject">
+			<InternalElement Name="CorrespondingState" RefBaseSystemUnitPath="MTPServiceSUCLib/ServiceState" ID="432ad5c3-18b7-4871-b65f-809df3cc65d2">
+				<Attribute Name="RefID" AttributeDataType="xs:ID">
+					<Value />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="ServiceTransition">
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+	<SystemUnitClassLib Name="MTPSUCLib">
+		<SystemUnitClass Name="LinkedObject">
+			<Attribute Name="RefID" AttributeDataType="xs:ID" />
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="CommunicationSet" RefBaseClassPath="MTPSUCLib/MTPSet">
+			<InternalElement Name="SourceList" RefBaseSystemUnitPath="MTPSUCLib/CommunicationSet/SourceList" ID="28c25780-d02c-4573-9915-ae9cbaf3ebd2">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<InternalElement Name="InstanceList" RefBaseSystemUnitPath="MTPSUCLib/CommunicationSet/InstanceList" ID="f38e6da6-dc00-40fb-b514-4c882db69e6b">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="InstanceList">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="SourceList">
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="MTPSet">
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="HMISet" RefBaseClassPath="MTPSUCLib/MTPSet">
+				<ExternalInterface Name="HMIReference" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector" ID="017a799d-2325-43e7-850f-7b9be770ee73">
+					<Attribute Name="refURI">
+						<Value />
+					</Attribute>
+				</ExternalInterface>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="ServiceSet" RefBaseClassPath="MTPSUCLib/MTPSet">
+				<ExternalInterface Name="ServiceReference" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector" ID="888b9adb-44f1-4e6b-9c37-8d1a3b9f5c20">
+					<Attribute Name="refURI">
+						<Value />
+					</Attribute>
+				</ExternalInterface>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="ModuleTypePackage">
+			<Attribute Name="Version" AttributeDataType="xs:string" />
+			<InternalElement Name="CommunicationSet" RefBaseSystemUnitPath="MTPSUCLib/CommunicationSet" ID="e20e0e17-f0c1-4b51-b29e-3bf82f68872f">
+				<InternalElement Name="SourceList" RefBaseSystemUnitPath="MTPSUCLib/CommunicationSet/SourceList" ID="bd53cdda-ae0d-43b9-9d36-73c90f17605a">
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="InstanceList" RefBaseSystemUnitPath="MTPSUCLib/CommunicationSet/InstanceList" ID="d6ea5c00-a513-4e6a-8f55-ab6a5d1e8d3f">
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+	<SystemUnitClassLib Name="MTPDataObjectSUCLib">
+		<SystemUnitClass Name="DataAssembly" RefBaseClassPath="MTPSUCLib/LinkedObject">
+			<Attribute Name="OSLevel" AttributeDataType="xs:byte" />
+			<Attribute Name="WQC" AttributeDataType="xs:byte" />
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="ExtAnaOp" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="VSclMin" AttributeDataType="xs:double" />
+				<Attribute Name="VSclMax" AttributeDataType="xs:double" />
+				<Attribute Name="VExt" AttributeDataType="xs:double" />
+				<Attribute Name="VUnit" AttributeDataType="xs:integer" />
+				<Attribute Name="VOut" AttributeDataType="xs:double" />
+				<Attribute Name="VMin" AttributeDataType="xs:double" />
+				<Attribute Name="VMax" AttributeDataType="xs:double" />
+				<Attribute Name="VRbk" AttributeDataType="xs:double" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="ExtIntAnaOp" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/ExtAnaOp">
+					<Attribute Name="VInt" AttributeDataType="xs:double" />
+					<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					<SystemUnitClass Name="AdvAnaOp" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/ExtAnaOp/ExtIntAnaOp">
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</SystemUnitClass>
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="ExtBinOp" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="VState0" AttributeDataType="xs:string" />
+				<Attribute Name="VState1" AttributeDataType="xs:string" />
+				<Attribute Name="VSetOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="VResetOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="VOut" AttributeDataType="xs:boolean" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="ExtIntBinOp" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/ExtBinOp">
+					<Attribute Name="VSetLi" AttributeDataType="xs:boolean" />
+					<Attribute Name="VResetLi" AttributeDataType="xs:boolean" />
+					<Attribute Name="OpMode" AttributeDataType="xs:string" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					<SystemUnitClass Name="AdvBinOp" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/ExtBinOp/ExtIntBinOp">
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</SystemUnitClass>
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="AnaDrv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="StopOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="RevOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="StopLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="RevLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdCtrl" AttributeDataType="xs:boolean" />
+				<Attribute Name="RevCtrl" AttributeDataType="xs:boolean" />
+				<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong" />
+				<Attribute Name="RevFbk" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdFbk" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdFbkEn" AttributeDataType="xs:boolean" />
+				<Attribute Name="RevFbkEn" AttributeDataType="xs:boolean" />
+				<Attribute Name="Trip" AttributeDataType="xs:boolean" />
+				<Attribute Name="RpmSclMin" AttributeDataType="xs:double" />
+				<Attribute Name="RpmSclMax" AttributeDataType="xs:double" />
+				<Attribute Name="RpmUnit" AttributeDataType="xs:integer" />
+				<Attribute Name="RpmInt" AttributeDataType="xs:double" />
+				<Attribute Name="RpmExt" AttributeDataType="xs:double" />
+				<Attribute Name="RpmMin" AttributeDataType="xs:double" />
+				<Attribute Name="RpmMax" AttributeDataType="xs:double" />
+				<Attribute Name="Rpm" AttributeDataType="xs:double" />
+				<Attribute Name="RpmFbk" AttributeDataType="xs:double" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="LockAnaDrv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/AnaDrv">
+					<Attribute Name="PermEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Permit" AttributeDataType="xs:boolean" />
+					<Attribute Name="IntlEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Interlock" AttributeDataType="xs:boolean" />
+					<Attribute Name="ProtEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Protect" AttributeDataType="xs:boolean" />
+					<Attribute Name="ResetOp" AttributeDataType="xs:boolean" />
+					<Attribute Name="ResetLi" AttributeDataType="xs:boolean" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					<SystemUnitClass Name="MonAnaDrv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/AnaDrv/LockAnaDrv">
+						<Attribute Name="MonEn" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonSafePos" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonStatErr" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonDynErr" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonStatTi" AttributeDataType="xs:double" />
+						<Attribute Name="MonDynTi" AttributeDataType="xs:double" />
+						<Attribute Name="RpmErr" AttributeDataType="xs:double" />
+						<Attribute Name="RpmAHEn" AttributeDataType="xs:boolean" />
+						<Attribute Name="RpmALEn" AttributeDataType="xs:boolean" />
+						<Attribute Name="RpmAHAct" AttributeDataType="xs:boolean" />
+						<Attribute Name="RpmALAct" AttributeDataType="xs:boolean" />
+						<Attribute Name="RpmAHLim" AttributeDataType="xs:double" />
+						<Attribute Name="RpmALLim" AttributeDataType="xs:double" />
+						<Attribute Name="StartingFbk" AttributeDataType="xs:boolean" />
+						<Attribute Name="StoppingFbk" AttributeDataType="xs:boolean" />
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</SystemUnitClass>
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="AnaView" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="V" AttributeDataType="xs:double" />
+				<Attribute Name="VSclMin" AttributeDataType="xs:double" />
+				<Attribute Name="VSclMax" AttributeDataType="xs:double" />
+				<Attribute Name="VUnit" AttributeDataType="xs:integer" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="AnaMon" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/AnaView">
+					<Attribute Name="VAHEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="VAHLim" AttributeDataType="xs:double" />
+					<Attribute Name="VAHAct" AttributeDataType="xs:boolean" />
+					<Attribute Name="VWHEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="VWHLim" AttributeDataType="xs:double" />
+					<Attribute Name="VWHAct" AttributeDataType="xs:boolean" />
+					<Attribute Name="VTHEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="VTHLim" AttributeDataType="xs:double" />
+					<Attribute Name="VTHAct" AttributeDataType="xs:boolean" />
+					<Attribute Name="VTLEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="VTLLim" AttributeDataType="xs:double" />
+					<Attribute Name="VTLAct" AttributeDataType="xs:boolean" />
+					<Attribute Name="VWLEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="VWLLim" AttributeDataType="xs:double" />
+					<Attribute Name="VWLAct" AttributeDataType="xs:boolean" />
+					<Attribute Name="VALEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="VALLim" AttributeDataType="xs:double" />
+					<Attribute Name="VALAct" AttributeDataType="xs:boolean" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="AnaVlv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="OpenOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="CloseOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="OpenLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="CloseLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="PosCtrl" AttributeDataType="xs:double" />
+				<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong" />
+				<Attribute Name="PosSclMin" AttributeDataType="xs:double" />
+				<Attribute Name="PosSclMax" AttributeDataType="xs:double" />
+				<Attribute Name="PosUnit" AttributeDataType="xs:integer" />
+				<Attribute Name="PosInt" AttributeDataType="xs:double" />
+				<Attribute Name="PosExt" AttributeDataType="xs:double" />
+				<Attribute Name="PosMin" AttributeDataType="xs:double" />
+				<Attribute Name="PosMax" AttributeDataType="xs:double" />
+				<Attribute Name="SafePos" AttributeDataType="xs:double" />
+				<Attribute Name="PosFbk" AttributeDataType="xs:double" />
+				<Attribute Name="OpenFbkEn" AttributeDataType="xs:boolean" />
+				<Attribute Name="CloseFbkEn" AttributeDataType="xs:boolean" />
+				<Attribute Name="OpenFbk" AttributeDataType="xs:boolean" />
+				<Attribute Name="CloseFbk" AttributeDataType="xs:boolean" />
+				<Attribute Name="PosFbkEn" AttributeDataType="xs:boolean" />
+				<Attribute Name="Ctrl" AttributeDataType="xs:boolean" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="LockAnaVlv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/AnaVlv">
+					<Attribute Name="PermEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Permit" AttributeDataType="xs:boolean" />
+					<Attribute Name="IntlEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Interlock" AttributeDataType="xs:boolean" />
+					<Attribute Name="ProtEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Protect" AttributeDataType="xs:boolean" />
+					<Attribute Name="ResetOp" AttributeDataType="xs:boolean" />
+					<Attribute Name="ResetLi" AttributeDataType="xs:boolean" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					<SystemUnitClass Name="MonAnaVlv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/AnaVlv/LockAnaVlv">
+						<Attribute Name="MonEn" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonSafePos" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonStatErr" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonDynErr" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonStatTi" AttributeDataType="xs:double" />
+						<Attribute Name="MonDynTi" AttributeDataType="xs:double" />
+						<Attribute Name="PosOpngFbk" AttributeDataType="xs:boolean" />
+						<Attribute Name="PosClsngFbk" AttributeDataType="xs:boolean" />
+						<Attribute Name="PosReachedFbk" AttributeDataType="xs:boolean" />
+						<Attribute Name="PosDeadband" AttributeDataType="xs:double" />
+						<Attribute Name="PosDiClose" AttributeDataType="xs:double" />
+						<Attribute Name="PosDiOpen" AttributeDataType="xs:double" />
+						<Attribute Name="MonTiPos" AttributeDataType="xs:double" />
+						<Attribute Name="MonPosErr" AttributeDataType="xs:boolean" />
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</SystemUnitClass>
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="BinDrv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="StopOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="RevOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="StopLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="RevLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdCtrl" AttributeDataType="xs:boolean" />
+				<Attribute Name="RevCtrl" AttributeDataType="xs:boolean" />
+				<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong" />
+				<Attribute Name="RevFbk" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdFbk" AttributeDataType="xs:boolean" />
+				<Attribute Name="FwdFbkEn" AttributeDataType="xs:boolean" />
+				<Attribute Name="RevFbkEn" AttributeDataType="xs:boolean" />
+				<Attribute Name="Trip" AttributeDataType="xs:boolean" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="LockBinDrv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/BinDrv">
+					<Attribute Name="PermEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Permit" AttributeDataType="xs:boolean" />
+					<Attribute Name="IntlEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Interlock" AttributeDataType="xs:boolean" />
+					<Attribute Name="ProtEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Protect" AttributeDataType="xs:boolean" />
+					<Attribute Name="ResetOp" AttributeDataType="xs:boolean" />
+					<Attribute Name="ResetLi" AttributeDataType="xs:boolean" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					<SystemUnitClass Name="MonBinDrv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/BinDrv/LockBinDrv">
+						<Attribute Name="MonEn" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonSafePos" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonStatErr" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonDynErr" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonTiStat" AttributeDataType="xs:double" />
+						<Attribute Name="MonTiDyn" AttributeDataType="xs:double" />
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</SystemUnitClass>
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="BinView" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="V" AttributeDataType="xs:boolean" />
+				<Attribute Name="VState0" AttributeDataType="xs:string" />
+				<Attribute Name="VState1" AttributeDataType="xs:string" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="BinMon" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/BinView">
+					<Attribute Name="VFlutEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="VFlutTi" AttributeDataType="xs:double" />
+					<Attribute Name="VFlutCnt" AttributeDataType="xs:int" />
+					<Attribute Name="VFlutAct" AttributeDataType="xs:boolean" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="BinVlv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="OpenOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="CloseOp" AttributeDataType="xs:boolean" />
+				<Attribute Name="OpenLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="CloseLi" AttributeDataType="xs:boolean" />
+				<Attribute Name="Ctrl" AttributeDataType="xs:boolean" />
+				<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong" />
+				<Attribute Name="OpenFbk" AttributeDataType="xs:boolean" />
+				<Attribute Name="CloseFbk" AttributeDataType="xs:boolean" />
+				<Attribute Name="SafePos" AttributeDataType="xs:boolean" />
+				<Attribute Name="OpenFbkEn" AttributeDataType="xs:boolean" />
+				<Attribute Name="CloseFbkEn" AttributeDataType="xs:boolean" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="LockBinVlv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/BinVlv">
+					<Attribute Name="PermEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Permit" AttributeDataType="xs:boolean" />
+					<Attribute Name="IntlEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Interlock" AttributeDataType="xs:boolean" />
+					<Attribute Name="ProtEn" AttributeDataType="xs:boolean" />
+					<Attribute Name="Protect" AttributeDataType="xs:boolean" />
+					<Attribute Name="ResetOp" AttributeDataType="xs:boolean" />
+					<Attribute Name="ResetLi" AttributeDataType="xs:boolean" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					<SystemUnitClass Name="MonBinVlv" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly/BinVlv/LockBinVlv">
+						<Attribute Name="MonEn" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonSafePos" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonStatErr" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonDynErr" AttributeDataType="xs:boolean" />
+						<Attribute Name="MonTiStat" AttributeDataType="xs:double" />
+						<Attribute Name="MonTiDyn" AttributeDataType="xs:double" />
+						<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</SystemUnitClass>
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="DynText" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="Text" AttributeDataType="xs:string" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="PIDCtrl" RefBaseClassPath="MTPDataObjectSUCLib/DataAssembly">
+				<Attribute Name="PV" AttributeDataType="xs:double" />
+				<Attribute Name="PVSclMin" AttributeDataType="xs:double" />
+				<Attribute Name="PVSclMax" AttributeDataType="xs:double" />
+				<Attribute Name="PVUnit" AttributeDataType="xs:integer" />
+				<Attribute Name="SPInt" AttributeDataType="xs:double" />
+				<Attribute Name="SPExt" AttributeDataType="xs:double" />
+				<Attribute Name="SPIntMin" AttributeDataType="xs:double" />
+				<Attribute Name="SPIntMax" AttributeDataType="xs:double" />
+				<Attribute Name="SPExtMin" AttributeDataType="xs:double" />
+				<Attribute Name="SPExtMax" AttributeDataType="xs:double" />
+				<Attribute Name="SP" AttributeDataType="xs:double" />
+				<Attribute Name="OpMode" AttributeDataType="xs:unsignedLong" />
+				<Attribute Name="MVOp" AttributeDataType="xs:double" />
+				<Attribute Name="MV" AttributeDataType="xs:double" />
+				<Attribute Name="MVUnit" AttributeDataType="xs:integer" />
+				<Attribute Name="MVSclMin" AttributeDataType="xs:double" />
+				<Attribute Name="MVSclMax" AttributeDataType="xs:double" />
+				<Attribute Name="P" AttributeDataType="xs:double" />
+				<Attribute Name="Ts" AttributeDataType="xs:double" />
+				<Attribute Name="Td" AttributeDataType="xs:double" />
+				<Attribute Name="SPSclMin" AttributeDataType="xs:double" />
+				<Attribute Name="SPSclMax" AttributeDataType="xs:double" />
+				<Attribute Name="SPUnit" AttributeDataType="xs:integer" />
+				<Attribute Name="MVMin" AttributeDataType="xs:double" />
+				<Attribute Name="MVMax" AttributeDataType="xs:double" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+	<SystemUnitClassLib Name="MTPHMISUCLib">
+		<SystemUnitClass Name="Connection">
+			<Attribute Name="Edgepath" AttributeDataType="xs:string" />
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="FunctionLine" RefBaseClassPath="MTPHMISUCLib/Connection">
+				<InternalElement Name="Start" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/LogicalPort" ID="0b813ad1-e996-433b-9110-e1f773616bc0">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/InformationFlowConnector" ID="50a7275a-c4dd-4f23-a4ef-cc587a18e7d8" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="End" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/LogicalPort" ID="f64e736a-e0b7-4f77-8dae-c174ca6024a9">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/InformationFlowConnector" ID="3624034d-aaf3-4186-a251-54180537a890" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="MeasurementLine" RefBaseClassPath="MTPHMISUCLib/Connection">
+				<InternalElement Name="Start" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/MeasurementPoint" ID="a5cfcf48-f244-40d6-847e-3356cd89782f">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/InformationFlowConnector" ID="2c180438-4199-49ab-9afd-9118cee5f25d" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="End" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/MeasurementPoint" ID="15d4d3c1-fe25-4daf-a66c-991d8941f5f1">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/InformationFlowConnector" ID="d5949c9a-0ec2-44b2-bc66-6938078e25ab" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="Pipe" RefBaseClassPath="MTPHMISUCLib/Connection">
+				<InternalElement Name="Nozzle1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="01c3e9c1-16a4-4da0-bbf2-c6a6e23da51e">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="f2433ce4-55ac-41dc-b741-50d5db9d2eb2" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="Nozzle2" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="dbedf34b-ce61-4827-8b3b-f353175a9a82">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="b192cb81-1bde-481a-b2b3-d6287cd91dfd" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="PortObject">
+			<Attribute Name="X" AttributeDataType="xs:double" />
+			<Attribute Name="Y" AttributeDataType="xs:double" />
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="LogicalPort" RefBaseClassPath="MTPHMISUCLib/PortObject">
+				<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/InformationFlowConnector" ID="1baebe60-3b96-4e05-be62-e6c9c00cdf51" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="Nozzle" RefBaseClassPath="MTPHMISUCLib/PortObject">
+				<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="aee2e841-bb0e-4b45-b91f-1f4a8c99726f" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="MeasurementPoint" RefBaseClassPath="MTPHMISUCLib/PortObject">
+				<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/InformationFlowConnector" ID="14fd9bf9-b9f7-4f58-9350-6eb9fb15499a" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="TopologyObject">
+			<Attribute Name="X" AttributeDataType="xs:double" />
+			<Attribute Name="Y" AttributeDataType="xs:double" />
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="Junction" RefBaseClassPath="MTPHMISUCLib/TopologyObject">
+				<InternalElement Name="Nozzle1" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="492c4ead-e398-46ef-9510-1eb21adc18e2">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="844e25b6-6488-4c6e-a044-1d994003e06d" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="Nozzle2" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="0799de6a-3caa-45a7-84da-c7e1ce7029c7">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="d74fea71-89b5-4dc6-be5d-167140ff1a6f" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<InternalElement Name="Nozzle3" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="9218b0ee-fd0a-48a2-a6ba-2dd08d45f31c">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="758f4a1f-6a51-49af-81d3-527399bdb4b6" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="Termination" RefBaseClassPath="MTPHMISUCLib/TopologyObject">
+				<InternalElement Name="Nozzle" RefBaseSystemUnitPath="MTPHMISUCLib/PortObject/Nozzle" ID="0932f421-c752-4c98-9e75-40c72b8d57df">
+					<Attribute Name="X" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<Attribute Name="Y" AttributeDataType="xs:double">
+						<Value />
+					</Attribute>
+					<ExternalInterface Name="Connector" RefBaseClassPath="MTPHMIICLib/ConnectorInterface/MassFlowConnector" ID="285dd503-811a-4e99-8649-0db6b1c1f8d3" />
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				<SystemUnitClass Name="Sink" RefBaseClassPath="MTPHMISUCLib/TopologyObject/Termination">
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</SystemUnitClass>
+				<SystemUnitClass Name="Source" RefBaseClassPath="MTPHMISUCLib/TopologyObject/Termination">
+					<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+				</SystemUnitClass>
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="Picture">
+			<Attribute Name="Width" AttributeDataType="xs:Integer" />
+			<Attribute Name="Height" AttributeDataType="xs:Integer" />
+			<Attribute Name="HierarchyLevel" AttributeDataType="xs:string" />
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="SemanticGroup">
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="VisualObject" RefBaseClassPath="MTPSUCLib/LinkedObject">
+			<Attribute Name="Width" AttributeDataType="xs:double" />
+			<Attribute Name="Height" AttributeDataType="xs:double" />
+			<Attribute Name="X" AttributeDataType="xs:double" />
+			<Attribute Name="Y" AttributeDataType="xs:double" />
+			<Attribute Name="Rotation" AttributeDataType="xs:double" />
+			<Attribute Name="eClassVersion" AttributeDataType="xs:string" />
+			<Attribute Name="eClassClassificationClass" AttributeDataType="xs:string" />
+			<Attribute Name="eClassIRDI" AttributeDataType="xs:string" />
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+	<SystemUnitClassLib Name="MTPCommunicationSUCLib">
+		<SystemUnitClass Name="ServerAssembly">
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			<SystemUnitClass Name="OPCUAServer" RefBaseClassPath="MTPCommunicationSUCLib/ServerAssembly">
+				<Attribute Name="Endpoint" AttributeDataType="xs:string" />
+				<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+			</SystemUnitClass>
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+</CAEXFile>

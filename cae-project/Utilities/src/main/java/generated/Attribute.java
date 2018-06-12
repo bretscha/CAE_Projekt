@@ -3,8 +3,8 @@ package generated;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
 /**
  * <p>
@@ -28,10 +28,10 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "value" })
+@XmlType(name = "")
 public class Attribute {
 
-    @XmlValue
+    @XmlElement(type = String.class)
     protected String value;
     @XmlAttribute(name = "Name")
     protected String name;
@@ -45,7 +45,7 @@ public class Attribute {
      * 
      */
     public String getValue() {
-        return value;
+	return value;
     }
 
     /**
@@ -56,7 +56,7 @@ public class Attribute {
      * 
      */
     public void setValue(String value) {
-        this.value = value;
+	this.value = value;
     }
 
     /**
@@ -66,7 +66,7 @@ public class Attribute {
      * 
      */
     public String getName() {
-        return name;
+	return name;
     }
 
     /**
@@ -77,7 +77,7 @@ public class Attribute {
      * 
      */
     public void setName(String value) {
-        this.name = value;
+	this.name = value;
     }
 
     /**
@@ -87,7 +87,7 @@ public class Attribute {
      * 
      */
     public String getAttributeDataType() {
-        return attributeDataType;
+	return attributeDataType;
     }
 
     /**
@@ -98,7 +98,7 @@ public class Attribute {
      * 
      */
     public void setAttributeDataType(String value) {
-        this.attributeDataType = value;
+	this.attributeDataType = value;
     }
 
 }

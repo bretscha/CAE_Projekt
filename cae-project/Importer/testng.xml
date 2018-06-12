@@ -1,0 +1,14 @@
+<suite name="TestSuite" verbose="1">
+	<test name="AllTests">
+		<groups>
+			<define name="include-group">
+				<include name="include" />
+			</define>
+			<define name="exclude-group" />
+			<run>
+				<include name="include-group" />
+				<exclude name="exclude-group" />
+			</run>
+		</groups>
+	</test>
+</suite>

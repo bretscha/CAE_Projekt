@@ -248,13 +248,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InternalElement", propOrder = { "attribute", "internalElement", "supportedRoleClass", "internalLink" })
+@XmlType(name = "InternalElement", propOrder = { "attribute", "internalElement", "externalInterface", "supportedRoleClass", "internalLink" })
 public class InternalElement {
 
     @XmlElement(name = "Attribute")
     protected List<Attribute> attribute;
     @XmlElement(name = "InternalElement")
     protected List<InternalElement> internalElement;
+    @XmlElement(name = "ExternalInterface")
+    protected List<Attribute> externalInterface;
     @XmlElement(name = "SupportedRoleClass")
     protected SupportedRoleClass supportedRoleClass;
     @XmlElement(name = "InternalLink")

@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
 import java.io.File;
+import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -11,7 +12,10 @@ import javax.xml.bind.Unmarshaller;
 
 import org.testng.annotations.Test;
 
+import generated.Attribute;
 import generated.CAEXFile;
+import generated.InstanceHierarchy;
+import generated.InternalElement;
 import utilities.UtilityA;
 
 public class TestInitialization {
@@ -34,10 +38,24 @@ public class TestInitialization {
      * @throws JAXBException
      */
     @Test
-    public void unmarshall() throws JAXBException {
+    public void TestUnmarshall() throws JAXBException {
 	JAXBContext context = JAXBContext.newInstance(CAEXFile.class);
 	Unmarshaller unmarshaller = context.createUnmarshaller();
 	CAEXFile caexFile = (CAEXFile) unmarshaller.unmarshal(new File(pathToAml));
 	assertNotNull(caexFile, "caexFile was not Found. Please give the right Path to the Manifest.aml");
+	List<InstanceHierarchy> instanceHierarchies = caexFile.getInstanceHierarchy();
+	InstanceHierarchy instanceHierarchy = new InstanceHierarchy();
+	for (InstanceHierarchy instanceHierarchy2 : instanceHierarchies) {
+	    String name = instanceHierarchy2.getName();
+	    if (name.equalsIgnoreCase("HMI")) {
+		instanceHierarchy = instanceHierarchy2;
+		break;
+	    }
+	}
+	assertNotNull(instanceHierarchy);
+	InternalElement internalElement = instanceHierarchy.getInternalElement().get(0);
+	Attribute attribute = internalElement.getAttribute().get(0);
+	String value = attribute.getValue();
+	assertNotNull(value);
     }
 }

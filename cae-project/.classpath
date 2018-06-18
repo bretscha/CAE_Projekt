@@ -33,6 +33,5 @@
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/UserInterface"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/Utilities"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/abpma/OneDrive/Dokumente/1UNI/8 Semester/CAE-Project/Documente/folder_2018-06-09__05-55-25__885/r43ples_exe/r43ples_exe/r43ples-0.8.8-jar-with-dependencies.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

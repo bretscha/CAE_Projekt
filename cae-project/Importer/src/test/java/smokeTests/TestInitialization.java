@@ -12,10 +12,10 @@ import javax.xml.bind.Unmarshaller;
 
 import org.testng.annotations.Test;
 
-import generated.Attribute;
-import generated.CAEXFile;
-import generated.InstanceHierarchy;
-import generated.InternalElement;
+import generated.CAEXFile.Attribute;
+import generated.CAEXFile.CAEXFile;
+import generated.CAEXFile.InstanceHierarchy;
+import generated.CAEXFile.InternalElement;
 import utilities.UtilityA;
 
 public class TestInitialization {

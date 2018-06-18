@@ -1,8 +1,7 @@
-package generated;
+package generated.CAEXFile;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
@@ -18,7 +17,8 @@ import javax.xml.bind.annotation.XmlValue;
  * &lt;complexType>
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *       &lt;attribute name="RefRoleClassPath" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="AttributeDataType" type="{http://www.w3.org/2001/XMLSchema}string" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -27,13 +27,11 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "value" })
-public class SupportedRoleClass {
+@XmlType(name = "")
+public class Value {
 
     @XmlValue
     protected String value;
-    @XmlAttribute(name = "RefRoleClassPath")
-    protected String refRoleClassPath;
 
     /**
      * Gets the value of the value property.
@@ -42,7 +40,7 @@ public class SupportedRoleClass {
      * 
      */
     public String getValue() {
-        return value;
+	return value;
     }
 
     /**
@@ -53,28 +51,7 @@ public class SupportedRoleClass {
      * 
      */
     public void setValue(String value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the refRoleClassPath property.
-     * 
-     * @return possible object is {@link String }
-     * 
-     */
-    public String getRefRoleClassPath() {
-        return refRoleClassPath;
-    }
-
-    /**
-     * Sets the value of the refRoleClassPath property.
-     * 
-     * @param value
-     *            allowed object is {@link String }
-     * 
-     */
-    public void setRefRoleClassPath(String value) {
-        this.refRoleClassPath = value;
+	this.value = value;
     }
 
 }

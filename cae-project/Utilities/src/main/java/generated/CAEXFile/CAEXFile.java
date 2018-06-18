@@ -5,7 +5,7 @@
 // Generated on: 2018.06.10 at 01:52:01 PM CEST 
 //
 
-package generated;
+package generated.CAEXFile;
 
 import java.util.ArrayList;
 import java.util.List;

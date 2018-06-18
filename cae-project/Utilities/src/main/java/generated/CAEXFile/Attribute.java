@@ -1,4 +1,4 @@
-package generated;
+package generated.CAEXFile;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -28,10 +28,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "")
+@XmlType(name = "", propOrder = { "value" })
 public class Attribute {
-
-    @XmlElement(type = String.class)
+    @XmlElement(required = true)
     protected String value;
     @XmlAttribute(name = "Name")
     protected String name;

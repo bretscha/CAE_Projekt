@@ -23,5 +23,9 @@ public class OnClickListener implements ActionListener {
 	    GUI.actAssume();
 	else if (e.getActionCommand().equals("updateDbBttn"))
 	    GUI.actDbUpdate();
+	else if (e.getActionCommand().equals("inflate_module"))
+		Tab.inflateModule(e);
     }
+    
+    	
 }

@@ -1,17 +1,13 @@
 package org.UserInterface;
 
-import org.apache.jena.query.Query;
-import org.apache.jena.query.QueryExecutionFactory;
-import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.ResultSet;
-import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 
 public class SPARQL_Construct {
 
     private static String queryString;
     public static ResultSet result;
 
-    public static void generateQuery() {
+    public static String generateQuery() {
 	queryString = "CONSTRUCT { ";
 	queryString += GUI.newSubTxtField.getText() + " ";
 	queryString += GUI.newPreTxtField.getText() + " ";
@@ -28,18 +24,7 @@ public class SPARQL_Construct {
 	}
 
 	queryString += "} ";
-	// return?
-    }
-
-    public static void executeQuery() {
-
-	Query query = QueryFactory.create(queryString);
-
-	QueryEngineHTTP qexec = QueryExecutionFactory.createServiceRequest(GUI.dsLocation, query);
-
-	result = qexec.execSelect();
-
-	// return("");
+	return queryString;
     }
 
 }

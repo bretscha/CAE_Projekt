@@ -2,6 +2,8 @@ package org.UserInterface;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +13,12 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
@@ -27,7 +30,8 @@ import org.apache.jena.query.ResultSetFormatter;
 
 public class GUI {
 
-    private static JFrame frame = new JFrame("ToolBox");
+    public static JFrame frame = new JFrame("ToolBox");
+    public static JTabbedPane tabbedPane = new JTabbedPane();
     private static JPanel mainPanel = new JPanel();
     private static JPanel configPanel = new JPanel();
     private static JPanel importPanel = new JPanel();
@@ -40,13 +44,13 @@ public class GUI {
     private static JPanel changePanel = new JPanel();
     private static JPanel updateDbPanel = new JPanel();
 
-    private static OnClickListener onClickListener = new OnClickListener();
+    public static OnClickListener onClickListener = new OnClickListener();
 
     public static String dsLocation = new String("http://localhost:3030/ds/query");
     private static String impLocation = new String("Bitte Pfad angeben...");
     private static String expLocation = new String("Bitte Pfad angeben...");
     private static int filterNumber = 1;
-    private static String lastResult;
+    private static String lastResult = "construct";
     public static List<JTextField> subTxtList = new ArrayList<JTextField>();
     public static List<JTextField> preTxtList = new ArrayList<JTextField>();
     public static List<JTextField> objTxtList = new ArrayList<JTextField>();
@@ -54,7 +58,11 @@ public class GUI {
     public static JTextField newSubTxtField = new JTextField("new subject");
     public static JTextField newPreTxtField = new JTextField("new predicate");
     public static JTextField newObjTxtField = new JTextField("new object");
-
+	public static JTextField rowTxtField = new JTextField("Zeile ...");
+	public static JTextField colTxtField = new JTextField("Spalte ...");
+	public static JTextField newTxtField = new JTextField("neuer Wert ...");
+	
+	private static JButton assumeBttn = new JButton("Übernehmen!");
     private static JTextField confTxtField = new JTextField(dsLocation);
     private static JTextField impTxtField = new JTextField(impLocation);
     private static JTextField expTxtField = new JTextField(expLocation);
@@ -66,6 +74,7 @@ public class GUI {
     public static JCheckBox sortCheck = new JCheckBox("SORT BY: ");
     public static JTextField limTxtField = new JTextField("Limit eintragen");
     public static JComboBox<String> sortBox;
+    private static ResultSet result;
 
     public static void main(String[] args) {
 	buildGUI();
@@ -74,6 +83,8 @@ public class GUI {
     private static void buildGUI() {
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.setSize(1600, 800);
+	
+	frame.add(tabbedPane);
 
 	mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
@@ -99,7 +110,8 @@ public class GUI {
 	mainPanel.add(updateDbPanel);
 
 	JScrollPane scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-	frame.add(scrollPane);
+	updateTabs();
+	tabbedPane.addTab("Main", scrollPane);
 	frame.setVisible(true);
     }
 
@@ -226,16 +238,8 @@ public class GUI {
     }
 
     public static void actSelect() {
-	String error = SPARQL_Select.generateQuery();
-	if (!error.isEmpty()) {
-	    JOptionPane.showMessageDialog(frame, error);
-	    return;
-	}
-	error = SPARQL_Select.executeQuery();
-	if (!error.isEmpty()) {
-	    JOptionPane.showMessageDialog(frame, error);
-	    return;
-	}
+	String query = SPARQL_Select.generateQuery();
+	result = Query_Execute.executeQuery(query);
 	lastResult = "select";
 	updateTable();
     }
@@ -253,15 +257,13 @@ public class GUI {
     }
 
     public static void actConstruct() {
-	SPARQL_Construct.generateQuery();
-	SPARQL_Construct.executeQuery();
+	String query = SPARQL_Construct.generateQuery();
+	result = Query_Execute.executeQuery(query);
 	lastResult = "construct";
 	updateTable();
     }
 
     private static void updateTable() {
-
-	ResultSet result = SPARQL_Select.result;
 
 	List<QuerySolution> list = ResultSetFormatter.toList(result);
 
@@ -290,33 +292,37 @@ public class GUI {
 	    res_obj_data.clear();
 
 	    for (int j = 0; j < list.size(); j++) {
-		if (sub_name.charAt(0) == '?' || lastResult.equals("construct")) {
-		    res_sub_data.add(list.get(j).get(sub_name).toString());
+		if (sub_name.charAt(0) == '?') {
+		    String data = list.get(j).get(sub_name).toString();
+		    if(data == null) data = "";
+			res_sub_data.add(data);
 		}
-		if (pre_name.charAt(0) == '?' || lastResult.equals("construct")) {
-		    res_pre_data.add(list.get(j).get(pre_name).toString());
+		if (pre_name.charAt(0) == '?') {
+			String data = list.get(j).get(pre_name).toString();
+		    if(data == null) data = "";
+		    res_pre_data.add(data);
 		}
-		if (obj_name.charAt(0) == '?' || lastResult.equals("construct")) {
-		    res_obj_data.add(list.get(j).get(obj_name).toString());
+		if (obj_name.charAt(0) == '?') {
+			String data = list.get(j).get(obj_name).toString();
+			if(data == null) data = "";
+		    res_obj_data.add(data);
 		}
 	    }
-	    if (sub_name.charAt(0) == '?' || lastResult.equals("construct")) {
+	    if (sub_name.charAt(0) == '?') {
 		sub_data = new Vector<String>(res_sub_data.size());
 		sub_data.addAll(res_sub_data);
 		tableModel.addColumn(sub_name, sub_data);
 	    }
-	    if (pre_name.charAt(0) == '?' || lastResult.equals("construct")) {
+	    if (pre_name.charAt(0) == '?') {
 		pre_data = new Vector<String>(res_pre_data.size());
 		pre_data.addAll(res_pre_data);
 		tableModel.addColumn(pre_name, pre_data);
 	    }
-	    if (obj_name.charAt(0) == '?' || lastResult.equals("construct")) {
+	    if (obj_name.charAt(0) == '?') {
 		obj_data = new Vector<String>(res_obj_data.size());
 		obj_data.addAll(res_obj_data);
 		tableModel.addColumn(obj_name, obj_data);
 	    }
-	    if (lastResult.equals("construct"))
-		break;
 	}
 
 	table.setModel(tableModel);
@@ -336,10 +342,6 @@ public class GUI {
     }
 
     private static void buildChangePanel() {
-	JTextField rowTxtField = new JTextField("Zeile ...");
-	JTextField colTxtField = new JTextField("Spalte ...");
-	JTextField newTxtField = new JTextField("neuer Wert ...");
-	JButton assumeBttn = new JButton("Übernehmen!");
 	assumeBttn.addActionListener(onClickListener);
 	assumeBttn.setActionCommand("assumeBttn");
 	changePanel.add(rowTxtField);
@@ -361,19 +363,25 @@ public class GUI {
     public static void actDbUpdate() {
 	// tbd
     }
+    
+    private static void updateTabs() {
+    	ArrayList<Tab> tabsList = new ArrayList<Tab>();
+    	//query = ...;
+    	//for ...
+    	
+    	Tab tab = new Tab("label", "name");
+    	tabsList.add(tab);
+    	tabbedPane.addTab("name", tab.scrollPane);
+//    	tab.drawLines();
+    	tabbedPane.repaint();
+    }
 
     private static void validateMainPanel() {
 	if (lastResult.equals("construct"))
-	    updateBttn.setEnabled(false);
+	    assumeBttn.setEnabled(false);
 	else
-	    updateBttn.setEnabled(true);
+	    assumeBttn.setEnabled(true);
 	mainPanel.validate();
-	mainPanel.updateUI();
 	frame.validate();
     }
 }
-
-/*
- * Transparenter Button: confBttn.setOpaque(false);
- * confBttn.setContentAreaFilled(false);
- */

@@ -1,10 +1,6 @@
 package org.UserInterface;
 
-import org.apache.jena.query.Query;
-import org.apache.jena.query.QueryExecutionFactory;
-import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.ResultSet;
-import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 
 public class SPARQL_Select {
 
@@ -49,17 +45,7 @@ public class SPARQL_Select {
 	    queryString += "SORTBY " + GUI.sortBox.getSelectedItem();
 	}
 
-	return ("");
+	return queryString;
     }
 
-    public static String executeQuery() {
-
-	Query query = QueryFactory.create(queryString);
-
-	QueryEngineHTTP qexec = QueryExecutionFactory.createServiceRequest(GUI.dsLocation, query);
-
-	result = qexec.execSelect();
-
-	return ("");
-    }
 }

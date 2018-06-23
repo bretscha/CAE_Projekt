@@ -1,6 +1,5 @@
 package org.UserInterface;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -8,18 +7,14 @@ import java.awt.Graphics2D;
 import java.awt.Insets;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
-import java.awt.geom.Line2D;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
-import javax.swing.JRootPane;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingUtilities;
@@ -30,7 +25,7 @@ public class Tab {
 	private static String name;
 	private static JPanel layer1 = new JPanel();
 	public static JPanel layer11 = new JPanel();
-	private static HashMap<JButton, DataHelper> BttnMap = new HashMap<JButton, DataHelper>();
+	private static HashMap<JButton, DataHelper> bttnMap = new HashMap<JButton, DataHelper>();
 	public static HashMap<JButton, ArrayList<JButton>> connMap = new HashMap<JButton, ArrayList<JButton>>();
     public static GlassPane glassPane = new GlassPane();
 
@@ -55,15 +50,25 @@ public class Tab {
 		layer11.setAlignmentY(Component.TOP_ALIGNMENT);
 		layer11.add(module1);
 		layer1.add(layer11);
-		BttnMap.put(module1, new DataHelper(label, layer11));
+		bttnMap.put(module1, new DataHelper(label, layer11, false));
+		
+	}
+	
+	public static void moduleClicked(ActionEvent e) {
+		JButton sourceBttn = (JButton) e.getSource();
+		if(bttnMap.get(sourceBttn).inflated) {
+			deflateModule(sourceBttn);
+		} else {
+			inflateModule(sourceBttn);
+		}
 		
 	}
 
-	public static void inflateModule(ActionEvent e) {
+	private static void inflateModule(JButton sourceBttn) {
 		
-		JButton sourceBttn = (JButton) e.getSource();
-		String label = BttnMap.get(sourceBttn).label;
-		JPanel currentPanel = BttnMap.get(sourceBttn).panel;
+		
+		String label = bttnMap.get(sourceBttn).label;
+		JPanel sourcePanel = bttnMap.get(sourceBttn).parentPanel;
 		
 		JPanel layer = new JPanel();
 		layer.setLayout(new BoxLayout(layer, BoxLayout.X_AXIS));
@@ -95,12 +100,13 @@ public class Tab {
 			subLayer.setLayout(new BoxLayout(subLayer, BoxLayout.Y_AXIS));
 			subLayer.setAlignmentY(Component.TOP_ALIGNMENT);
 			subLayer.add(button);
-			BttnMap.put(button, new DataHelper("label aus result", subLayer));
+			bttnMap.put(button, new DataHelper("label aus result", subLayer, false));
 			layer.add(subLayer);
 			layer.add(Box.createRigidArea(new Dimension(40,0)));
 			}
-		currentPanel.add(Box.createRigidArea(new Dimension(0,100)));
-		currentPanel.add(layer);
+		bttnMap.get(sourceBttn).inflated = true;
+		sourcePanel.add(Box.createRigidArea(new Dimension(0,100)));
+		sourcePanel.add(layer);
 		connMap.put(sourceBttn, destBttns);
 		
 		layer1.revalidate();	
@@ -111,17 +117,42 @@ public class Tab {
 		 * usw...
 		 */
 		
-	}	
+	}
+	
+	private static void deflateModule(JButton sourceBttn) {
+		connMapCleaner(sourceBttn);
+		connMap.remove(sourceBttn);
+		JPanel sourcePanel = bttnMap.get(sourceBttn).parentPanel;
+		int size = sourcePanel.getComponentCount();
+		for(int i = size-1; i > 0; i--) {
+			sourcePanel.remove(i);
+		}
+		layer1.revalidate();
+	}
+	
+	private static void connMapCleaner(JButton sourceBttn) {
+		ArrayList<JButton> btnList = connMap.get(sourceBttn);
+		if(btnList != null) {
+			for(JButton btn : btnList) {
+				connMapCleaner(btn);
+			}
+		} else {
+			connMap.remove(sourceBttn);
+		}
+		
+	}
 }
 
 class DataHelper {
 	
 	public String label;
-	public JPanel panel;
+	public JPanel parentPanel;
+	public boolean inflated;
 
-	public DataHelper(String label, JPanel panelNumber) {
+	public DataHelper(String label, JPanel parentPanel, boolean inflated) {
 		this.label = label;
-		this.panel = panelNumber;
+		this.parentPanel = parentPanel;
+		this.inflated = inflated;
 	}
 	
 }

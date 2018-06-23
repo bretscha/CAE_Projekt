@@ -2,8 +2,6 @@ package org.UserInterface;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +11,6 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -44,22 +41,58 @@ public class GUI {
     private static JPanel changePanel = new JPanel();
     private static JPanel updateDbPanel = new JPanel();
 
+    /**
+     * Click Listener for all buttons
+     */
     public static OnClickListener onClickListener = new OnClickListener();
 
+    /**
+     * path to the SPARQL endpoint
+     */
     public static String dsLocation = new String("http://localhost:3030/ds/query");
     private static String impLocation = new String("Bitte Pfad angeben...");
     private static String expLocation = new String("Bitte Pfad angeben...");
     private static int filterNumber = 1;
     private static String lastResult = "construct";
-    public static List<JTextField> subTxtList = new ArrayList<JTextField>();
-    public static List<JTextField> preTxtList = new ArrayList<JTextField>();
-    public static List<JTextField> objTxtList = new ArrayList<JTextField>();
-    public static List<JCheckBox> optChkList = new ArrayList<JCheckBox>();
+    /**
+     * ArrayList that contains all subject-TextFields for the Sparql Query
+     */
+    public static ArrayList<JTextField> subTxtList = new ArrayList<JTextField>();
+    /**
+     * ArrayList that contains all predicate-TextFields for the Sparql Query
+     */
+    public static ArrayList<JTextField> preTxtList = new ArrayList<JTextField>();
+    /**
+     * ArrayList that contains all object-TextFields for the Sparql Query
+     */
+    public static ArrayList<JTextField> objTxtList = new ArrayList<JTextField>();
+    /**
+     * ArrayList that contains all "OPTIONAL"-CheckBoxes  for the Sparql Query
+     */
+    public static ArrayList<JCheckBox> optChkList = new ArrayList<JCheckBox>();
+    /**
+     * TextField that contains the new subject value for Triple -Construction 
+     */
     public static JTextField newSubTxtField = new JTextField("new subject");
+    /**
+     * TextField that contains the new predicate value for Triple-Construction 
+     */
     public static JTextField newPreTxtField = new JTextField("new predicate");
+    /**
+     * TextField that contains the new object value for Triple-Construction 
+     */
     public static JTextField newObjTxtField = new JTextField("new object");
+	/**
+	 * TextField to define the row of the result table for value changes
+	 */
 	public static JTextField rowTxtField = new JTextField("Zeile ...");
+	/**
+	 * TextField to define the column of the result table for value changes
+	 */
 	public static JTextField colTxtField = new JTextField("Spalte ...");
+	/**
+	 * TextField to define the new value of the cell defined by colTxtField and rowTxtField
+	 */
 	public static JTextField newTxtField = new JTextField("neuer Wert ...");
 	
 	private static JButton assumeBttn = new JButton("Übernehmen!");
@@ -76,6 +109,10 @@ public class GUI {
     public static JComboBox<String> sortBox;
     private static ResultSet result;
 
+    /**
+     * start method
+     * @param args start arguments
+     */
     public static void main(String[] args) {
 	buildGUI();
     }
@@ -125,6 +162,10 @@ public class GUI {
 	confBttn.addActionListener(onClickListener);
     }
 
+    /**
+     * Configuration button click method:
+     * stores the new value of Sparql endpoint in dsLocation
+     */
     public static void actConfig() {
 	dsLocation = confTxtField.getText().toString();
     }
@@ -139,6 +180,10 @@ public class GUI {
 	impBttn.addActionListener(onClickListener);
     }
 
+    /**
+     * Import button click method
+     * calls Importer start method
+     */
     public static void actImport() {
 	impLocation = impTxtField.getText().toString();
 	// startImport(impLocation);
@@ -157,6 +202,10 @@ public class GUI {
 	expBttn.addActionListener(onClickListener);
     }
 
+    /**
+     * Export button click method
+     * calls Ecporter start method
+     */
     public static void actExport() {
 	expLocation = expTxtField.getText().toString();
 	// String outType = expBox.getSelectedItem().toString();
@@ -215,12 +264,21 @@ public class GUI {
 	customizePanel.add(searchBttn);
     }
 
+    /**
+     * add Filter button click method
+     * adds new line for Sparql-Select-conditions
+     */
     public static void actAddFilter() {
 	filterNumber++;
 	buildQueryPanel();
 	validateMainPanel();
     }
 
+    /**
+     * remove Filter button click method
+     * removes a line for Sparql-Select-conditions
+     * 1 still remaining
+     */
     public static void actRemoFilter() {
 	filterNumber--;
 	int last = subTxtList.size() - 1;
@@ -237,6 +295,10 @@ public class GUI {
 	validateMainPanel();
     }
 
+    /**
+     * Spaqrl-select button click method
+     * generates and executes Sparql-select-query
+     */
     public static void actSelect() {
 	String query = SPARQL_Select.generateQuery();
 	result = Query_Execute.executeQuery(query);
@@ -256,6 +318,10 @@ public class GUI {
 	constructPanel.add(constructBttn);
     }
 
+    /**
+     * construct triples button click method
+     * generates new triples using Sparql-select-conditions
+     */
     public static void actConstruct() {
 	String query = SPARQL_Construct.generateQuery();
 	result = Query_Execute.executeQuery(query);

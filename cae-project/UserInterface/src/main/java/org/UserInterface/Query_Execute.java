@@ -7,16 +7,16 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 
 public class Query_Execute {
-	
-    public static ResultSet executeQuery(String queryString) {
 
-	Query query = QueryFactory.create(queryString);
+	public static ResultSet executeQuery(String queryString) {
 
-	QueryEngineHTTP qexec = QueryExecutionFactory.createServiceRequest(GUI.dsLocation, query);
+		Query query = QueryFactory.create(queryString);
 
-	ResultSet result = qexec.execSelect();
+		QueryEngineHTTP qexec = QueryExecutionFactory.createServiceRequest(GUI.dsLocation, query);
 
-	return result;
-    }
+		ResultSet result = qexec.execSelect();
+
+		return result;
+	}
 
 }

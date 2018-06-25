@@ -4,29 +4,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class OnClickListener implements ActionListener {
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals("confBttn"))
+	public void actionPerformed(ActionEvent ae) {
+		if (ae.getSource().equals("confBttn"))
 			GUI.actConfig();
-		else if (e.getSource().equals("impBttn"))
+		else if (ae.getSource().equals("impBttn"))
 			GUI.actImport();
-		else if (e.getSource().equals("expBttn"))
+		else if (ae.getSource().equals("expBttn"))
 			GUI.actExport();
-		else if (e.getActionCommand().equals("addFilterBttn"))
+		else if (ae.getActionCommand().equals("addFilterBttn"))
 			GUI.actAddFilter();
-		else if (e.getActionCommand().equals("remoFilterBttn"))
+		else if (ae.getActionCommand().equals("remoFilterBttn"))
 			GUI.actRemoFilter();
-		else if (e.getActionCommand().equals("searchBttn"))
+		else if (ae.getActionCommand().equals("searchBttn"))
 			GUI.actSelect();
-		else if (e.getActionCommand().equals("constructBttn"))
+		else if (ae.getActionCommand().equals("constructBttn"))
 			GUI.actConstruct();
-		else if (e.getActionCommand().equals("assumeBttn"))
+		else if (ae.getActionCommand().equals("assumeBttn"))
 			GUI.actAssume();
-		else if (e.getActionCommand().equals("updateDbBttn"))
+		else if (ae.getActionCommand().equals("updateDbBttn"))
 			GUI.actDbUpdate();
-		else if (e.getActionCommand().equals("inflate_module")) {
-			GUI.tabbedPane.getSelectedIndex();
-			GUI.tabList.get(GUI.tabbedPane.getSelectedIndex());
-			GUI.tabList.get(GUI.tabbedPane.getSelectedIndex() - 1).moduleClicked(e);
-		}
 	}
 }

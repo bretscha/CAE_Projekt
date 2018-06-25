@@ -482,7 +482,7 @@ class GlassPane extends JComponent {
 		super.paintComponent(g);
 		Graphics2D g2D = (Graphics2D) g.create();
 
-		if (GUI.tabbedPane.getSelectedIndex() != 0) {
+		if (GUI.tabbedPane.getSelectedIndex() != 0 && GUI.tabList.get(GUI.tabbedPane.getSelectedIndex() - 1).layer1.isVisible()) {
 			for (JButton start : GUI.tabList.get(GUI.tabbedPane.getSelectedIndex() - 1).connMap.keySet()) {
 				for (JButton dest : GUI.tabList.get(GUI.tabbedPane.getSelectedIndex() - 1).connMap.get(start)) {
 					Window anch = SwingUtilities.getWindowAncestor(start);

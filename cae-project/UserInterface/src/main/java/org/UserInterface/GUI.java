@@ -32,10 +32,16 @@ import org.apache.jena.query.ResultSetFormatter;
 
 import utilities.Query_Execute;
 
+/**
+ * implements the main graphical user interface
+ */
 public class GUI {
 
     private static JFrame frame = new JFrame("ToolBox");
     private static GlassPane glassPane = new GlassPane();
+    /**
+     * Pane in which all scollPanes of Tab.class instances will be placed
+     */
     public static JTabbedPane tabbedPane = new JTabbedPane();
     private static JPanel mainPanel = new JPanel();
     private static JPanel configPanel = new JPanel();
@@ -55,9 +61,9 @@ public class GUI {
     public OnClickListener onClickListener = new OnClickListener();
 
     /**
-     * path to the SPARQL endpoint
+     * path to the SPARQL end point
      */
-    private static String dsLocation = new String("http://localhost:3030/ds/query");
+    private static String dsLocation = new String("http://localhost:3030/ds/");
     private static String impLocation = new String("Bitte Pfad angeben...");
     private static String expLocation = new String("Bitte Pfad angeben...");
     private static int filterNumber = 1;
@@ -103,6 +109,9 @@ public class GUI {
      * rowTxtField
      */
     public static JTextField newTxtField = new JTextField("neuer Wert ...");
+    /**
+     * ArrayList that stores all visible Tabs
+     */
     public static ArrayList<Tab> tabList = new ArrayList<Tab>();
 
     private static JButton assumeBttn = new JButton("Übernehmen!");
@@ -113,12 +122,27 @@ public class GUI {
     private static JComboBox<String> expBox;
     private static JTable table;
     private static JButton updateBttn = new JButton("Datenbank akualisieren!");
+    /**
+     * CheckBox for applying a "LIMIT"-filter for the SPARQL query generator
+     */
     public static JCheckBox limCheck = new JCheckBox("LIMIT: ");
+    /**
+     * heckBox for applying a "SORT-BY"-filter for the SPARQL query generator
+     */
     public static JCheckBox sortCheck = new JCheckBox("SORT BY: ");
+    /**
+     * TextField to define the "LIMIT"-filter value 
+     */
     public static JTextField limTxtField = new JTextField("Limit eintragen");
+    /**
+     * ComboBox for some "SORT-BY" possibilities 
+     */
     public static JComboBox<String> sortBox;
     private static ResultSet result;
 
+    /**
+     * Constructor for building up the main gui frame
+     */
     public void buildGUI() {
 	JScrollPane scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 	tabbedPane.addTab("Main", scrollPane);
@@ -154,14 +178,6 @@ public class GUI {
 	mainPanel.add(updateDbPanel);
 
 	updateTabs();
-    }
-
-    public static String getDsLocation() {
-	return dsLocation;
-    }
-
-    public static void setDsLocation(String dsLocation) {
-	GUI.dsLocation = dsLocation;
     }
 
     private void buildConfigPanel() {
@@ -308,7 +324,7 @@ public class GUI {
      */
     public static void actSelect() {
 	String query = SPARQL_Select.generateQuery();
-	result = Query_Execute.executeQuery(getDsLocation(), query);
+	result = Query_Execute.executeQuery(dsLocation, query);
 	lastResult = "select";
 	updateTable();
     }
@@ -331,7 +347,7 @@ public class GUI {
      */
     public static void actConstruct() {
 	String query = SPARQL_Construct.generateQuery();
-	result = Query_Execute.executeQuery(getDsLocation(), query);
+	result = Query_Execute.executeQuery(dsLocation, query);
 	lastResult = "construct";
 	updateTable();
     }

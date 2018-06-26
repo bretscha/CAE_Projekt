@@ -1,11 +1,18 @@
 package projectLauncher;
 
-import javax.xml.bind.JAXBException;
+import org.UserInterface.GUI;
 
 public class projectLauncher {
 
-    public static void main(String[] args) throws JAXBException {
-
+    /**
+     * start method
+     * 
+     * @param args
+     *            start arguments
+     */
+    public static void main(String[] args) {
+	GUI gui = new GUI();
+	gui.buildGUI();
     }
 
 }

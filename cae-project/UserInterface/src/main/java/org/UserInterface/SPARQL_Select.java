@@ -1,12 +1,15 @@
 package org.UserInterface;
 
-import org.apache.jena.query.ResultSet;
-
+/**
+ * implements a method that generates a SPARQL Select Query
+ */
 public class SPARQL_Select {
 
 	private static String queryString;
-	public static ResultSet result;
 
+	/**
+	 * @return the generated query as a String
+	 */
 	public static String generateQuery() {
 		queryString = "SELECT ";
 
@@ -33,7 +36,7 @@ public class SPARQL_Select {
 				queryString += "OPTIONAL ";
 			queryString += "{ " + GUI.subTxtList.get(i).getText() + " ";
 			queryString += GUI.preTxtList.get(i).getText() + " ";
-			queryString += GUI.objTxtList.get(i).getText() + " . } ";
+			queryString += GUI.objTxtList.get(i).getText() + " . } "; // was ist mit dem Punkt???
 		}
 
 		queryString += "} ";

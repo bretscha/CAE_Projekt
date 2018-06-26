@@ -22,23 +22,47 @@ import javax.swing.SwingUtilities;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
 
+/**
+ * implements the view to the plant topology and some functions for changing and
+ * combining it
+ */
 public class Tab {
 
+	/**
+	 * lowest layer which will be placed on the tappedPane in the main frame
+	 */
 	public JScrollPane scrollPane;
 	private JPanel mainPanel = new JPanel();
 	private String name;
 	private String label;
+	/**
+	 * lowest layer for button-tree-structure
+	 */
 	public JPanel layer1 = new JPanel();
 	private JPanel upperPanel = new JPanel();
 	private JTree tree;
 	private DefaultMutableTreeNode topNode;
 	private JPanel layer11 = new JPanel();
 	private HashMap<JButton, DataHelper> bttnMap = new HashMap<JButton, DataHelper>();
+	/**
+	 * HashMap that stores all visible buttons (modules/devices) and the properly
+	 * buttons in the next layer of the plant topology
+	 */
 	public HashMap<JButton, ArrayList<JButton>> connMap = new HashMap<JButton, ArrayList<JButton>>();
 	private MouseListener mouseListener;
 	private JPopupMenu popUpMenu;
 	private Component lastRightClick;
 
+	/**
+	 * Constructor for a new Tab
+	 * 
+	 * @param gui
+	 *            main graphical user interface class
+	 * @param label
+	 *            unambiguously identifier for a button (module/device)
+	 * @param name
+	 *            name of the button (module/device)
+	 */
 	public Tab(GUI gui, String label, String name) {
 
 		this.name = name;
@@ -129,56 +153,56 @@ public class Tab {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				
+
 			}
 
 		});
 		popUpMenu.add(menuItem);
-		
+
 		menuItem = new JMenuItem("... mit dieser Komponente verbinden");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				
+
 			}
 
 		});
 		popUpMenu.add(menuItem);
-		
+
 		menuItem = new JMenuItem("Verbindung entfernen zu ...");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				
+
 			}
 
 		});
 		popUpMenu.add(menuItem);
-		
+
 		menuItem = new JMenuItem("... Verbindung zu dieser Komponente entfernen");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				
+
 			}
 
 		});
 		popUpMenu.add(menuItem);
-		
+
 		menuItem = new JMenuItem("Mehr Informationen anzeigen");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				
+
 			}
 
 		});
 		popUpMenu.add(menuItem);
-		
+
 	}
 
 	private void initMouseListener() {
@@ -219,7 +243,7 @@ public class Tab {
 		};
 	}
 
-	public void moduleClicked(Component source) {
+	private void moduleClicked(Component source) {
 		if (source.getClass() == JButton.class) {
 			if (bttnMap.get(source).inflated) {
 				deflateBttn((JButton) source);

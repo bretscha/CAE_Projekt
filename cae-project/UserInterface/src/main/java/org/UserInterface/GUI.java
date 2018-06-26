@@ -33,10 +33,16 @@ import org.apache.jena.query.ResultSetFormatter;
 import Importer.ImporterBase;
 import utilities.Query_Execute;
 
+/**
+ * implements the main graphical user interface
+ */
 public class GUI {
 
     private static JFrame frame = new JFrame("ToolBox");
     private static GlassPane glassPane = new GlassPane();
+    /**
+     * Pane in which all scollPanes of Tab.class instances will be placed
+     */
     public static JTabbedPane tabbedPane = new JTabbedPane();
     private static JPanel mainPanel = new JPanel();
     private static JPanel configPanel = new JPanel();
@@ -112,6 +118,9 @@ public class GUI {
      * rowTxtField
      */
     public static JTextField newTxtField = new JTextField("neuer Wert ...");
+    /**
+     * ArrayList that stores all visible Tabs
+     */
     public static ArrayList<Tab> tabList = new ArrayList<Tab>();
 
     private static JButton assumeBttn = new JButton("Übernehmen!");
@@ -122,13 +131,28 @@ public class GUI {
     private static JComboBox<String> expBox;
     private static JTable table;
     private static JButton updateBttn = new JButton("Datenbank akualisieren!");
+    /**
+     * CheckBox for applying a "LIMIT"-filter for the SPARQL query generator
+     */
     public static JCheckBox limCheck = new JCheckBox("LIMIT: ");
+    /**
+     * heckBox for applying a "SORT-BY"-filter for the SPARQL query generator
+     */
     public static JCheckBox sortCheck = new JCheckBox("SORT BY: ");
+    /**
+     * TextField to define the "LIMIT"-filter value
+     */
     public static JTextField limTxtField = new JTextField("Limit eintragen");
+    /**
+     * ComboBox for some "SORT-BY" possibilities
+     */
     public static JComboBox<String> sortBox;
     private static ResultSet result;
 
-    public void buildGUI() {
+    /**
+     * Constructor for building up the main gui frame
+     */
+    public GUI() {
 	JScrollPane scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 	tabbedPane.addTab("Main", scrollPane);
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

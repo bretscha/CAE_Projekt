@@ -30,6 +30,7 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
 
+import Importer.ImporterBase;
 import utilities.Query_Execute;
 
 public class GUI {
@@ -53,13 +54,21 @@ public class GUI {
      * Click Listener for all buttons
      */
     public OnClickListener onClickListener = new OnClickListener();
+    private static ImporterBase importerBase;
 
     /**
      * path to the SPARQL endpoint
      */
     private static String dsLocation = new String("http://localhost:3030/ds/query");
-    private static String impLocation = new String("Bitte Pfad angeben...");
-    private static String expLocation = new String("Bitte Pfad angeben...");
+    // Bitte Pfad angeben...
+    private static String impLocation = "";
+    // Bitte Pfad angeben...
+    private static String expLocation = "";
+    // Bitte Pfad angeben...
+    private static String mappingLocation = "";
+    // Bitte Pfad angeben...
+    private static String rdfImportLocation = "";
+
     private static int filterNumber = 1;
     private static String lastResult = "construct";
     /**
@@ -154,6 +163,8 @@ public class GUI {
 	mainPanel.add(updateDbPanel);
 
 	updateTabs();
+
+	importerBase = new ImporterBase(impLocation, mappingLocation, rdfImportLocation);
     }
 
     public static String getDsLocation() {
@@ -197,7 +208,11 @@ public class GUI {
      */
     public static void actImport() {
 	impLocation = impTxtField.getText().toString();
-	// startImport(impLocation);
+	try {
+	    importerBase.doImport();
+	} catch (Exception e) {
+	    System.err.println(e);
+	}
     }
 
     private void buildExportPanel() {

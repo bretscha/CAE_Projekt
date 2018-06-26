@@ -20,12 +20,31 @@
 			<version>6.14.3</version>
 			<scope>test</scope>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-surefire-plugin</artifactId>
 			<version>2.21.0</version>
 			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-jdk14</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-nop</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.jena/apache-jena-libs -->
 		<dependency>
@@ -34,15 +53,16 @@
 			<version>3.7.0</version>
 			<type>pom</type>
 		</dependency>
-
 	</dependencies>
+
 
 	<modules>
 		<module>UserInterface</module>
-		<module>Importer</module>
 		<module>Exporter</module>
 		<module>ToolBox</module>
 		<module>Utilities</module>
+		<module>Importer</module>
+
 	</modules>
 	<build>
 		<plugins>

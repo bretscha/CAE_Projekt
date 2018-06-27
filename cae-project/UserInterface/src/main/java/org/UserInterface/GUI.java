@@ -236,7 +236,6 @@ public class GUI {
 	    importerBase.doImport();
 	} catch (Exception e) {
 	    System.err.println(e);
-
     }
     }
 

@@ -238,6 +238,7 @@ public class GUI {
 	    System.err.println(e);
 
     }
+    }
 
     private void buildExportPanel() {
 	JButton expBttn = new JButton("Export!");

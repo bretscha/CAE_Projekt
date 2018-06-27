@@ -227,14 +227,16 @@ public class GUI {
 	impBttn.addActionListener(onClickListener);
     }
 
-	/**
-	 * Export button click method calls Exporter start method
-	 */
-	public static void actExport() {
-		expLocation = expTxtField.getText().toString();
-		// String outType = expBox.getSelectedItem().toString();
-		// startExporter(expLocation, outType);
-	}
+    /**
+     * Import button click method calls Importer start method
+     */
+    public static void actImport() {
+	impLocation = impTxtField.getText().toString();
+	try {
+	    importerBase.doImport();
+	} catch (Exception e) {
+	    System.err.println(e);
+
     }
 
     private void buildExportPanel() {

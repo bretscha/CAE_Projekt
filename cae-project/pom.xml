@@ -53,19 +53,6 @@
 			<version>3.7.0</version>
 			<type>pom</type>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.daverog.tripliser</groupId>
-			<artifactId>tripliser</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE -->
-		<dependency>
-			<groupId>net.sf.saxon</groupId>
-			<artifactId>Saxon-HE</artifactId>
-			<version>9.8.0-12</version>
-		</dependency>
-
 	</dependencies>
 
 

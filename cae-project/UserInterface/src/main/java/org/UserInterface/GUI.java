@@ -6,9 +6,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridLayout;
 import java.awt.Window;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -20,6 +17,7 @@ import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
@@ -32,8 +30,6 @@ import javax.swing.table.DefaultTableModel;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.update.UpdateExecutionFactory;
 import org.apache.jena.update.UpdateFactory;
 import org.apache.jena.update.UpdateProcessor;
@@ -256,7 +252,7 @@ public class GUI {
 
 		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
 		exeProc.execute();
-		
+
 		updateTabs();
 	}
 
@@ -488,8 +484,137 @@ public class GUI {
 		changePanel.add(assumeBttn);
 	}
 
+	/**
+	 * deletes the old value and replaces it with the new value directly in the graph
+	 */
 	public static void actAssume() {
-		// tbd
+		int intRow = 0;
+		int intCol = 0;
+		try {
+			intRow = Integer.parseInt(rowTxtField.getText());
+			intCol = Integer.parseInt(colTxtField.getText());
+
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(frame, "Nur Zahlen eingeben!");
+			return;
+		}
+		String oldValue = table.getValueAt(intRow, intCol).toString();
+		String colName = table.getColumnName(intCol);
+		String newValue = newTxtField.getText();
+		
+		System.out.println(colName);
+
+/*		String deleteString = "DELETE WHERE { ";
+
+		for (int i = 0; i < GUI.subTxtList.size(); i++) {
+			if (GUI.optChkList.get(i).isSelected())
+				deleteString += "OPTIONAL ";
+			deleteString += "{ ";
+			String sub = GUI.subTxtList.get(i).getText();
+			if (sub.equals(colName))
+				deleteString += oldValue + " ";
+			else
+				deleteString += sub + " ";
+
+			String pre = GUI.preTxtList.get(i).getText();
+			if (sub.equals(colName))
+				deleteString += oldValue + " ";
+			else
+				deleteString += pre + " ";
+
+			String obj = GUI.objTxtList.get(i).getText();
+			if (sub.equals(colName))
+				deleteString += oldValue + " . ";
+			else
+				deleteString += obj + " . } ";
+		}
+		deleteString += "} ";
+
+		UpdateRequest req = UpdateFactory.create();
+		req.add(deleteString);
+
+		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
+		exeProc.execute();*/
+
+		boolean sub_flag = false;
+		boolean pre_flag = false;
+		boolean obj_flag = false;
+
+		int i = 0;
+		for (JTextField field : subTxtList) {
+			if (field.getText().equals(colName)) {
+				sub_flag = true;
+				break;
+			}
+			i++;
+		}
+		if (!sub_flag) {
+			i = 0;
+			for (JTextField field : preTxtList) {
+				if (field.getText().equals(colName)) {
+					pre_flag = true;
+					break;
+				}
+				i++;
+			}
+		}
+		if (!pre_flag) {
+			i = 0;
+			for (JTextField field : objTxtList) {
+				if (field.getText().equals(colName)) {
+					obj_flag = true;
+					break;
+				}
+				i++;
+			}
+		}
+		
+		System.out.println(i);
+		System.out.println(sub_flag);
+		System.out.println(pre_flag);
+		System.out.println(obj_flag);
+
+		String updateString = "INSERT { ";
+		if (sub_flag)
+			updateString += newValue + " " + preTxtList.get(i).getText() + " " + objTxtList.get(i).getText() + " } ";
+		else if (pre_flag)
+			updateString += subTxtList.get(i).getText() + " " + newValue + " " + objTxtList.get(i).getText() + " } ";
+		else if (obj_flag)
+			updateString += subTxtList.get(i).getText() + " " + preTxtList.get(i).getText() + " \"" + newValue + "\" } ";
+		
+		updateString += "WHERE { ";
+		
+		for (i = 0; i < GUI.subTxtList.size(); i++) {
+			if (GUI.optChkList.get(i).isSelected())
+				updateString += "OPTIONAL ";
+			updateString += "{ ";
+			String sub = GUI.subTxtList.get(i).getText();
+			if (sub.equals(colName))
+				updateString += oldValue + " ";
+			else
+				updateString += sub + " ";
+
+			String pre = GUI.preTxtList.get(i).getText();
+			if (sub.equals(colName))
+				updateString += oldValue + " ";
+			else
+				updateString += pre + " ";
+
+			String obj = GUI.objTxtList.get(i).getText();
+			if (sub.equals(colName))
+				updateString += oldValue + " . ";
+			else
+				updateString += obj + " . } ";
+		}
+
+		updateString += "} ";
+		
+		UpdateRequest req = UpdateFactory.create();
+		req.add(updateString);
+
+		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
+		exeProc.execute();
+
 	}
 
 	private void buildUpdateDbPanel() {

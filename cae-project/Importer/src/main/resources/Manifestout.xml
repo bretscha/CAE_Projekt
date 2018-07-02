@@ -8,5 +8,101 @@
       <caex:schemaVersion>2.15</caex:schemaVersion>
       <caex:xSISchemaLocation>CAEX_ClassModel_V2.15.xsd</caex:xSISchemaLocation>
       <caex:additionalInformation>2.0</caex:additionalInformation>
+      <caex:instanceHierarchy>
+         <caex:InstanceHierarchy rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
+            <caex:name>HMI</caex:name>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Bedienbild</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPHMISUCLib/Picture</caex:refBaseSystemUnitPath>
+                  <caex:iD>f741f2a0-ba55-49b0-9566-5c0c8349b855</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Ablassen</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
+                  <caex:iD>96251aed-c32f-4a24-bf62-148687895035</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Fuellen</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
+                  <caex:iD>e5cb4743-999e-4fd0-aaac-d809de3a7ca9</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>CAE_AC500</caex:name>
+                  <caex:iD>404f0950-059b-443a-b15f-d2b884c844d2</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+         </caex:InstanceHierarchy>
+      </caex:instanceHierarchy>
+      <caex:instanceHierarchy>
+         <caex:InstanceHierarchy rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
+            <caex:name>Services</caex:name>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Bedienbild</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPHMISUCLib/Picture</caex:refBaseSystemUnitPath>
+                  <caex:iD>f741f2a0-ba55-49b0-9566-5c0c8349b855</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Ablassen</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
+                  <caex:iD>96251aed-c32f-4a24-bf62-148687895035</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Fuellen</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
+                  <caex:iD>e5cb4743-999e-4fd0-aaac-d809de3a7ca9</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>CAE_AC500</caex:name>
+                  <caex:iD>404f0950-059b-443a-b15f-d2b884c844d2</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+         </caex:InstanceHierarchy>
+      </caex:instanceHierarchy>
+      <caex:instanceHierarchy>
+         <caex:InstanceHierarchy rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
+            <caex:name>ModuleTypePackage</caex:name>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Bedienbild</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPHMISUCLib/Picture</caex:refBaseSystemUnitPath>
+                  <caex:iD>f741f2a0-ba55-49b0-9566-5c0c8349b855</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Ablassen</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
+                  <caex:iD>96251aed-c32f-4a24-bf62-148687895035</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>Fuellen</caex:name>
+                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
+                  <caex:iD>e5cb4743-999e-4fd0-aaac-d809de3a7ca9</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+            <caex:internalElement>
+               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                  <caex:name>CAE_AC500</caex:name>
+                  <caex:iD>404f0950-059b-443a-b15f-d2b884c844d2</caex:iD>
+               </caex:InternalElement>
+            </caex:internalElement>
+         </caex:InstanceHierarchy>
+      </caex:instanceHierarchy>
    </caex:CAEXFile>
 </rdf:RDF>

@@ -19,15 +19,41 @@
 				<caex:schemaVersion><xsl:value-of select="/CAEXFile/@SchemaVersion" /></caex:schemaVersion>
 				<caex:xSISchemaLocation><xsl:value-of select="/CAEXFile/@xsi:noNamespaceSchemaLocation" /></caex:xSISchemaLocation>
 				<xsl:apply-templates select="/CAEXFile/AdditionalInformation"/>
+				<xsl:apply-templates select="/CAEXFile/InstanceHierarchy"/>
 			</caex:CAEXFile>
 		</rdf:RDF> 
 	</xsl:template>
+
 	<!-- AdditionalInformation Template -->
 	<xsl:template match="/CAEXFile/AdditionalInformation">
 		<caex:additionalInformation><xsl:value-of select="/CAEXFile/AdditionalInformation/@AutomationMLVersion" /></caex:additionalInformation>
-
 	</xsl:template>
 
+	<!-- InstanceHierarchy Template -->
+	<xsl:template match="/CAEXFile/InstanceHierarchy">
+		<!-- hasinstanceHierarchy -->
+		<caex:instanceHierarchy>
+			<!-- the InstanceHierarchy -->
+			<caex:InstanceHierarchy rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
+				<caex:name><xsl:value-of select="./@Name" /></caex:name>
+				<xsl:apply-templates select="/CAEXFile/InstanceHierarchy/InternalElement"/>
+			</caex:InstanceHierarchy>
+		</caex:instanceHierarchy>
+	</xsl:template>
+
+	<!-- InternalElement Template -->
+	<xsl:template match="/CAEXFile/InstanceHierarchy/InternalElement">
+		<caex:internalElement>
+			<caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+				<caex:name><xsl:value-of select="./@Name" /></caex:name>
+				<xsl:if test="./@RefBaseSystemUnitPath != ''">
+					<caex:refBaseSystemUnitPath><xsl:value-of select="./@RefBaseSystemUnitPath" /></caex:refBaseSystemUnitPath>
+				</xsl:if>
+				<caex:iD><xsl:value-of select="./@ID" /></caex:iD>
+			</caex:InternalElement>
+		</caex:internalElement>
+
+	</xsl:template>
 
 
 

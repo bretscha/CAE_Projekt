@@ -9,6 +9,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import javax.swing.AbstractButton;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -153,7 +155,7 @@ public class Tab {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-
+				
 			}
 
 		});
@@ -170,7 +172,7 @@ public class Tab {
 		});
 		popUpMenu.add(menuItem);
 
-		menuItem = new JMenuItem("Verbindung entfernen zu ...");
+		menuItem = new JMenuItem("Verbindung zu vorheriger Ebene entfernen");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
@@ -181,7 +183,7 @@ public class Tab {
 		});
 		popUpMenu.add(menuItem);
 
-		menuItem = new JMenuItem("... Verbindung zu dieser Komponente entfernen");
+		menuItem = new JMenuItem("Verbindung zu folgender Ebene entfernen");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
@@ -197,6 +199,11 @@ public class Tab {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
+				if (lastRightClick.getClass() == JButton.class) {
+					System.out.println(((JButton) lastRightClick).getText());
+				} else {
+					System.out.println(((DefaultMutableTreeNode) ((JTree) lastRightClick).getSelectionPath().getLastPathComponent()).toString());
+				}
 
 			}
 

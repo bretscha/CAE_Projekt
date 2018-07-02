@@ -3,6 +3,11 @@
 	<name>cae-project</name>
 	<comment></comment>
 	<projects>
+		<project>Exporter</project>
+		<project>Importer</project>
+		<project>ToolBox</project>
+		<project>UserInterface</project>
+		<project>Utilities</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -26,5 +26,7 @@ public class OnClickListener implements ActionListener {
 			GUI.actAssume();
 		else if (ae.getActionCommand().equals("updateDbBttn"))
 			GUI.actDbUpdate();
+		else if (ae.getActionCommand().equals("assumeNewCell")) 
+			GUI.actNewCell();
 	}
 }

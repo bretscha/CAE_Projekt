@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xsd="https://www.w3.org/TR/xmlschema11-2/#"
+         xmlns:caex="http://data.ifs.tuwien.ac.at/aml/ontology#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <caex:CAEXFile rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#CAEXFile">
+      <caex:fileName>Manifest.aml</caex:fileName>
+      <caex:schemaVersion>2.15</caex:schemaVersion>
+      <caex:xSISchemaLocation>CAEX_ClassModel_V2.15.xsd</caex:xSISchemaLocation>
+      <caex:additionalInformation>2.0</caex:additionalInformation>
+   </caex:CAEXFile>
+</rdf:RDF>

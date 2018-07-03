@@ -7,102 +7,2092 @@
       <caex:fileName>Manifest.aml</caex:fileName>
       <caex:schemaVersion>2.15</caex:schemaVersion>
       <caex:xSISchemaLocation>CAEX_ClassModel_V2.15.xsd</caex:xSISchemaLocation>
-      <caex:additionalInformation>2.0</caex:additionalInformation>
       <caex:instanceHierarchy>
-         <caex:InstanceHierarchy rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
+         <caex:InstanceHierarchy rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
             <caex:name>HMI</caex:name>
             <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+               <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
                   <caex:name>Bedienbild</caex:name>
                   <caex:refBaseSystemUnitPath>MTPHMISUCLib/Picture</caex:refBaseSystemUnitPath>
                   <caex:iD>f741f2a0-ba55-49b0-9566-5c0c8349b855</caex:iD>
-               </caex:InternalElement>
-            </caex:internalElement>
-            <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
-                  <caex:name>Ablassen</caex:name>
-                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
-                  <caex:iD>96251aed-c32f-4a24-bf62-148687895035</caex:iD>
-               </caex:InternalElement>
-            </caex:internalElement>
-            <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
-                  <caex:name>Fuellen</caex:name>
-                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
-                  <caex:iD>e5cb4743-999e-4fd0-aaac-d809de3a7ca9</caex:iD>
-               </caex:InternalElement>
-            </caex:internalElement>
-            <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
-                  <caex:name>CAE_AC500</caex:name>
-                  <caex:iD>404f0950-059b-443a-b15f-d2b884c844d2</caex:iD>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>Width</caex:name>
+                        <caex:attributeDataType>xs:Integer</caex:attributeDataType>
+                        <caex:value>800</caex:value>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>Height</caex:name>
+                        <caex:attributeDataType>xs:Integer</caex:attributeDataType>
+                        <caex:value>600</caex:value>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>HierarchyLevel</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value>0</caex:value>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>PL4</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/Connection/Pipe</caex:refBaseSystemUnitPath>
+                        <caex:iD>70b11af3-4701-4cc6-88a4-20af36b71d90</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Edgepath</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>616,295;616,292;444,292;</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>c7cc5add-3d8b-4a8e-aa7f-245fed8b6ac9</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>444</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>291</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle2</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>8022b98c-c835-484d-8641-b46d3c32c571</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>615</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>295</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>PL3</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/Connection/Pipe</caex:refBaseSystemUnitPath>
+                        <caex:iD>d9343e4a-6ca9-4aeb-92ff-efc6178d5c91</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Edgepath</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>430,206;430,249;392,249;392,292;412,292;</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>99b6071f-2b9a-4018-87bd-af4fbcca3601</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>429</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>206</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle2</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>d7376b64-542c-48cb-a3f4-3bacd8482390</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>411</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>291</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>PL2</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/Connection/Pipe</caex:refBaseSystemUnitPath>
+                        <caex:iD>9459c97a-7c3a-4f13-988b-b06c18f48d60</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Edgepath</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>288,178;348,178;348,158;408,158;</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>40f853a5-30b6-4120-866d-23ae92128544</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>288</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>178</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle2</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>2a9a6482-df8e-4604-a7bd-dc09664a0e25</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>408</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>157</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>PL1</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/Connection/Pipe</caex:refBaseSystemUnitPath>
+                        <caex:iD>cc37d7a0-f3c6-469a-a8b4-426ab07a6c3a</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Edgepath</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>176,175;211,175;211,178;246,178;</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>29de1c25-d8d8-41a6-b414-7a07d3377e90</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>175</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>175</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle2</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>8dfcf92e-e81c-4654-839c-750d3ac2ef26</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>246</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>178</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>PL0</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/Connection/Pipe</caex:refBaseSystemUnitPath>
+                        <caex:iD>c1b24b32-dba6-4c8b-a677-ccdc47f48095</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Edgepath</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>30,174;30,175;142,175;</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>bf12c965-8592-4788-9f33-029955c4c8a9</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>29</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>174</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle2</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>0a8707dc-9a4a-47b2-8340-82e5fe1f4b53</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>142</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>175</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>Ausgang</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/TopologyObject/Termination/Sink</caex:refBaseSystemUnitPath>
+                        <caex:iD>d2f11f77-726e-4526-ac4d-192374a447c3</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>X</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>599</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Y</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>284</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>98af484d-6592-4937-ab2f-be0cbef8ecc0</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>615</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>295</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>V002</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/VisualObject</caex:refBaseSystemUnitPath>
+                        <caex:iD>e769d6dc-ac98-41a8-b6b3-c05e9c98e399</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Width</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>33</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Height</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>25</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>X</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>411</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Y</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>279</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Rotation</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>0</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassVersion</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>9.1</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassClassificationClass</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>37010203</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassIRDI</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value>b2698b8c-fc63-4120-a23d-5ebad13fc6e4</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>V002_N1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>55b16dad-4823-46b4-a713-ca91f59c52a5</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>444</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>291</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>V002_N0</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>26aebe25-0999-47b8-8dde-097618e1cd66</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>411</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>291</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>B001</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/VisualObject</caex:refBaseSystemUnitPath>
+                        <caex:iD>fd2f9977-3d04-4ec2-b457-d979f86ebde4</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Width</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>41</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Height</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>79</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>X</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>408</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Y</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>127</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Rotation</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>0</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassVersion</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>9.1</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassClassificationClass</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>36030101</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassIRDI</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value>832e968a-4cc9-4ff9-8c38-a43c1d247597</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>B001_N1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>713cb3f0-f7bf-422d-9e18-cc0179f0a92a</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>429</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>206</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>B001_N0</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>bbd9b089-9928-409b-8625-d7c664c81d37</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>408</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>157</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>P001</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/VisualObject</caex:refBaseSystemUnitPath>
+                        <caex:iD>ad2c9c85-bc2c-4a03-9657-cc2e5358f78b</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Width</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>42</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Height</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>42</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>X</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>246</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Y</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>157</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Rotation</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>0</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassVersion</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>9.1</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassClassificationClass</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>36410000</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassIRDI</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value>07bf972e-7b93-456d-af89-b552332bb4cd</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>P001_N1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>fdd738b4-6ef9-4e83-8d97-51fa50af596e</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>288</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>178</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>P001_N0</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>0e3f60a7-6b0d-4012-b34e-a976565b70b7</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>246</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>178</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>Eingang</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/TopologyObject/Termination/Source</caex:refBaseSystemUnitPath>
+                        <caex:iD>1112e408-2970-42ce-9fc7-6baa69ffe8ea</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>X</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>13</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Y</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>163</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>Nozzle</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>f0f2a5b5-6cdc-4310-9a13-c33411360f4e</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>29</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>174</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>V001</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPHMISUCLib/VisualObject</caex:refBaseSystemUnitPath>
+                        <caex:iD>1838aaf9-055c-424a-9b87-842ec76b0914</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Width</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>33</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Height</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>18</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>X</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>142</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Y</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>166</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>Rotation</caex:name>
+                              <caex:attributeDataType>xs:double</caex:attributeDataType>
+                              <caex:value>0</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassVersion</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>9.1</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassClassificationClass</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value>37010201</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>eClassIRDI</caex:name>
+                              <caex:attributeDataType>xs:string</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value>3e1f9960-d757-4510-bb7f-30e7cddcc430</caex:value>
+                           </caex:Attribute>
+                        </caex:attribute>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>V001_N1</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>c254b1c7-0e7f-4b6a-a18f-a0a2a209060d</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>175</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>175</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>V001_N0</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPHMISUCLib/PortObject/Nozzle</caex:refBaseSystemUnitPath>
+                              <caex:iD>ce1458af-d75f-4279-af8d-7447f64bb2d1</caex:iD>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>X</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>142</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                              <caex:attribute>
+                                 <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                    <caex:name>Y</caex:name>
+                                    <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                    <caex:value>175</caex:value>
+                                 </caex:Attribute>
+                              </caex:attribute>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
                </caex:InternalElement>
             </caex:internalElement>
          </caex:InstanceHierarchy>
       </caex:instanceHierarchy>
       <caex:instanceHierarchy>
-         <caex:InstanceHierarchy rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
+         <caex:InstanceHierarchy rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
             <caex:name>Services</caex:name>
             <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
-                  <caex:name>Bedienbild</caex:name>
-                  <caex:refBaseSystemUnitPath>MTPHMISUCLib/Picture</caex:refBaseSystemUnitPath>
-                  <caex:iD>f741f2a0-ba55-49b0-9566-5c0c8349b855</caex:iD>
-               </caex:InternalElement>
-            </caex:internalElement>
-            <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+               <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
                   <caex:name>Ablassen</caex:name>
                   <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
                   <caex:iD>96251aed-c32f-4a24-bf62-148687895035</caex:iD>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>OperationMode</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>Status</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>Command</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>ParameterStatus</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>ParameterCommand</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>RefID</caex:name>
+                        <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>RunningState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/RunningState</caex:refBaseSystemUnitPath>
+                        <caex:iD>a9e9398a-e1eb-46d3-ac3f-da8d5727b686</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>IdleState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/IdleState</caex:refBaseSystemUnitPath>
+                        <caex:iD>c5eee164-3b5a-452f-99d6-727f32fd036c</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>AbortingState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/AbortingState</caex:refBaseSystemUnitPath>
+                        <caex:iD>20001e0c-f0b4-4c1b-8b04-ea9bc036bc99</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>AbortedState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/AbortedState</caex:refBaseSystemUnitPath>
+                        <caex:iD>03037a7b-ec1d-4b5a-a583-580d3b6a2462</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>CompleteState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/CompleteState</caex:refBaseSystemUnitPath>
+                        <caex:iD>bed7de07-bbee-4cc4-b1a3-15102d9ea36f</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>Running</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/RunningState</caex:refBaseSystemUnitPath>
+                        <caex:iD>645bbe98-c9ac-41e0-866f-e8ee9761ab26</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>Idle</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/IdleState</caex:refBaseSystemUnitPath>
+                        <caex:iD>73f0bccf-1742-401d-bf1c-705773fd495c</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
                </caex:InternalElement>
             </caex:internalElement>
             <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+               <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
                   <caex:name>Fuellen</caex:name>
                   <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
                   <caex:iD>e5cb4743-999e-4fd0-aaac-d809de3a7ca9</caex:iD>
-               </caex:InternalElement>
-            </caex:internalElement>
-            <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
-                  <caex:name>CAE_AC500</caex:name>
-                  <caex:iD>404f0950-059b-443a-b15f-d2b884c844d2</caex:iD>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>OperationMode</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>Status</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>Command</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>ParameterStatus</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>ParameterCommand</caex:name>
+                        <caex:attributeDataType>xs:string</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:attribute>
+                     <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                        <caex:name>RefID</caex:name>
+                        <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                        <caex:value/>
+                     </caex:Attribute>
+                  </caex:attribute>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>RunningState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/RunningState</caex:refBaseSystemUnitPath>
+                        <caex:iD>6f711905-4ace-4533-84c5-c7a4345de25c</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>IdleState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/IdleState</caex:refBaseSystemUnitPath>
+                        <caex:iD>c632d855-72a5-4537-8305-c0d6bd2af671</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>AbortingState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/AbortingState</caex:refBaseSystemUnitPath>
+                        <caex:iD>5d15fc97-9533-4d93-a661-42f8b7a931cd</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>AbortedState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/AbortedState</caex:refBaseSystemUnitPath>
+                        <caex:iD>51b90063-58e5-4975-b80d-e0c6a89b9c26</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>CompleteState</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/CompleteState</caex:refBaseSystemUnitPath>
+                        <caex:iD>4290deb0-db48-42b6-b555-a2baa75b8018</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>Running</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/RunningState</caex:refBaseSystemUnitPath>
+                        <caex:iD>021a4997-34c2-4558-ab52-fa01e8009535</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>Idle</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPServiceSUCLib/ServiceState/IdleState</caex:refBaseSystemUnitPath>
+                        <caex:iD>8559ebd6-54da-4cb7-8a65-69bef39ab961</caex:iD>
+                        <caex:attribute>
+                           <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                              <caex:name>RefID</caex:name>
+                              <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                              <caex:value/>
+                           </caex:Attribute>
+                        </caex:attribute>
+                     </caex:InternalElement>
+                  </caex:internalElement>
                </caex:InternalElement>
             </caex:internalElement>
          </caex:InstanceHierarchy>
       </caex:instanceHierarchy>
       <caex:instanceHierarchy>
-         <caex:InstanceHierarchy rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
+         <caex:InstanceHierarchy rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InstanceHierarchy">
             <caex:name>ModuleTypePackage</caex:name>
             <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
-                  <caex:name>Bedienbild</caex:name>
-                  <caex:refBaseSystemUnitPath>MTPHMISUCLib/Picture</caex:refBaseSystemUnitPath>
-                  <caex:iD>f741f2a0-ba55-49b0-9566-5c0c8349b855</caex:iD>
-               </caex:InternalElement>
-            </caex:internalElement>
-            <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
-                  <caex:name>Ablassen</caex:name>
-                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
-                  <caex:iD>96251aed-c32f-4a24-bf62-148687895035</caex:iD>
-               </caex:InternalElement>
-            </caex:internalElement>
-            <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
-                  <caex:name>Fuellen</caex:name>
-                  <caex:refBaseSystemUnitPath>MTPServiceSUCLib/Service</caex:refBaseSystemUnitPath>
-                  <caex:iD>e5cb4743-999e-4fd0-aaac-d809de3a7ca9</caex:iD>
-               </caex:InternalElement>
-            </caex:internalElement>
-            <caex:internalElement>
-               <caex:InternalElement rdf:about="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+               <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
                   <caex:name>CAE_AC500</caex:name>
                   <caex:iD>404f0950-059b-443a-b15f-d2b884c844d2</caex:iD>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>Tag List</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPSUCLib/CommunicationSet</caex:refBaseSystemUnitPath>
+                        <caex:iD>3388546a-c143-4d00-a6af-5b653e68a9c8</caex:iD>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>SourceList</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPSUCLib/CommunicationSet/SourceList</caex:refBaseSystemUnitPath>
+                              <caex:iD>5f2665d9-32af-4a64-a06e-39f681aabb1e</caex:iD>
+                              <caex:internalElement>
+                                 <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                                    <caex:name>AC500OPC</caex:name>
+                                    <caex:refBaseSystemUnitPath>MTPCommunicationSUCLib/ServerAssembly/OPCUAServer</caex:refBaseSystemUnitPath>
+                                    <caex:iD>f3b840fd-9fd2-453f-ae2d-e4178daf2e18</caex:iD>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Endpoint</caex:name>
+                                          <caex:attributeDataType>xs:string</caex:attributeDataType>
+                                          <caex:value>opcda://localhost/CoDeSys.OPC.DA</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                 </caex:InternalElement>
+                              </caex:internalElement>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                        <caex:internalElement>
+                           <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                              <caex:name>InstanceList</caex:name>
+                              <caex:refBaseSystemUnitPath>MTPSUCLib/CommunicationSet/InstanceList</caex:refBaseSystemUnitPath>
+                              <caex:iD>1515d2b7-b676-4f5c-8b76-4f74f3e04f47</caex:iD>
+                              <caex:internalElement>
+                                 <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                                    <caex:name>V002</caex:name>
+                                    <caex:refBaseSystemUnitPath>MTPDataObjectSUCLib/DataAssembly/AnaVlv/LockAnaVlv/MonAnaVlv</caex:refBaseSystemUnitPath>
+                                    <caex:iD>a222fb9b-c27d-483b-9034-dc01be2d0d6e</caex:iD>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>d71f2e4c-055d-4dbe-9cf2-ddcf3595727a</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonSafePos</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>b026f29b-6f4d-4979-a655-959748c7bd7a</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonStatErr</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>bd485090-9e6a-4869-bcee-cf6582f06643</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonDynErr</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>5bce9836-ba5a-47c8-8762-b0a8ad6db89b</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonStatTi</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>fbfda5bd-8ffe-4ee6-9b9e-176e70029f96</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonDynTi</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>47e8879e-a7fc-495e-9db7-5f25e7f4cdd4</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosOpngFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>2d74b690-ae03-49d2-bf97-9099ef3bff44</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosClsngFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>f7385114-d626-406c-b99f-cf6bde8a8118</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosReachedFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>bd447d4f-4a3c-442b-bfce-0098b636ba8d</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosDeadband</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>5d30c851-81ab-4ea3-b4fe-afe7645e7d02</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosDiClose</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>028a229d-66db-4900-a644-5d096f5c5485</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosDiOpen</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>f5d89724-7728-42c0-876a-a5b444df2584</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonTiPos</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>e458a8e8-dae5-4e8d-beab-f1372fee55e3</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonPosErr</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>160939c2-dcda-4375-a4c1-73b7bb0c2dd6</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PermEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>83a7111a-964a-4727-a80d-7f59c3fce4a7</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Permit</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>33882348-407f-4214-aec6-5dc753af3bef</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>IntlEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>fc1a31a2-f6f7-41ea-bace-69215e9aca33</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Interlock</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>b0861d30-bc5d-4da2-838a-6b7326926085</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ProtEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>5a395ca2-8356-46f0-bb3b-a13ea4d8d28c</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Protect</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>a9e8fd59-477e-40f0-a0d0-ab81c2492bac</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ResetOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>7ad3d344-af51-4493-b4bf-0ea8d1dac5fa</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ResetLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>4024c12a-9a4e-4020-b88d-b963eeed697e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpenOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>452cae41-266a-4522-a21f-6fb0911f9aba</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>CloseOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>4f1d7c65-2c50-4ace-b754-4eaef079c3d1</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpenLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>c8e032ce-3252-4361-8ed4-9c1fb3fb4a66</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>CloseLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>08073548-e225-478c-be50-bf61b3ab8fd4</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosCtrl</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>50147836-de75-4b75-b10e-259ea32addb9</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpMode</caex:name>
+                                          <caex:attributeDataType>xs:unsignedLong</caex:attributeDataType>
+                                          <caex:value>df123737-90c0-4886-aa54-bc80be12fbc8</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosSclMin</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>b33ba136-f788-48b0-812a-1687d683715e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosSclMax</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>05dd0efc-2f3a-4fea-8e68-49633a64a0bd</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosUnit</caex:name>
+                                          <caex:attributeDataType>xs:integer</caex:attributeDataType>
+                                          <caex:value>b11db40b-2bd9-48c1-8c70-173d7ae3172a</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosInt</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>aaa327a9-ce97-45c4-87dc-bfbbc01d52d3</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosExt</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>2e508db5-48d8-4fb5-9179-19e7d03eda7a</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosMin</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>38dcd1d3-9caa-45ac-b7e0-85d229600fb2</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosMax</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>dcdbb35a-f812-42b7-aed9-79c2ae09e947</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>SafePos</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>7cc0898c-e88a-4a8b-93d8-c15b958c8cb3</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosFbk</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>d5caf6e0-2dfa-4ab9-8ecf-86f003f7bc3a</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpenFbkEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>e52da2b4-b666-42f8-992d-859231f8e91c</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>CloseFbkEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>83aead61-69ff-459a-bc43-86306383c3b8</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpenFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>65346e83-d0b9-4f9c-b1ee-e58460e6ecc0</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>CloseFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>0fb94c0c-af84-4de1-9bff-4d484719b9e5</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PosFbkEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>3abeff27-2128-44a8-bb67-3a4bbd322364</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Ctrl</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>99da2e2d-513f-4cc8-b9d1-c25d02c8b71e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OSLevel</caex:name>
+                                          <caex:attributeDataType>xs:byte</caex:attributeDataType>
+                                          <caex:value>d074e147-8b76-410b-a120-e9d2359bc354</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>WQC</caex:name>
+                                          <caex:attributeDataType>xs:byte</caex:attributeDataType>
+                                          <caex:value>f75a4f7c-e760-4578-84db-e5f3eb308419</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RefID</caex:name>
+                                          <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                                          <caex:value>b2698b8c-fc63-4120-a23d-5ebad13fc6e4</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                 </caex:InternalElement>
+                              </caex:internalElement>
+                              <caex:internalElement>
+                                 <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                                    <caex:name>V001</caex:name>
+                                    <caex:refBaseSystemUnitPath>MTPDataObjectSUCLib/DataAssembly/BinVlv/LockBinVlv/MonBinVlv</caex:refBaseSystemUnitPath>
+                                    <caex:iD>4da6431e-df35-499d-8efb-0ceb20eefe92</caex:iD>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>0c79cb0a-e202-46a6-8626-b3695bbc5ae5</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonSafePos</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>911e83cb-6dfd-4813-b01f-a0c721a066ad</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonStatErr</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>23171fa7-da34-45c6-800e-dd3e66b36e93</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonDynErr</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>bcfe3d9f-7d9c-4642-a63a-da508238d021</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonTiStat</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>b3010535-3471-47e5-8d11-4040d13e6b22</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonTiDyn</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>d9323f8b-162a-4907-b0a4-d274ee1a0f85</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PermEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>321cccef-d82f-4772-9831-329ce2a1be27</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Permit</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>a9d453d6-5382-439e-adc4-0809d76a4493</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>IntlEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>40cf3c1f-2fce-4ad8-bb30-3d6f89e47ef8</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Interlock</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>d89c98c1-7217-4476-9f67-ebb1e58afd75</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ProtEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>215d141d-9097-4f6a-b4ab-9bc78776b9ad</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Protect</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>954b7e88-5dad-480a-a1bb-563602e17334</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ResetOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>bdb4311a-36b6-4b0d-aa61-b6f2b15db697</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ResetLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>587ca378-b9fc-4c0d-a549-3be78ba21a12</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpenOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>19a80de3-21fb-4a04-a1bb-678a9e3621d4</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>CloseOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>ff59396f-c39a-4704-8e86-6eedbcc6c0f5</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpenLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>f36b89f3-32da-42bd-a7f6-7d47d69d365a</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>CloseLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>dcf36242-e6f6-4c60-aaf4-005f20416e3f</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Ctrl</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>f296ab16-b777-4a38-b091-fc2b74c04e4c</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpMode</caex:name>
+                                          <caex:attributeDataType>xs:unsignedLong</caex:attributeDataType>
+                                          <caex:value>183f9998-4fc6-4c15-8a83-1945acc450ae</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpenFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>33f8f374-0f2f-4d38-9fb1-023cd592a27e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>CloseFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>532fc21e-ab9e-4d4b-b8e7-47c5d61abfbd</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>SafePos</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>6b51136f-cd36-4756-81ec-510b59009b3e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpenFbkEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>c9381233-cae4-4346-8182-e1d3cbac6913</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>CloseFbkEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>f97fdd4b-f88a-42db-a53a-70e21f83ba69</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OSLevel</caex:name>
+                                          <caex:attributeDataType>xs:byte</caex:attributeDataType>
+                                          <caex:value>0170ac42-0667-4b5a-935c-62208ca73b7a</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>WQC</caex:name>
+                                          <caex:attributeDataType>xs:byte</caex:attributeDataType>
+                                          <caex:value>c85a75dc-d9ef-433f-8a7f-87c58ef315d1</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RefID</caex:name>
+                                          <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                                          <caex:value>3e1f9960-d757-4510-bb7f-30e7cddcc430</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                 </caex:InternalElement>
+                              </caex:internalElement>
+                              <caex:internalElement>
+                                 <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                                    <caex:name>P001</caex:name>
+                                    <caex:refBaseSystemUnitPath>MTPDataObjectSUCLib/DataAssembly/AnaDrv/LockAnaDrv/MonAnaDrv</caex:refBaseSystemUnitPath>
+                                    <caex:iD>a55b503b-e802-4067-9f3c-64976615a7cc</caex:iD>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>54ac3e01-d500-4947-bd60-0364d7037df1</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonSafePos</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>c8d97eca-e62a-41b9-ac74-7af7ef8bc1f9</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonStatErr</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>678a19f5-e30c-41d7-9779-8425d26c5f59</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonDynErr</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>42a51bbd-2805-49ff-a3db-a7c6514704bf</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonStatTi</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>def8d0b8-000b-40a1-aeca-46014496cfd0</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>MonDynTi</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>32b42267-7c17-4cbc-a6a4-ec3513f8eeaa</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmErr</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>158281ea-a514-4d8a-aebb-0fb77f406fc0</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmAHEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>93f4aab3-6378-4704-9132-5aec9026e7e9</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmALEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>f438ad40-0c1c-4f7d-8bea-c3c64b6cde5e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmAHAct</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>5260c308-10ad-4300-bfa4-0f9753d58461</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmALAct</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>ae856f3b-a4ed-4d74-baf9-bdc9522eb157</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmAHLim</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>815aa052-d784-4852-b4e5-04ecd7b0dd8e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmALLim</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>497d03e6-9f2e-499e-8b77-25dfdaf514d8</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>StartingFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>2da16e20-6bd0-40fc-8679-78243635b64b</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>StoppingFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>1bb906e8-48e8-4f66-a5ca-687b7326c329</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>PermEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>fa110e86-f9c3-4660-a784-a888cb3c56c4</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Permit</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>a622cac0-9eb8-4135-b7e3-f63620355f84</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>IntlEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>910fe664-362e-4f4e-92a3-28850dfcf14f</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Interlock</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>e4287c83-90a1-454a-97f6-7aae941b4220</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ProtEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>e99acbcb-aa36-4cb2-9842-52a9a2799c6c</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Protect</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>6f333f96-42e4-4dbe-9604-627083749362</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ResetOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>708972ff-9632-469a-bb3a-dc75c62cf78d</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>ResetLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>46c7f13f-cd94-4800-a57f-5c7b0b1c019e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>StopOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>3f84c0b7-dc5a-4b46-9186-96ac74dffb66</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>FwdOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>791f0402-dfe2-433c-9171-d0b4b76744d1</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RevOp</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>5a1a1573-932e-4c26-9c88-9831bb4feb8d</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>StopLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>b0d2e1e5-b00c-41c2-b057-613a44990cef</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>FwdLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>219b808b-53ea-40b8-a896-f4e7d859bba3</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RevLi</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>c9e9bb69-e3c4-4337-b305-2970ce574834</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>FwdCtrl</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>6666d7d2-a09c-46f4-87ca-b060bb1d9609</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RevCtrl</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>5bef9bf7-af00-4a8f-a312-c9dac1b60d9b</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OpMode</caex:name>
+                                          <caex:attributeDataType>xs:unsignedLong</caex:attributeDataType>
+                                          <caex:value>039b055d-a2d9-4d35-a001-d85fa4a66ed2</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RevFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>4819239f-04cb-4190-a931-d9d69a125982</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>FwdFbk</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>52767328-2c54-45ad-a3c5-f66030042ecd</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>FwdFbkEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>d356c039-27ed-4c40-bed1-b9a637eb7a5b</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RevFbkEn</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>a42981fb-6fad-4f49-9471-89ececb2e9c7</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Trip</caex:name>
+                                          <caex:attributeDataType>xs:boolean</caex:attributeDataType>
+                                          <caex:value>a3cb270c-4d34-4ce3-b28e-e5e43cdb35d9</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmSclMin</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>51f936b4-e72c-4385-a8f6-b2880237e35d</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmSclMax</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>cbe1875d-702e-4324-91ac-e102b3a6b0b1</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmUnit</caex:name>
+                                          <caex:attributeDataType>xs:integer</caex:attributeDataType>
+                                          <caex:value>37f04b07-8813-46b0-84b8-8aeb476f205d</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmInt</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>61c9d91b-9f4e-48cc-b32b-284541104751</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmExt</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>cf0d4aca-01ac-460a-9877-e6601e384174</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmMin</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>3f533a11-25bb-4bdc-8de5-ac8a2bdca2c7</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmMax</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>42056fcc-ad03-467c-b6a4-9e9e92711ed3</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>Rpm</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>a06ab641-37ba-42b7-88d9-71579cae73f9</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RpmFbk</caex:name>
+                                          <caex:attributeDataType>xs:double</caex:attributeDataType>
+                                          <caex:value>b8c98ca1-1930-4fd7-b342-286118770e4d</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>OSLevel</caex:name>
+                                          <caex:attributeDataType>xs:byte</caex:attributeDataType>
+                                          <caex:value>5a47204c-19c3-4bc8-829f-347f684e8d56</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>WQC</caex:name>
+                                          <caex:attributeDataType>xs:byte</caex:attributeDataType>
+                                          <caex:value>a64b50e5-ddde-416e-9e22-8c64e31a050e</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                    <caex:attribute>
+                                       <caex:Attribute rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#Attribute">
+                                          <caex:name>RefID</caex:name>
+                                          <caex:attributeDataType>xs:ID</caex:attributeDataType>
+                                          <caex:value>07bf972e-7b93-456d-af89-b552332bb4cd</caex:value>
+                                       </caex:Attribute>
+                                    </caex:attribute>
+                                 </caex:InternalElement>
+                              </caex:internalElement>
+                           </caex:InternalElement>
+                        </caex:internalElement>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>Services</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPSUCLib/MTPSet/ServiceSet</caex:refBaseSystemUnitPath>
+                        <caex:iD>3cf409bf-b9ea-4364-99f6-ca466efc4692</caex:iD>
+                     </caex:InternalElement>
+                  </caex:internalElement>
+                  <caex:internalElement>
+                     <caex:InternalElement rdf:resource="http://data.ifs.tuwien.ac.at/aml/ontology#InternalElement">
+                        <caex:name>HMIs</caex:name>
+                        <caex:refBaseSystemUnitPath>MTPSUCLib/MTPSet/HMISet</caex:refBaseSystemUnitPath>
+                        <caex:iD>d0258458-a474-4c8d-8b5e-fc8a431651c4</caex:iD>
+                     </caex:InternalElement>
+                  </caex:internalElement>
                </caex:InternalElement>
             </caex:internalElement>
          </caex:InstanceHierarchy>
       </caex:instanceHierarchy>
+      <caex:additionalInformation>2.0</caex:additionalInformation>
    </caex:CAEXFile>
 </rdf:RDF>

@@ -422,22 +422,31 @@ public class GUI {
 
 			for (int j = 0; j < list.size(); j++) {
 				if (sub_name.charAt(0) == '?') {
-					String data = list.get(j).get(sub_name).toString();
-					if (data == null)
-						data = "";
-					res_sub_data.add(data);
+					String data0 = list.get(j).toString();
+					String[] parts = data0.split("\\" + sub_name + " = ");
+					parts = parts[1].split(" \\)");
+					// String data = list.get(j).get(sub_name).toString();
+					if (parts[0] == null)
+						parts[0] = "";
+					res_sub_data.add(parts[0]);
 				}
 				if (pre_name.charAt(0) == '?') {
-					String data = list.get(j).get(pre_name).toString();
-					if (data == null)
-						data = "";
-					res_pre_data.add(data);
+					String data0 = list.get(j).toString();
+					String[] parts = data0.split("\\" + pre_name + " = ");
+					parts = parts[1].split(" \\)");
+					// String data = list.get(j).get(pre_name).toString();
+					if (parts[0] == null)
+						parts[0] = "";
+					res_pre_data.add(parts[0]);
 				}
 				if (obj_name.charAt(0) == '?') {
-					String data = list.get(j).get(obj_name).toString();
-					if (data == null)
-						data = "";
-					res_obj_data.add(data);
+					String data0 = list.get(j).toString();
+					String[] parts = data0.split("\\" + obj_name + " = ");
+					parts = parts[1].split(" \\)");
+					// String data = list.get(j).get(obj_name).toString();
+					if (parts[0] == null)
+						parts[0] = "";
+					res_obj_data.add(parts[0]);
 				}
 			}
 			if (sub_name.charAt(0) == '?') {
@@ -485,7 +494,8 @@ public class GUI {
 	}
 
 	/**
-	 * deletes the old value and replaces it with the new value directly in the graph
+	 * deletes the old value and replaces it with the new value directly in the
+	 * graph
 	 */
 	public static void actAssume() {
 		int intRow = 0;
@@ -501,40 +511,9 @@ public class GUI {
 		String oldValue = table.getValueAt(intRow, intCol).toString();
 		String colName = table.getColumnName(intCol);
 		String newValue = newTxtField.getText();
-		
-		System.out.println(colName);
 
-/*		String deleteString = "DELETE WHERE { ";
-
-		for (int i = 0; i < GUI.subTxtList.size(); i++) {
-			if (GUI.optChkList.get(i).isSelected())
-				deleteString += "OPTIONAL ";
-			deleteString += "{ ";
-			String sub = GUI.subTxtList.get(i).getText();
-			if (sub.equals(colName))
-				deleteString += oldValue + " ";
-			else
-				deleteString += sub + " ";
-
-			String pre = GUI.preTxtList.get(i).getText();
-			if (sub.equals(colName))
-				deleteString += oldValue + " ";
-			else
-				deleteString += pre + " ";
-
-			String obj = GUI.objTxtList.get(i).getText();
-			if (sub.equals(colName))
-				deleteString += oldValue + " . ";
-			else
-				deleteString += obj + " . } ";
-		}
-		deleteString += "} ";
-
-		UpdateRequest req = UpdateFactory.create();
-		req.add(deleteString);
-
-		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-		exeProc.execute();*/
+		if (oldValue.equals(newValue))
+			return;
 
 		boolean sub_flag = false;
 		boolean pre_flag = false;
@@ -568,11 +547,6 @@ public class GUI {
 				i++;
 			}
 		}
-		
-		System.out.println(i);
-		System.out.println(sub_flag);
-		System.out.println(pre_flag);
-		System.out.println(obj_flag);
 
 		String updateString = "INSERT { ";
 		if (sub_flag)
@@ -580,10 +554,10 @@ public class GUI {
 		else if (pre_flag)
 			updateString += subTxtList.get(i).getText() + " " + newValue + " " + objTxtList.get(i).getText() + " } ";
 		else if (obj_flag)
-			updateString += subTxtList.get(i).getText() + " " + preTxtList.get(i).getText() + " \"" + newValue + "\" } ";
-		
+			updateString += subTxtList.get(i).getText() + " " + preTxtList.get(i).getText() + newValue + " } ";
+
 		updateString += "WHERE { ";
-		
+
 		for (i = 0; i < GUI.subTxtList.size(); i++) {
 			if (GUI.optChkList.get(i).isSelected())
 				updateString += "OPTIONAL ";
@@ -595,25 +569,61 @@ public class GUI {
 				updateString += sub + " ";
 
 			String pre = GUI.preTxtList.get(i).getText();
-			if (sub.equals(colName))
+			if (pre.equals(colName))
 				updateString += oldValue + " ";
 			else
 				updateString += pre + " ";
 
 			String obj = GUI.objTxtList.get(i).getText();
-			if (sub.equals(colName))
-				updateString += oldValue + " . ";
+			if (obj.equals(colName))
+				updateString += oldValue + " . } ";
 			else
 				updateString += obj + " . } ";
 		}
 
 		updateString += "} ";
-		
+
 		UpdateRequest req = UpdateFactory.create();
 		req.add(updateString);
 
 		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
 		exeProc.execute();
+
+		String deleteString = "DELETE WHERE { ";
+
+		for (i = 0; i < GUI.subTxtList.size(); i++) {
+			if (GUI.optChkList.get(i).isSelected())
+				deleteString += "OPTIONAL { ";
+			String sub = GUI.subTxtList.get(i).getText();
+			if (sub.equals(colName))
+				deleteString += oldValue + " ";
+			else
+				deleteString += sub + " ";
+
+			String pre = GUI.preTxtList.get(i).getText();
+			if (pre.equals(colName))
+				deleteString += oldValue + " ";
+			else
+				deleteString += pre + " ";
+
+			String obj = GUI.objTxtList.get(i).getText();
+			if (obj.equals(colName))
+				deleteString += oldValue + " . ";
+			else
+				deleteString += obj + " . ";
+
+			if (GUI.optChkList.get(i).isSelected())
+				deleteString += " } ";
+		}
+		deleteString += "} ";
+
+		req = UpdateFactory.create();
+		req.add(deleteString);
+
+		exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
+		exeProc.execute();
+
+		actSelect();
 
 	}
 

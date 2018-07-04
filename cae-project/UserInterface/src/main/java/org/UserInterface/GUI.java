@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridLayout;
 import java.awt.Window;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -58,16 +59,12 @@ public class GUI {
 	private static JPanel queryPanel = new JPanel();
 	private static JPanel filterPanel = new JPanel();
 	private static JPanel customizePanel = new JPanel();
-	private static JPanel constructPanel = new JPanel();
 	private static JPanel tablePanel = new JPanel();
 	private static JPanel changePanel = new JPanel();
-	private static JPanel updateDbPanel = new JPanel();
+	private static JPanel insertPanel = new JPanel();
 	private static JPanel plusTab = new JPanel();
 
-	/**
-	 * Click Listener for all buttons
-	 */
-	public static OnClickListener onClickListener;
+	private static OnClickListener onClickListener;
 	private static ImporterBase importerBase;
 
 	/**
@@ -100,31 +97,12 @@ public class GUI {
 	 * ArrayList that contains all "OPTIONAL"-CheckBoxes for the Sparql Query
 	 */
 	public static ArrayList<JCheckBox> optChkList = new ArrayList<JCheckBox>();
-	/**
-	 * TextField that contains the new subject value for Triple -Construction
-	 */
-	public static JTextField newSubTxtField = new JTextField("new subject");
-	/**
-	 * TextField that contains the new predicate value for Triple-Construction
-	 */
-	public static JTextField newPreTxtField = new JTextField("new predicate");
-	/**
-	 * TextField that contains the new object value for Triple-Construction
-	 */
-	public static JTextField newObjTxtField = new JTextField("new object");
-	/**
-	 * TextField to define the row of the result table for value changes
-	 */
-	public static JTextField rowTxtField = new JTextField("Zeile ...");
-	/**
-	 * TextField to define the column of the result table for value changes
-	 */
-	public static JTextField colTxtField = new JTextField("Spalte ...");
-	/**
-	 * TextField to define the new value of the cell defined by colTxtField and
-	 * rowTxtField
-	 */
-	public static JTextField newTxtField = new JTextField("neuer Wert ...");
+	private static JTextField newSubTxtField = new JTextField("subject");
+	private static JTextField newPreTxtField = new JTextField("predicate");
+	private static JTextField newObjTxtField = new JTextField("object");
+	private static JTextField rowTxtField = new JTextField("Zeile ...");
+	private static JTextField colTxtField = new JTextField("Spalte ...");
+	private static JTextField newTxtField = new JTextField("neuer Wert ...");
 	/**
 	 * ArrayList that stores all visible Tabs
 	 */
@@ -137,7 +115,6 @@ public class GUI {
 	private static JButton remoFilterBttn = new JButton("Zusätzlichen Filter entfernen");
 	private static JComboBox<String> expBox;
 	private static JTable table;
-	private static JButton updateBttn = new JButton("Datenbank akualisieren!");
 	private static JTextField processCellName = new JTextField("Neuer Name der Anlage");
 	/**
 	 * CheckBox for applying a "LIMIT"-filter for the SPARQL query generator
@@ -188,14 +165,12 @@ public class GUI {
 		mainPanel.add(filterPanel);
 		buildCustomizePanel();
 		mainPanel.add(customizePanel);
-		buildConstructPanel();
-		mainPanel.add(constructPanel);
 		buildTablePanel();
 		mainPanel.add(tablePanel);
+		buildInsertPanel();
+		mainPanel.add(insertPanel);
 		buildChangePanel();
 		mainPanel.add(changePanel);
-		buildUpdateDbPanel();
-		mainPanel.add(updateDbPanel);
 
 		updateTabs();
 
@@ -369,29 +344,6 @@ public class GUI {
 		updateTable();
 	}
 
-	private void buildConstructPanel() {
-		JButton constructBttn = new JButton("Neue Tripel erstellen!");
-		constructBttn.addActionListener(onClickListener);
-		constructBttn.setActionCommand("constructBttn");
-		constructPanel.setLayout(new FlowLayout());
-		constructPanel.add(new JLabel("Neues Tripel erstellen aus:"));
-		constructPanel.add(newSubTxtField);
-		constructPanel.add(newPreTxtField);
-		constructPanel.add(newObjTxtField);
-		constructPanel.add(constructBttn);
-	}
-
-	/**
-	 * construct triples button click method generates new triples using
-	 * Sparql-select-conditions
-	 */
-	public static void actConstruct() {
-		String query = SPARQL_Construct.generateQuery();
-		result = Query_Execute.executeQuery(dsLocation, query);
-		lastResult = "construct";
-		updateTable();
-	}
-
 	private static void updateTable() {
 
 		List<QuerySolution> list = ResultSetFormatter.toList(result);
@@ -476,7 +428,21 @@ public class GUI {
 
 		DefaultTableModel tableModel = new DefaultTableModel(
 				new Object[] { "number", "subject1", "predicate1", "object1" }, 10);
-		table = new JTable(tableModel);
+		table = new JTable(tableModel) {
+			/**
+			 * Auto generated default serial ID
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public String getToolTipText(MouseEvent e) {
+				int row = rowAtPoint(e.getPoint());
+				int column = columnAtPoint(e.getPoint());
+
+				Object value = getValueAt(row, column);
+				return value == null ? null : value.toString();
+			}
+		};
+		;
 		table.setPreferredScrollableViewportSize(new Dimension(800, 160));
 		table.setEnabled(false);
 		table.getTableHeader().setReorderingAllowed(false);
@@ -584,10 +550,18 @@ public class GUI {
 		updateString += "} ";
 
 		UpdateRequest req = UpdateFactory.create();
-		req.add(updateString);
+		try {
+			req.add(updateString);
+		} catch (Exception e) {
+			stringError();
+		}
 
-		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-		exeProc.execute();
+		try {
+			UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
+			exeProc.execute();
+		} catch (Exception e) {
+			executeError();
+		}
 
 		String deleteString = "DELETE WHERE { ";
 
@@ -618,23 +592,91 @@ public class GUI {
 		deleteString += "} ";
 
 		req = UpdateFactory.create();
-		req.add(deleteString);
+		try {
+			req.add(deleteString);
+		} catch (Exception e) {
+			stringError();
+		}
 
-		exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-		exeProc.execute();
+		try {
+			UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
+			exeProc.execute();
+		} catch (Exception e) {
+			executeError();
+		}
 
 		actSelect();
+	}
+
+	private static void buildInsertPanel() {
+		JButton insertNewBttn = new JButton("Triple erstellen");
+		insertNewBttn.addActionListener(onClickListener);
+		insertNewBttn.setActionCommand("insertNew");
+		JButton deleteBttn = new JButton("Triple löschen");
+		deleteBttn.addActionListener(onClickListener);
+		deleteBttn.setActionCommand("deleteTriple");
+		// insertPanel.setLayout();
+		insertPanel.add(newSubTxtField);
+		insertPanel.add(newPreTxtField);
+		insertPanel.add(newObjTxtField);
+		insertPanel.add(insertNewBttn);
+		insertPanel.add(deleteBttn);
+	}
+
+	/**
+	 * adds a Triple to the graph
+	 */
+	public static void actInsertNew() {
+
+		String insertString = "INSERT DATA { " + newSubTxtField.getText() + " " + newPreTxtField.getText() + " "
+				+ newObjTxtField.getText() + " }";
+
+		UpdateRequest req = UpdateFactory.create();
+		try {
+			req.add(insertString);
+		} catch (Exception e) {
+			stringError();
+		}
+
+		try {
+			UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
+			exeProc.execute();
+		} catch (Exception e) {
+			executeError();
+		}
+	}
+
+	/**
+	 * deletes the Triple from the graph
+	 */
+	public static void actDeleteTriple() {
+		String deleteString = "DELETE DATA { " + newSubTxtField.getText() + " " + newPreTxtField.getText() + " "
+				+ newObjTxtField.getText() + " }";
+
+		UpdateRequest req = UpdateFactory.create();
+		try {
+			req.add(deleteString);
+		} catch (Exception e) {
+			stringError();
+		}
+
+		try {
+			UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
+			exeProc.execute();
+		} catch (Exception e) {
+			executeError();
+		}
 
 	}
 
-	private void buildUpdateDbPanel() {
-		updateBttn.addActionListener(onClickListener);
-		updateBttn.setActionCommand("updateDbBttn");
-		updateDbPanel.add(updateBttn);
+	private static void stringError() {
+		JOptionPane.showMessageDialog(frame,
+				"Fehler beim Erstellen des Query/Update Strings! /n Eingaben in den Textfeldern überprüfen und ToolTips beachten.");
 	}
 
-	public static void actDbUpdate() {
-		// tbd
+	private static void executeError() {
+		JOptionPane.showMessageDialog(frame,
+				"Fehler beim Ausführen des Befehls! /n Bitte Verbindung zum Server überprüfen.");
 	}
 
 	private static void updateTabs() {
@@ -643,8 +685,6 @@ public class GUI {
 		for (int i = tabbedPane.getTabCount() - 1; i > 0; i--) {
 			tabbedPane.remove(i);
 		}
-
-		String tabQuery = "SELECT ?g ?s ?o {GRAPH ?g{?s <> ";
 
 		Tab tab = new Tab(gui, "label", "name");
 		tabList.add(tab);
@@ -674,7 +714,7 @@ public class GUI {
 	 * new process cell is added to the graph
 	 */
 	public static void actNewCell() {
-		String newName = processCellName.getText();
+		processCellName.getText();
 		String update = "PREFIX mso: <http://eatld.et.tu-dresden.de/mso/> ";
 		update += "INSERT DATA { ";
 		update += "<http://example2.com> ";

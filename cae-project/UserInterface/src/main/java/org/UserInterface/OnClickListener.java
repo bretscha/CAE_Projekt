@@ -20,13 +20,13 @@ public class OnClickListener implements ActionListener {
 			GUI.actRemoFilter();
 		else if (ae.getActionCommand().equals("searchBttn"))
 			GUI.actSelect();
-		else if (ae.getActionCommand().equals("constructBttn"))
-			GUI.actConstruct();
+		else if (ae.getActionCommand().equals("insertNew"))
+			GUI.actInsertNew();
+		else if (ae.getActionCommand().equals("deleteTriple"))
+			GUI.actDeleteTriple();
 		else if (ae.getActionCommand().equals("assumeBttn"))
 			GUI.actAssume();
-		else if (ae.getActionCommand().equals("updateDbBttn"))
-			GUI.actDbUpdate();
-		else if (ae.getActionCommand().equals("assumeNewCell")) 
+		else if (ae.getActionCommand().equals("assumeNewCell"))
 			GUI.actNewCell();
 	}
 }

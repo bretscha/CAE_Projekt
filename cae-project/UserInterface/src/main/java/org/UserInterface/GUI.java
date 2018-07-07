@@ -36,6 +36,7 @@ import org.apache.jena.update.UpdateFactory;
 import org.apache.jena.update.UpdateProcessor;
 import org.apache.jena.update.UpdateRequest;
 
+import Exporter.ExporterBase;
 import Importer.ImporterBase;
 import utilities.Query_Execute;
 
@@ -66,6 +67,7 @@ public class GUI {
 
 	private static OnClickListener onClickListener;
 	private static ImporterBase importerBase;
+	private static ExporterBase exporterBase;
 
 	/**
 	 * path to the SPARQL endpoint
@@ -175,6 +177,7 @@ public class GUI {
 		updateTabs();
 
 		importerBase = new ImporterBase(impLocation, mappingLocation);
+		exporterBase = new ExporterBase(expLocation, mappingLocation);
 	}
 
 	private void buildConfigPanel() {
@@ -223,7 +226,7 @@ public class GUI {
 		// ***********************************************************************************************
 
 		req.add("LOAD <file:" + ImporterBase.getRdfOutputPath() + ">");
-		// req.add("LOAD <file:/home/christoph/Desktop/rdfout.ttl>"); //test
+		//req.add("LOAD <file:/home/christoph/Desktop/rdfout.ttl>"); //test
 
 		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
 		exeProc.execute();
@@ -249,8 +252,8 @@ public class GUI {
 	 */
 	public static void actExport() {
 		expLocation = expTxtField.getText().toString();
-		// String outType = expBox.getSelectedItem().toString();
-		// startExporter(expLocation, outType);
+		String outType = expBox.getSelectedItem().toString();
+		exporterBase.doExport(dsLocation, outType, expLocation);
 	}
 
 	private static void buildQueryPanel() {

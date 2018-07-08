@@ -8,9 +8,9 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 public class ExporterBase {
-    private String inputPath = "./Exporter/src/main/resources/in.xml";
-    private String xslPath = "./Exporter/src/main/resources/test.xsl";
-    private String outputPath = "./Exporter/src/main/resources/out.xml";
+    private String inputPath = "./Exporter/src/main/resources/exporter_in.xml";
+    private String xslPath = "./Exporter/src/main/resources/rdfToGraphML.xsl";
+    private String outputPath = "./Exporter/src/main/resources/exporter_out.xml";
     //private static final String graphMLPath = "./Exporter/src/main/resources/Manifestout.xml";
 
     /**

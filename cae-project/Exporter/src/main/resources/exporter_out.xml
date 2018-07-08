@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns:caex="http://data.ifs.tuwien.ac.at/aml/ontology#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rs="http://www.w3.org/2001/sw/DataAccess/tests/result-set#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://graphml.graphdrawing.org/xmlns">
+	<key id="node_label" for="node" attr.name="label"
+		attr.type="string" />
+	<key id="edge_label" for="edge" attr.name="label"
+		attr.type="string" />
+	<graph id="G" edgedefault="undirected">
+		<node id="Jovian">
+			<data key="node_label">Jovian</data>
+		</node>
+		<edge id="jupiter_to_Jovian" source="jupiter" target="Jovian">
+			<data key="edge_label">http://theuniverse.org/adjective</data>
+		</edge>
+		<node id="G2V">
+			<data key="node_label">G2V</data>
+		</node>
+		<edge id="sun_to_G2V" source="sun" target="G2V">
+			<data key="edge_label">http://theuniverse.org/spectralClass</data>
+		</edge>
+		<node id="63">
+			<data key="node_label">63</data>
+		</node>
+		<edge id="jupiter_to_63" source="jupiter" target="63">
+			<data key="edge_label">http://theuniverse.org/numberOfSatellites</data>
+		</edge>
+		<node id="http://theuniverse.org/Planet">
+			<data key="node_label">http://theuniverse.org/Planet</data>
+		</node>
+		<edge id="jupiter_to_http://theuniverse.org/Planet"
+			source="jupiter" target="http://theuniverse.org/Planet">
+			<data key="edge_label">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</data>
+		</edge>
+		<node id="jupiter">
+			<data key="node_label">Jupiter</data>
+		</node>
+		<node id="sun">
+			<data key="node_label">Sun</data>
+		</node>
+		<node id="http://theuniverse.org/Star">
+			<data key="node_label">http://theuniverse.org/Star</data>
+		</node>
+		<edge id="sun_to_http://theuniverse.org/Star" source="sun"
+			target="http://theuniverse.org/Star">
+			<data key="edge_label">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</data>
+		</edge>
+	</graph>
+</graphml>

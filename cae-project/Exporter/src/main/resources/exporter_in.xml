@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rs="http://www.w3.org/2001/sw/DataAccess/tests/result-set#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rs:ResultSet>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Jovian</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://theuniverse.org/adjective"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/jupiter#planet"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Sun</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/sun#star"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>G2V</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://theuniverse.org/spectralClass"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/sun#star"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >63</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://theuniverse.org/numberOfSatellites"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/jupiter#planet"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:resultVariable>p</rs:resultVariable>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://theuniverse.org/Planet"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/jupiter#planet"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>jupiter</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://theuniverse.org/id"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/jupiter#planet"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:resultVariable>s</rs:resultVariable>
+    <rs:resultVariable>o</rs:resultVariable>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Jupiter</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/jupiter#planet"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:size rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9</rs:size>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>sun</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://theuniverse.org/id"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/sun#star"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://theuniverse.org/Star"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://objects.theuniverse.org/sun#star"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+  </rs:ResultSet>
+</rdf:RDF>

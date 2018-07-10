@@ -67,6 +67,7 @@
 					</xsd:string>
 					<xsl:apply-templates select="./Equipment" />
 					<xsl:apply-templates select="./Armature" />
+					<xsl:apply-templates select="./Pipe" />
 				</mso:Unit>
 			</mso:hasUnit>
 
@@ -151,7 +152,28 @@
 	</xsl:template>
 
 	<!-- <xsl:template match="Vessel"> <rdfs:label><xsl:value-of select="./@label"/></rdfs:label> <xsd:string><xsl:value-of select="./@description"/></xsd:string> </xsl:template> -->
+	<xsl:template match="Pipe">
+		<!-- for each equipment > Scan for name > Set Template -->
+		<xsl:for-each select=".">
+		
+			<mso:has>
+				<mso:Pipe>
+						<rdf:label>
+							<xsl:value-of select="./@label" />
+						</rdf:label>
+						<rdf:label>
+							<xsl:value-of select="./@description" />
+						</rdf:label>
+						<mso:hasAllowableTemperature>
+							<xsl:value-of select="./@AllowableTemperature" />
+						</mso:hasAllowableTemperature>
+						<mso:hasAllowablePressure>
+							<xsl:value-of select="./@AllowablePressure" />
+						</mso:hasAllowablePressure>
+				</mso:Pipe>
+			</mso:has>
 
-
+		</xsl:for-each>
+	</xsl:template>
 
 </xsl:stylesheet>

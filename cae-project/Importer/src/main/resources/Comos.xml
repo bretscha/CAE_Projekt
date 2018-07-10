@@ -1,54 +1,22 @@
 <ComosXmlExport>
-  <Werk Fullname="=0">
-    <Anlage label="H1" description="Anlage">
-      <Teilanlage label="T1" description="Teilanlage">
-        <Apparate>
-          <Behälter label="C1" description="Einraumbehälter">
-            <pressure>
-            </pressure>
-            <temperature>
-            </temperature>
-            <QR-Code>
-            </QR-Code>
-          </Behälter>
-        </Apparate>
-        <Armaturen>
-          <Ventil label="Q1" description="Durchgangsventil (allg)">
-            <pressure>
-            </pressure>
-            <flow>
-            </flow>
-            <QR-Code>
-            </QR-Code>
-          </Ventil>
-          <Ventil label="Q2" description="Durchgangsventil (allg)">
-            <pressure>
-            </pressure>
-            <flow>
-            </flow>
-            <QR-Code>
-            </QR-Code>
-          </Ventil>
-        </Armaturen>
-      </Teilanlage>
-      <Teilanlage label="T2" description="Teilanlage">
-        <Apparate>
-          <Behälter label="C2" description="Einraumbehälter">
-            <pressure>
-            </pressure>
-            <temperature>
-            </temperature>
-            <QR-Code>
-            </QR-Code>
-          </Behälter>
-          <Pumpen label="G1" description="Kreiselpumpe">
-            <flow>
-            </flow>
-            <QR-Code>
-            </QR-Code>
-          </Pumpen>
-        </Apparate>
-      </Teilanlage>
-    </Anlage>
-  </Werk>
+  <Site name="=0" label="0" description="Werk/Gebäude/Produktion nach EN Standard">
+    <ProcessCell label="H1" description="Anlage">
+      <Unit label="T1" description="Teilanlage">
+        <Equipment label="C1" description="Einraumbehälter" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" InnerDiameter="" aggregateState="" Quality="100   %" />
+        <Armature label="Q1" description="Durchgangsventil (allg)" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Hand" Quality="100   %" material="" />
+        <Armature label="Q2" description="Magnetventil" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Magnet" Quality="100   %" material="" />
+        <Armature label="R1" description="2-Wege-Regelventil" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Kolben" Quality="100   %" material="" />
+        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
+        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
+        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
+        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
+      </Unit>
+      <Unit label="T2" description="Teilanlage">
+        <Equipment label="C1" description="Einraumbehälter" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" InnerDiameter="" aggregateState="" Quality="100   %" />
+        <Equipment label="G1" description="Kreiselpumpe" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" InnerDiameter="" aggregateState="" Quality="100   %" />
+        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
+        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
+      </Unit>
+    </ProcessCell>
+  </Site>
 </ComosXmlExport>

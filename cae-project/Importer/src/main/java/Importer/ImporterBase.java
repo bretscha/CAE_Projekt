@@ -34,6 +34,7 @@ public class ImporterBase {
 
     public void doImport() {
 	try {
+
 	    System.out.println("Writing RDF on new File: " + rdfOutputPath);
 	    Source xslt = new StreamSource(new File(xslPath));
 	    Source text = new StreamSource(new File(xmlPath));

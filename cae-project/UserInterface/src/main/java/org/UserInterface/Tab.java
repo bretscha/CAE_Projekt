@@ -50,6 +50,7 @@ public class Tab {
 	private String label;
 	private String type;
 	private Tab tab;
+	private String graph;
 	/**
 	 * lowest layer for button-tree-structure
 	 */
@@ -73,20 +74,20 @@ public class Tab {
 	/**
 	 * Constructor for a new Tab
 	 * 
-	 * @param gui
-	 *            main graphical user interface class
 	 * @param label
 	 *            unambiguously identifier for a button (module/device)
 	 * @param name
 	 *            name of the button (module/device)
 	 * @param type type of the first module
+	 * @param graph dataset graph uri
 	 */
-	public Tab(String label, String name, String type) {
+	public Tab(String label, String name, String type, String graph) {
 
 		this.name = name;
 		this.label = label;
 		this.type = type;
 		this.tab = this;
+		this.graph = graph;
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 		scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
 				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -184,7 +185,7 @@ public class Tab {
 									.getLastPathComponent()).toString(),
 							GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
 				}*/
-				GUI.newConnMap.put(lastRightClick, GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
+				GUI.newConnMap.put(lastRightClick, tab);
 			}
 
 		});
@@ -197,24 +198,24 @@ public class Tab {
 			public void actionPerformed(ActionEvent ae) {
 				String type = "";
 				String sub = "";
-				String graphName = GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex());
+				allResults = "";
 				
 				for (Object key : GUI.newConnMap.keySet()) {
 					if (key.getClass() == JButton.class) {
-						type = bttnMap.get(key).type;
+						type = GUI.newConnMap.get(key).bttnMap.get(key).type;
 						sub = ((JButton) key).getText();
 					} else {
 						type = treeMap.get(key).type;
 						sub = treeMap.get(key).name;
 					}
-					String[] parts = type.split("/");
+					String[] parts = type.split("/");//TODO
 					String newType = "";
 					int i;
 					for(i=0; i<parts.length-1; i++) {
-						newType += parts[i];
+						newType += parts[i] + "/";
 					}
-					newType += "has" + parts[i+1];
-					String updateString = "INSERT DATA { GRAPH " + graphName + " { " + ((JButton) lastRightClick).getText() + " " + newType + " " + sub + " }}"; //TODO testen
+					newType += "has" + parts[i];
+					String updateString = "INSERT DATA { GRAPH " + graph + " { " + ((JButton) lastRightClick).getText() + " " + newType + " " + sub + " }}"; //TODO testen
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 					findAll(sub);
 					try {
@@ -224,7 +225,7 @@ public class Tab {
 						p.close();
 					} catch (FileNotFoundException e) {
 					} 
-					updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.csv> INTO GRAPH " + graphName;
+					updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.csv> INTO GRAPH " + graph;
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 				}
 			}
@@ -285,7 +286,7 @@ public class Tab {
 	protected void findAll(String sub) {
 		String queryString = "SELECT ?p ?o WHERE { " + sub + " ?p ?o}";
 
-		ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString);
+		ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 		List<QuerySolution> list = ResultSetFormatter.toList(result);
 		for(QuerySolution sol : list) {
 			String obj = "< " + sol.get("?o").toString() + ">";
@@ -351,10 +352,9 @@ public class Tab {
 
 		String sub = lastComponent.toString();
 		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/hasPlant>", "<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>", "<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
-		String graph = GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex());
 		for (String pre : searchFor) {
 			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o }}";
-			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString);
+			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for(QuerySolution sol : resList) {
 				String type = "";
@@ -381,11 +381,10 @@ public class Tab {
 
 		String sub = sourceBttn.getText();
 		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/hasPlant>", "<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>", "<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
-		String graph = GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex());
 		HashMap<String, String> newBttnMap = new HashMap<String, String>();
 		for (String pre : searchFor) {
 			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o }}";
-			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString);
+			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for(QuerySolution sol : resList) {
 				String type = "";

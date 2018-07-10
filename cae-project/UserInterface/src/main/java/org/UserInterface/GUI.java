@@ -106,7 +106,7 @@ public class GUI {
 	/**
 	 * stores all modules which should be connected to a new plant/process cell
 	 */
-	public static HashMap<Object, String> newConnMap = new HashMap<Object, String>();
+	public static HashMap<Object, Tab> newConnMap = new HashMap<Object, Tab>();
 	private static JTextField newSubTxtField = new JTextField("subject");
 	private static JTextField newPreTxtField = new JTextField("predicate");
 	private static JTextField newObjTxtField = new JTextField("object");
@@ -164,7 +164,7 @@ public class GUI {
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
 		String queryString = "SELECT ?g WHERE {GRAPH ?g {}}";
-		ResultSet result = Query_Execute.executeQuery(dsLocation, queryString);
+		ResultSet result = Query_Execute.executeQuery(dsLocation, queryString, frame);
 
 		for (QuerySolution sol : ResultSetFormatter.toList(result)) {
 			graphList.add("<" + sol.get("?g").toString() + ">");
@@ -272,7 +272,7 @@ public class GUI {
 	public static void actExport() {
 		expLocation = expTxtField.getText().toString();
 		String outType = expBox.getSelectedItem().toString();
-		exporterBase.doExport(dsLocation, outType, expLocation);
+		exporterBase.doExport(dsLocation, outType, expLocation, frame);
 	}
 
 	private static void buildQueryPanel() {
@@ -361,7 +361,7 @@ public class GUI {
 	 */
 	public static void actSelect() {
 		String queryString = SPARQL_Select.generateQuery();
-		result = Query_Execute.executeQuery(dsLocation, queryString);
+		result = Query_Execute.executeQuery(dsLocation, queryString, frame);
 		lastResult = "select";
 		updateTable();
 	}
@@ -648,7 +648,7 @@ public class GUI {
 				}
 			}
 			if (result != null && !result.equals("")) {
-				Tab tab = new Tab("label", "<" + result + ">", type);
+				Tab tab = new Tab("label", "<" + result + ">", type, graph);
 				tabList.add(tab);
 				tabbedPane.addTab(graph, tab.scrollPane);
 			}
@@ -663,13 +663,13 @@ public class GUI {
 
 		initPlusTab();
 		tabbedPane.addTab("+", plusTab);
-		tabList.add(new Tab("plus", "plus", "plus"));
+		tabList.add(new Tab("plus", "plus", "plus", "plus"));
 	}
 
 	private static String searchInGraph(String graph, String obj) {
 		String queryString = "SELECT ?s WHERE { GRAPH " + graph
 				+ " { ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> " + obj + " } }";
-		result = Query_Execute.executeQuery(dsLocation, queryString);
+		result = Query_Execute.executeQuery(dsLocation, queryString, frame);
 		String sub = result.nextSolution().get("?s").toString();
 		return sub;
 
@@ -694,9 +694,10 @@ public class GUI {
 	public static void actNewCell() {
 		String name = newModuleName.getText();
 		String graphName = "<" + dsLocation + "data/" + name + ">";
-
 		String updateString = "CREATE GRAPH " + graphName;
-		updateString += " INSERT DATA { GRAPH " + graphName + " { ";
+		Update_Execute.executeUpdate(frame, updateString, dsLocation);
+		
+		updateString = " INSERT DATA { GRAPH " + graphName + " { ";
 		updateString += "<http://localhost:3030/" + name + "> "; // hier muss noch der TextFeld Wert rein ? //TODO
 		updateString += "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ";
 		if (newModuleBox.getSelectedItem().toString().equals("Werk"))

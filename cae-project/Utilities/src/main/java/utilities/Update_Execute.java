@@ -27,7 +27,6 @@ public class Update_Execute {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(frame,
 					"Fehler beim Erstellen des Query/Update Strings! /n Eingaben in den Textfeldern überprüfen und ToolTips beachten.");
-
 			return;
 		}
 
@@ -37,10 +36,7 @@ public class Update_Execute {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(frame,
 					"Fehler beim Ausführen des Befehls! /n Bitte Verbindung zum Server überprüfen.");
-
 			return;
 		}
-
-		
 	}
 }

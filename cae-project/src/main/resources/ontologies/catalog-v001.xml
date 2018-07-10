@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1530186792379" name="https://github.com/bretscha/CAE_Projekt/blob/master/cae-project/src/main/resources/ontologies/CAEX_File.owl" uri="CAEX_File.owl"/>
-    </group>
-</catalog>

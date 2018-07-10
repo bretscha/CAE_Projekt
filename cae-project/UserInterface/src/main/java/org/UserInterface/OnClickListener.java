@@ -12,7 +12,7 @@ public class OnClickListener implements ActionListener {
 			GUI.actConfig();
 		else if (ae.getActionCommand().equals("impBttn"))
 			GUI.actImport();
-		else if (ae.getSource().equals("expBttn"))
+		else if (ae.getActionCommand().equals("expBttn"))
 			GUI.actExport();
 		else if (ae.getActionCommand().equals("addFilterBttn"))
 			GUI.actAddFilter();

@@ -11,6 +11,8 @@ public class SPARQL_Select {
 	 * @return the generated query as a String
 	 */
 	public static String generateQuery() {
+		String selGraph = GUI.graphBox.getSelectedItem().toString();
+		
 		queryString = "SELECT ";
 
 		for (int i = 0; i < GUI.subTxtList.size(); i++) {
@@ -18,6 +20,9 @@ public class SPARQL_Select {
 			String predicate = GUI.preTxtList.get(i).getText();
 			String object = GUI.objTxtList.get(i).getText();
 
+			if (selGraph.equals("All")) {
+				queryString += "?g ";
+			}
 			if (subject.charAt(0) == '?') {
 				queryString += subject + " ";
 			}
@@ -30,16 +35,22 @@ public class SPARQL_Select {
 		}
 
 		queryString += "WHERE { ";
+		
+		if(selGraph.equals("All")) {
+			queryString += "GRAPH ?g { ";
+		} else {
+			queryString += "GRAPH " + selGraph + " { ";
+		}
 
 		for (int i = 0; i < GUI.subTxtList.size(); i++) {
 			if (GUI.optChkList.get(i).isSelected())
 				queryString += "OPTIONAL ";
 			queryString += "{ " + GUI.subTxtList.get(i).getText() + " ";
 			queryString += GUI.preTxtList.get(i).getText() + " ";
-			queryString += GUI.objTxtList.get(i).getText() + " . } "; // was ist mit dem Punkt???
+			queryString += GUI.objTxtList.get(i).getText() + " } . "; // was ist mit dem Punkt???
 		}
 
-		queryString += "} ";
+		queryString += "} } ";
 
 		if (GUI.limCheck.isSelected()) {
 			queryString += "LIMIT " + GUI.limTxtField.getText() + " ";

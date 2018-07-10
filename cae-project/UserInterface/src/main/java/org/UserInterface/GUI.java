@@ -8,6 +8,7 @@ import java.awt.GridLayout;
 import java.awt.Window;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 
@@ -31,23 +32,20 @@ import javax.swing.table.DefaultTableModel;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
-import org.apache.jena.update.UpdateExecutionFactory;
-import org.apache.jena.update.UpdateFactory;
-import org.apache.jena.update.UpdateProcessor;
-import org.apache.jena.update.UpdateRequest;
-
 import Exporter.ExporterBase;
 import Importer.ImporterBase;
 import utilities.Query_Execute;
+import utilities.Update_Execute;
 
 /**
  * implements the main graphical user interface
  */
 public class GUI {
 
-	private static GUI gui;
-
-	private static JFrame frame = new JFrame("ToolBox");
+	/**
+	 * main frame gui
+	 */
+	public static JFrame frame = new JFrame("ToolBox");
 	private static GlassPane glassPane = new GlassPane();
 	/**
 	 * Pane in which all scollPanes of Tab.class instances will be placed
@@ -57,6 +55,7 @@ public class GUI {
 	private static JPanel configPanel = new JPanel();
 	private static JPanel importPanel = new JPanel();
 	private static JPanel exportPanel = new JPanel();
+	private static JPanel graphPanel = new JPanel();
 	private static JPanel queryPanel = new JPanel();
 	private static JPanel filterPanel = new JPanel();
 	private static JPanel customizePanel = new JPanel();
@@ -72,17 +71,18 @@ public class GUI {
 	/**
 	 * path to the SPARQL endpoint
 	 */
-	private static String dsLocation = new String("http://localhost:3030/ds/");
+	public static String dsLocation = new String("http://localhost:3030/ds/");
 	// Bitte Pfad angeben...
 	private static String impLocation = "./Importer/src/main/resources/Manifest.aml";
 	// Bitte Pfad angeben...
-	private static String expLocation = "./Exporter/src/main/resources/Manifest.aml";
+	private static String expLocation = "./Exporter/src/main/resources/exporter_out.xml";
 	// Bitte Pfad angeben...
 	private static String mappingLocation = "./Importer/src/main/resources/ManifestTransform.xsl";
 	// private static String rdfImportLocation =
 	// "C:/Users/abpma/Desktop/rdfOutput.xml";
 	private static int filterNumber = 1;
 	private static String lastResult = "construct";
+	private static ArrayList<String> graphList = new ArrayList<String>();
 	/**
 	 * ArrayList that contains all subject-TextFields for the Sparql Query
 	 */
@@ -99,6 +99,14 @@ public class GUI {
 	 * ArrayList that contains all "OPTIONAL"-CheckBoxes for the Sparql Query
 	 */
 	public static ArrayList<JCheckBox> optChkList = new ArrayList<JCheckBox>();
+	/**
+	 * stores all available graph names in data set
+	 */
+	public static JComboBox<String> graphBox = new JComboBox<String>();
+	/**
+	 * stores all modules which should be connected to a new plant/process cell
+	 */
+	public static HashMap<Object, String> newConnMap = new HashMap<Object, String>();
 	private static JTextField newSubTxtField = new JTextField("subject");
 	private static JTextField newPreTxtField = new JTextField("predicate");
 	private static JTextField newObjTxtField = new JTextField("object");
@@ -116,8 +124,9 @@ public class GUI {
 	private static JTextField expTxtField = new JTextField(expLocation);
 	private static JButton remoFilterBttn = new JButton("Zusätzlichen Filter entfernen");
 	private static JComboBox<String> expBox;
+	private static JComboBox<String> newModuleBox;
 	private static JTable table;
-	private static JTextField processCellName = new JTextField("Neuer Name der Anlage");
+	private static JTextField newModuleName = new JTextField("Neuer Name der Anlage");
 	/**
 	 * CheckBox for applying a "LIMIT"-filter for the SPARQL query generator
 	 */
@@ -140,7 +149,6 @@ public class GUI {
 	 * Constructor for building up the main gui frame
 	 */
 	public GUI() {
-		gui = this;
 		onClickListener = new OnClickListener();
 		JScrollPane scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
 				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -155,12 +163,21 @@ public class GUI {
 
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
+		String queryString = "SELECT ?g WHERE {GRAPH ?g {}}";
+		ResultSet result = Query_Execute.executeQuery(dsLocation, queryString);
+
+		for (QuerySolution sol : ResultSetFormatter.toList(result)) {
+			graphList.add("<" + sol.get("?g").toString() + ">");
+		}
+
 		buildConfigPanel();
 		mainPanel.add(configPanel);
 		buildImportPanel();
 		mainPanel.add(importPanel);
 		buildExportPanel();
 		mainPanel.add(exportPanel);
+		buildGraphPanel();
+		mainPanel.add(graphPanel);
 		buildQueryPanel();
 		mainPanel.add(queryPanel);
 		buildFilterPanel();
@@ -219,17 +236,12 @@ public class GUI {
 			System.err.println(e);
 		}
 
-		UpdateRequest req = UpdateFactory.create();
+		String graphName = dsLocation + "/data/ + name";
+		String updateString = "CREATE GRAPH " + graphName;
+		updateString += " LOAD <file:" + ImporterBase.getRdfOutputPath() + "> INTO GRAPH <" + graphName + ">";
+		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 
-		// *******************************************ACHTUNG*********************************************
-		// TODO BITE KEINE LOCALE PHADE ANGEBEN denn es bei mir fehler ergibt...
-		// ***********************************************************************************************
-
-		req.add("LOAD <file:" + ImporterBase.getRdfOutputPath() + ">");
-		//req.add("LOAD <file:/home/christoph/Desktop/rdfout.ttl>"); //test
-
-		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-		exeProc.execute();
+		graphList.add(graphName);
 
 		updateTabs();
 	}
@@ -245,6 +257,13 @@ public class GUI {
 		exportPanel.add(expBox);
 		exportPanel.add(expBttn);
 		expBttn.addActionListener(onClickListener);
+	}
+
+	private static void buildGraphPanel() {
+		graphBox.addItem("All");
+		for (String name : graphList)
+			graphBox.addItem(name);
+		graphPanel.add(graphBox);
 	}
 
 	/**
@@ -341,8 +360,8 @@ public class GUI {
 	 * Spaqrl-select button click method generates and executes Sparql-select-query
 	 */
 	public static void actSelect() {
-		String query = SPARQL_Select.generateQuery();
-		result = Query_Execute.executeQuery(dsLocation, query);
+		String queryString = SPARQL_Select.generateQuery();
+		result = Query_Execute.executeQuery(dsLocation, queryString);
 		lastResult = "select";
 		updateTable();
 	}
@@ -353,34 +372,39 @@ public class GUI {
 
 		DefaultTableModel tableModel = new DefaultTableModel();
 
+		ArrayList<String> res_gra_data = new ArrayList<String>();
 		ArrayList<String> res_sub_data = new ArrayList<String>();
 		ArrayList<String> res_pre_data = new ArrayList<String>();
 		ArrayList<String> res_obj_data = new ArrayList<String>();
-		Vector<String> sub_data;
-		Vector<String> pre_data;
-		Vector<String> obj_data;
 
 		for (int i = 0; i < subTxtList.size(); i++) {
+			String gra_name = graphBox.getSelectedItem().toString();
 			String sub_name = subTxtList.get(i).getText();
 			String pre_name = preTxtList.get(i).getText();
 			String obj_name = objTxtList.get(i).getText();
 
-			if (lastResult.equals("construct")) {
-				sub_name = newSubTxtField.getText();
-				pre_name = newPreTxtField.getText();
-				obj_name = newObjTxtField.getText();
-			}
-
+			res_gra_data.clear();
 			res_sub_data.clear();
 			res_pre_data.clear();
 			res_obj_data.clear();
 
 			for (int j = 0; j < list.size(); j++) {
+				if (gra_name.equals("All")) {
+					String data0 = list.get(j).toString();
+					String[] parts = data0.split("\\?g = ");
+					parts = parts[1].split(" \\)"); // " )"
+					if (parts[0] == null)
+						parts[0] = "";
+					res_gra_data.add(parts[0]);
+				} else {
+					res_gra_data.add(gra_name);
+				}
 				if (sub_name.charAt(0) == '?') {
 					String data0 = list.get(j).toString();
-					String[] parts = data0.split("\\" + sub_name + " = ");
+					String[] parts = data0.split("\\" + sub_name + " = "); // \\? escape
 					parts = parts[1].split(" \\)");
-					// String data = list.get(j).get(sub_name).toString();
+					// String data = list.get(j).get(sub_name).toString(); //ist kacke, weil da
+					// fehlen "" bzw. <>
 					if (parts[0] == null)
 						parts[0] = "";
 					res_sub_data.add(parts[0]);
@@ -404,18 +428,21 @@ public class GUI {
 					res_obj_data.add(parts[0]);
 				}
 			}
+			Vector<String> gra_data = new Vector<String>(res_gra_data.size());
+			gra_data.addAll(res_gra_data);
+			tableModel.addColumn("Graph", gra_data);
 			if (sub_name.charAt(0) == '?') {
-				sub_data = new Vector<String>(res_sub_data.size());
+				Vector<String> sub_data = new Vector<String>(res_sub_data.size());
 				sub_data.addAll(res_sub_data);
 				tableModel.addColumn(sub_name, sub_data);
 			}
 			if (pre_name.charAt(0) == '?') {
-				pre_data = new Vector<String>(res_pre_data.size());
+				Vector<String> pre_data = new Vector<String>(res_pre_data.size());
 				pre_data.addAll(res_pre_data);
 				tableModel.addColumn(pre_name, pre_data);
 			}
 			if (obj_name.charAt(0) == '?') {
-				obj_data = new Vector<String>(res_obj_data.size());
+				Vector<String> obj_data = new Vector<String>(res_obj_data.size());
 				obj_data.addAll(res_obj_data);
 				tableModel.addColumn(obj_name, obj_data);
 			}
@@ -480,6 +507,7 @@ public class GUI {
 		String oldValue = table.getValueAt(intRow, intCol).toString();
 		String colName = table.getColumnName(intCol);
 		String newValue = newTxtField.getText();
+		String graph = table.getValueAt(intRow, 0).toString();
 
 		if (oldValue.equals(newValue))
 			return;
@@ -517,13 +545,22 @@ public class GUI {
 			}
 		}
 
-		String updateString = "INSERT { ";
+		String updateString = "WITH " + graph;
+		updateString += "DELETE { ";
+		if (sub_flag)
+			updateString += oldValue + " " + preTxtList.get(i).getText() + " " + objTxtList.get(i).getText() + " } ";
+		else if (pre_flag)
+			updateString += subTxtList.get(i).getText() + " " + oldValue + " " + objTxtList.get(i).getText() + " } ";
+		else if (obj_flag)
+			updateString += subTxtList.get(i).getText() + " " + preTxtList.get(i).getText() + " " + oldValue + " } ";
+
+		updateString += " INSERT { ";
 		if (sub_flag)
 			updateString += newValue + " " + preTxtList.get(i).getText() + " " + objTxtList.get(i).getText() + " } ";
 		else if (pre_flag)
 			updateString += subTxtList.get(i).getText() + " " + newValue + " " + objTxtList.get(i).getText() + " } ";
 		else if (obj_flag)
-			updateString += subTxtList.get(i).getText() + " " + preTxtList.get(i).getText() + newValue + " } ";
+			updateString += subTxtList.get(i).getText() + " " + preTxtList.get(i).getText() + " " + newValue + " } ";
 
 		updateString += "WHERE { ";
 
@@ -550,63 +587,9 @@ public class GUI {
 				updateString += obj + " . } ";
 		}
 
-		updateString += "} ";
+		updateString += "}";
 
-		UpdateRequest req = UpdateFactory.create();
-		try {
-			req.add(updateString);
-		} catch (Exception e) {
-			stringError();
-		}
-
-		try {
-			UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-			exeProc.execute();
-		} catch (Exception e) {
-			executeError();
-		}
-
-		String deleteString = "DELETE WHERE { ";
-
-		for (i = 0; i < GUI.subTxtList.size(); i++) {
-			if (GUI.optChkList.get(i).isSelected())
-				deleteString += "OPTIONAL { ";
-			String sub = GUI.subTxtList.get(i).getText();
-			if (sub.equals(colName))
-				deleteString += oldValue + " ";
-			else
-				deleteString += sub + " ";
-
-			String pre = GUI.preTxtList.get(i).getText();
-			if (pre.equals(colName))
-				deleteString += oldValue + " ";
-			else
-				deleteString += pre + " ";
-
-			String obj = GUI.objTxtList.get(i).getText();
-			if (obj.equals(colName))
-				deleteString += oldValue + " . ";
-			else
-				deleteString += obj + " . ";
-
-			if (GUI.optChkList.get(i).isSelected())
-				deleteString += " } ";
-		}
-		deleteString += "} ";
-
-		req = UpdateFactory.create();
-		try {
-			req.add(deleteString);
-		} catch (Exception e) {
-			stringError();
-		}
-
-		try {
-			UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-			exeProc.execute();
-		} catch (Exception e) {
-			executeError();
-		}
+		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 
 		actSelect();
 	}
@@ -630,56 +613,21 @@ public class GUI {
 	 * adds a Triple to the graph
 	 */
 	public static void actInsertNew() {
+		String insertString = " INSERT DATA { GRAPH " + graphBox.getSelectedItem().toString() + " { "
+				+ newSubTxtField.getText() + " " + newPreTxtField.getText() + " " + newObjTxtField.getText() + " } }";
 
-		String insertString = "INSERT DATA { " + newSubTxtField.getText() + " " + newPreTxtField.getText() + " "
-				+ newObjTxtField.getText() + " }";
-
-		UpdateRequest req = UpdateFactory.create();
-		try {
-			req.add(insertString);
-		} catch (Exception e) {
-			stringError();
-		}
-
-		try {
-			UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-			exeProc.execute();
-		} catch (Exception e) {
-			executeError();
-		}
+		Update_Execute.executeUpdate(frame, insertString, dsLocation);
 	}
 
 	/**
 	 * deletes the Triple from the graph
 	 */
 	public static void actDeleteTriple() {
-		String deleteString = "DELETE DATA { " + newSubTxtField.getText() + " " + newPreTxtField.getText() + " "
-				+ newObjTxtField.getText() + " }";
+		String deleteString = " DELETE DATA { GRAPH " + graphBox.getSelectedItem().toString() + " { "
+				+ newSubTxtField.getText() + " " + newPreTxtField.getText() + " " + newObjTxtField.getText() + " } }";
 
-		UpdateRequest req = UpdateFactory.create();
-		try {
-			req.add(deleteString);
-		} catch (Exception e) {
-			stringError();
-		}
+		Update_Execute.executeUpdate(frame, deleteString, dsLocation);
 
-		try {
-			UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-			exeProc.execute();
-		} catch (Exception e) {
-			executeError();
-		}
-
-	}
-
-	private static void stringError() {
-		JOptionPane.showMessageDialog(frame,
-				"Fehler beim Erstellen des Query/Update Strings! /n Eingaben in den Textfeldern überprüfen und ToolTips beachten.");
-	}
-
-	private static void executeError() {
-		JOptionPane.showMessageDialog(frame,
-				"Fehler beim Ausführen des Befehls! /n Bitte Verbindung zum Server überprüfen.");
 	}
 
 	private static void updateTabs() {
@@ -688,28 +636,55 @@ public class GUI {
 		for (int i = tabbedPane.getTabCount() - 1; i > 0; i--) {
 			tabbedPane.remove(i);
 		}
+		String[] searchFor = { "<http://eatld.et.tu-dresden.de/mso/ProcessCell>", "plant", "sub_plant" }; // hierarchical
+		for (String graph : graphList) {
+			String result = "";
+			String type = "";
+			for (String obj : searchFor) {
+				result = searchInGraph(graph, obj);
+				if (result != null) {
+					type = obj;
+					break;
+				}
+			}
+			if (result != null && !result.equals("")) {
+				Tab tab = new Tab("label", "<" + result + ">", type);
+				tabList.add(tab);
+				tabbedPane.addTab(graph, tab.scrollPane);
+			}
+		}
 
-		Tab tab = new Tab(gui, "label", "name");
-		tabList.add(tab);
-		Tab tab2 = new Tab(gui, "label2", "name2");
-		tabList.add(tab2);
-		tabbedPane.addTab("name", tab.scrollPane);
-		validateMainPanel();
-		tabbedPane.addTab("name2", tab2.scrollPane);
-		tabbedPane.repaint();
+		/*
+		 * Tab tab = new Tab("label", "name"); tabList.add(tab); Tab tab2 = new
+		 * Tab("label2", "name2"); tabList.add(tab2); tabbedPane.addTab("name",
+		 * tab.scrollPane); validateMainPanel(); tabbedPane.addTab("name2",
+		 * tab2.scrollPane); tabbedPane.revalidate();
+		 */
 
 		initPlusTab();
 		tabbedPane.addTab("+", plusTab);
-		tabList.add(new Tab(gui, "plus", "plus"));
+		tabList.add(new Tab("plus", "plus", "plus"));
+	}
+
+	private static String searchInGraph(String graph, String obj) {
+		String queryString = "SELECT ?s WHERE { GRAPH " + graph
+				+ " { ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> " + obj + " } }";
+		result = Query_Execute.executeQuery(dsLocation, queryString);
+		String sub = result.nextSolution().get("?s").toString();
+		return sub;
+
 	}
 
 	private static void initPlusTab() {
 		plusTab = new JPanel();
 		plusTab.setLayout(new FlowLayout());
+		String[] moduleType = { "Werk", "Anlage" };
+		newModuleBox = new JComboBox<String>(moduleType);
 		JButton assumeNewBttn = new JButton("Neu erstellen");
 		assumeNewBttn.setActionCommand("assumeNewCell");
 		assumeNewBttn.addActionListener(onClickListener);
-		plusTab.add(processCellName);
+		plusTab.add(newModuleName);
+		plusTab.add(newModuleBox);
 		plusTab.add(assumeNewBttn);
 	}
 
@@ -717,18 +692,21 @@ public class GUI {
 	 * new process cell is added to the graph
 	 */
 	public static void actNewCell() {
-		processCellName.getText();
-		String update = "PREFIX mso: <http://eatld.et.tu-dresden.de/mso/> ";
-		update += "INSERT DATA { ";
-		update += "<http://example2.com> ";
-		update += "mso:process_cell ";// hier muss noch der TextFeld Wert rein ?
-		update += "\"testest\" } ";
+		String name = newModuleName.getText();
+		String graphName = "<" + dsLocation + "data/" + name + ">";
 
-		UpdateRequest req = UpdateFactory.create();
-		req.add(update);
+		String updateString = "CREATE GRAPH " + graphName;
+		updateString += " INSERT DATA { GRAPH " + graphName + " { ";
+		updateString += "<http://localhost:3030/" + name + "> "; // hier muss noch der TextFeld Wert rein ? //TODO
+		updateString += "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ";
+		if (newModuleBox.getSelectedItem().toString().equals("Werk"))
+			updateString += "<http://eatld.et.tu-dresden.de/mso/ProcessCell> ";
+		else
+			updateString += "<http://eatld.et.tu-dresden.de/mso/Plant> ";
+		updateString += " } }";
 
-		UpdateProcessor exeProc = UpdateExecutionFactory.createRemote(req, dsLocation + "update");
-		exeProc.execute();
+		Update_Execute.executeUpdate(frame, updateString, dsLocation);
+		graphList.add(graphName);
 
 		updateTabs();
 

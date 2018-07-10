@@ -1,5 +1,6 @@
 package org.UserInterface;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Insets;
@@ -7,8 +8,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -23,6 +29,12 @@ import javax.swing.SwingUtilities;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
 
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
+import utilities.Query_Execute;
+import utilities.Update_Execute;
+
 /**
  * implements the view to the plant topology and some functions for changing and
  * combining it
@@ -36,6 +48,8 @@ public class Tab {
 	private JPanel mainPanel = new JPanel();
 	private String name;
 	private String label;
+	private String type;
+	private Tab tab;
 	/**
 	 * lowest layer for button-tree-structure
 	 */
@@ -44,7 +58,9 @@ public class Tab {
 	private JTree tree;
 	private DefaultMutableTreeNode topNode;
 	private JPanel layer11 = new JPanel();
-	private HashMap<JButton, DataHelper> bttnMap = new HashMap<JButton, DataHelper>();
+	private HashMap<JButton, BttnDataHelper> bttnMap = new HashMap<JButton, BttnDataHelper>();
+	private HashMap<DefaultMutableTreeNode, TreeDataHelper> treeMap = new HashMap<DefaultMutableTreeNode, TreeDataHelper>();
+	private String allResults;
 	/**
 	 * HashMap that stores all visible buttons (modules/devices) and the properly
 	 * buttons in the next layer of the plant topology
@@ -63,11 +79,14 @@ public class Tab {
 	 *            unambiguously identifier for a button (module/device)
 	 * @param name
 	 *            name of the button (module/device)
+	 * @param type type of the first module
 	 */
-	public Tab(GUI gui, String label, String name) {
+	public Tab(String label, String name, String type) {
 
 		this.name = name;
 		this.label = label;
+		this.type = type;
+		this.tab = this;
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 		scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
 				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -102,32 +121,23 @@ public class Tab {
 			}
 
 		});
-		JButton assumeBttn = new JButton("Änderungen übernehmen");
-		assumeBttn.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent ae) {
-				mainPanel.revalidate();
-			}
-
-		});
-		JButton discardBttn = new JButton("Änderungen verwerfen");
+		JButton discardBttn = new JButton("geplante Änderungen verwerfen");
 		discardBttn.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				mainPanel.revalidate();
+				GUI.newConnMap.clear();
 			}
 
 		});
 		upperPanel.setLayout(new BoxLayout(upperPanel, BoxLayout.X_AXIS));
 		upperPanel.add(switchBttn);
-		upperPanel.add(assumeBttn);
 		upperPanel.add(discardBttn);
 	}
 
 	private void initTree() {
 		topNode = new DefaultMutableTreeNode(name);
+		treeMap.put(topNode, new TreeDataHelper(name, type, tab));
 		tree = new JTree(topNode);
 		tree.setToggleClickCount(1);
 		tree.addMouseListener(mouseListener);
@@ -135,38 +145,97 @@ public class Tab {
 
 	private void initLayer1() {
 		JButton module1 = new JButton(name);
-		module1.setOpaque(false);
-		module1.setContentAreaFilled(false);
+		//module1.setOpaque(false);
+		//module1.setContentAreaFilled(false);
+		module1.setBackground(getColor(type));
 		module1.addMouseListener(mouseListener);
 		module1.setMargin(new Insets(20, 20, 20, 20));
 		module1.setAlignmentX(Component.CENTER_ALIGNMENT);
 		layer11.setAlignmentY(Component.TOP_ALIGNMENT);
 		layer11.add(module1);
 		layer1.add(layer11);
-		bttnMap.put(module1, new DataHelper(label, layer11, false));
+		bttnMap.put(module1, new BttnDataHelper(label, type, layer11, tab, false));
 
+	}
+
+	private Color getColor(String type) {
+		if(type.equals("<http://eatld.et.tu-dresden.de/mso/ProcessCell>")) return Color.BLUE;
+		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>")) return Color.GREEN;
+		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/SubPlant>")) return Color.MAGENTA; //TODO stimmt das?
+		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>")) return Color.CYAN;
+		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/Equipment>")) return Color.GRAY;
+		//hier noch den rest.... //TODO alles da?
+		else return Color.WHITE;
 	}
 
 	private void initPopUp() {
 		popUpMenu = new JPopupMenu();
-		JMenuItem menuItem = new JMenuItem("Diese Komponente verbinden...");
+		JMenuItem menuItem = new JMenuItem("Diese Komponente hinzufügen...");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-
+/*				if (lastRightClick.getClass() == JButton.class) {
+					GUI.newConnMap.put(((JButton) lastRightClick).getText(),
+							GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
+				} else {
+					GUI.newConnMap.put(
+							((DefaultMutableTreeNode) ((JTree) lastRightClick).getSelectionPath()
+									.getLastPathComponent()).toString(),
+							GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
+				}*/
+				GUI.newConnMap.put(lastRightClick, GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
 			}
 
 		});
 		popUpMenu.add(menuItem);
 
-		menuItem = new JMenuItem("... mit dieser Komponente verbinden");
+		menuItem = new JMenuItem("Alle ausgewählten hier hinzufügen");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-
+				String type = "";
+				String sub = "";
+				String graphName = GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex());
+				
+				for (Object key : GUI.newConnMap.keySet()) {
+					if (key.getClass() == JButton.class) {
+						type = bttnMap.get(key).type;
+						sub = ((JButton) key).getText();
+					} else {
+						type = treeMap.get(key).type;
+						sub = treeMap.get(key).name;
+					}
+					String[] parts = type.split("/");
+					String newType = "";
+					int i;
+					for(i=0; i<parts.length-1; i++) {
+						newType += parts[i];
+					}
+					newType += "has" + parts[i+1];
+					String updateString = "INSERT DATA { GRAPH " + graphName + " { " + ((JButton) lastRightClick).getText() + " " + newType + " " + sub + " }}"; //TODO testen
+					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+					findAll(sub);
+					try {
+						FileOutputStream outStream = new FileOutputStream(new File("./UserInterface/src/main/resources/newTriples.csv")); //helper file
+						PrintWriter p = new PrintWriter(outStream);
+						p.write(allResults);
+						p.close();
+					} catch (FileNotFoundException e) {
+					} 
+					updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.csv> INTO GRAPH " + graphName;
+					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+				}
 			}
+/*				if (lastRightClick.getClass() == JButton.class) {
+					allResults = "";
+					String graphName = GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex());
+				} else {
+					System.out.println(((DefaultMutableTreeNode) ((JTree) lastRightClick).getSelectionPath()
+							.getLastPathComponent()).toString());
+				}
+			}*/
 
 		});
 		popUpMenu.add(menuItem);
@@ -193,13 +262,14 @@ public class Tab {
 		});
 		popUpMenu.add(menuItem);
 
-		menuItem = new JMenuItem("Mehr Informationen anzeigen");
+/*		menuItem = new JMenuItem("Mehr Informationen anzeigen");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
 				if (lastRightClick.getClass() == JButton.class) {
 					System.out.println(((JButton) lastRightClick).getText());
+					System.out.println(GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
 				} else {
 					System.out.println(((DefaultMutableTreeNode) ((JTree) lastRightClick).getSelectionPath()
 							.getLastPathComponent()).toString());
@@ -208,8 +278,20 @@ public class Tab {
 			}
 
 		});
-		popUpMenu.add(menuItem);
+		popUpMenu.add(menuItem);*/
 
+	}
+
+	protected void findAll(String sub) {
+		String queryString = "SELECT ?p ?o WHERE { " + sub + " ?p ?o}";
+
+		ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString);
+		List<QuerySolution> list = ResultSetFormatter.toList(result);
+		for(QuerySolution sol : list) {
+			String obj = "< " + sol.get("?o").toString() + ">";
+			findAll(obj);
+			allResults += sub + "," + sol.get("?p") + "," + obj + "\n";
+		}
 	}
 
 	private void initMouseListener() {
@@ -226,25 +308,25 @@ public class Tab {
 
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
+				// Auto-generated method stub
 
 			}
 
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
+				//Auto-generated method stub
 
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
-				// TODO Auto-generated method stub
+				// Auto-generated method stub
 
 			}
 
 			@Override
 			public void mousePressed(MouseEvent e) {
-				// TODO Auto-generated method stub
+				// Auto-generated method stub
 
 			}
 		};
@@ -267,10 +349,25 @@ public class Tab {
 		TreePath tp = tree.getSelectionPath();
 		Object lastComponent = tp.getLastPathComponent();
 
-		// SPARQL BLA bla siehe inflateBttn
-		for (int i = 0; i < 3; i++) {
-			DefaultMutableTreeNode node = new DefaultMutableTreeNode("name" + i);
-			((DefaultMutableTreeNode) lastComponent).add(node);
+		String sub = lastComponent.toString();
+		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/hasPlant>", "<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>", "<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
+		String graph = GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex());
+		for (String pre : searchFor) {
+			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o }}";
+			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString);
+			List<QuerySolution> resList = ResultSetFormatter.toList(result);
+			for(QuerySolution sol : resList) {
+				String type = "";
+				if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasUnit>")) type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
+				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>")) type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
+				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
+				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; //TODO checken
+
+				String name = "<" + sol.get("?o").toString() + ">";
+				DefaultMutableTreeNode node = new DefaultMutableTreeNode(name);
+				treeMap.put(node, new TreeDataHelper(name, type, tab));
+				((DefaultMutableTreeNode) lastComponent).add(node);
+			}
 		}
 	}
 
@@ -282,25 +379,34 @@ public class Tab {
 		JPanel layer = new JPanel();
 		layer.setLayout(new BoxLayout(layer, BoxLayout.X_AXIS));
 
-		/*
-		 * sparql: label:HASallesmögliche:result resutl:hasLabel:label for result... new
-		 * Button mit farben!! usw...
-		 * 
-		 * für jedes Modul in der nächsten schicht ein eigenes Panel anlegen! zuordnung
-		 * mit hmap
-		 */
-
-		// test:
-
-		int size = 3;
+		String sub = sourceBttn.getText();
+		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/hasPlant>", "<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>", "<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
+		String graph = GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex());
+		HashMap<String, String> newBttnMap = new HashMap<String, String>();
+		for (String pre : searchFor) {
+			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o }}";
+			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString);
+			List<QuerySolution> resList = ResultSetFormatter.toList(result);
+			for(QuerySolution sol : resList) {
+				String type = "";
+				if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasUnit>")) type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
+				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>")) type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
+				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
+				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; //TODO checken
+				
+				newBttnMap.put("<" + sol.get("?o").toString() + ">", type);	
+			}
+		}
 
 		ArrayList<JButton> destBttns = new ArrayList<JButton>();
 
-		for (int i = 0; i < size; i++) {
+		for (String name : newBttnMap.keySet()) {
 			JPanel subLayer = new JPanel();
-			JButton button = new JButton("name aus result");
-			button.setOpaque(false);
-			button.setContentAreaFilled(false);
+			JButton button = new JButton(name);
+			//button.setOpaque(false);
+			//button.setContentAreaFilled(false);
+			String type = newBttnMap.get(name);
+			button.setBackground(getColor(type));
 			button.addMouseListener(mouseListener);
 			button.setMargin(new Insets(20, 20, 20, 20));
 			button.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -308,7 +414,7 @@ public class Tab {
 			subLayer.setLayout(new BoxLayout(subLayer, BoxLayout.Y_AXIS));
 			subLayer.setAlignmentY(Component.TOP_ALIGNMENT);
 			subLayer.add(button);
-			bttnMap.put(button, new DataHelper("label aus result", subLayer, false));
+			bttnMap.put(button, new BttnDataHelper("label aus result", type, subLayer, tab, false));
 			layer.add(subLayer);
 			layer.add(Box.createRigidArea(new Dimension(40, 0)));
 		}
@@ -345,15 +451,32 @@ public class Tab {
 	}
 }
 
-class DataHelper {
+class BttnDataHelper {
 
 	public String label;
 	public JPanel parentPanel;
 	public boolean inflated;
+	public String type;
+	public Tab hostTab;
 
-	public DataHelper(String label, JPanel parentPanel, boolean inflated) {
+	public BttnDataHelper(String label, String type, JPanel parentPanel, Tab hostTab, boolean inflated) {
 		this.label = label;
 		this.parentPanel = parentPanel;
+		this.hostTab = hostTab;
 		this.inflated = inflated;
+		this.type = type;
+	}
+}
+
+class TreeDataHelper {
+	
+	public String type;
+	public String name;
+	public Tab hostTab;
+	
+	public TreeDataHelper(String name, String type, Tab hostTab) {
+		this.name = name;
+		this.type = type;
+		this.hostTab = hostTab;
 	}
 }

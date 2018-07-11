@@ -73,11 +73,11 @@ public class GUI {
 	 */
 	public static String dsLocation = new String("http://localhost:3030/ds/");
 	// Bitte Pfad angeben...
-	private static String impLocation = "./Importer/src/main/resources/Manifest.aml";
+	private static String impLocation = "./Importer/src/main/resources/Comos.xml";
 	// Bitte Pfad angeben...
 	private static String expLocation = "./Exporter/src/main/resources/exporter_out.xml";
 	// Bitte Pfad angeben...
-	private static String mappingLocation = "./Importer/src/main/resources/ManifestTransform.xsl";
+	private static String mappingLocation = "./Importer/src/main/resources/ComosTransform.xsl";
 	// private static String rdfImportLocation =
 	// "C:/Users/abpma/Desktop/rdfOutput.xml";
 	private static int filterNumber = 1;
@@ -234,11 +234,16 @@ public class GUI {
 			importerBase.doImport();
 		} catch (Exception e) {
 			System.err.println(e);
+			JOptionPane.showMessageDialog(frame, "Fehler beim Importieren (transformieren)");
+			return;
 		}
 
-		String graphName = dsLocation + "/data/ + name";
+		String[] parts = impLocation.split("/");
+		String name = parts[parts.length - 1].split("\\.")[0];
+		String graphName = "<" + dsLocation + "data/" + name + ">";
 		String updateString = "CREATE GRAPH " + graphName;
-		updateString += " LOAD <file:" + ImporterBase.getRdfOutputPath() + "> INTO GRAPH <" + graphName + ">";
+		Update_Execute.executeUpdate(frame, updateString, dsLocation);
+		updateString = " LOAD <file:" + ImporterBase.getRdfOutputPath() + "> INTO GRAPH " + graphName;
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 
 		graphList.add(graphName);
@@ -263,6 +268,7 @@ public class GUI {
 		graphBox.addItem("All");
 		for (String name : graphList)
 			graphBox.addItem(name);
+		graphPanel.add(new JLabel("verfügbare Graphen im Dataset"));
 		graphPanel.add(graphBox);
 	}
 
@@ -637,18 +643,20 @@ public class GUI {
 			tabbedPane.remove(i);
 		}
 		String[] searchFor = { "<http://eatld.et.tu-dresden.de/mso/ProcessCell>", "plant", "sub_plant" }; // hierarchical
+																											// //TODO
 		for (String graph : graphList) {
-			String result = "";
+			ArrayList<String> ident = new ArrayList<String>();
+			ArrayList<String> label = new ArrayList<String>();
 			String type = "";
 			for (String obj : searchFor) {
-				result = searchInGraph(graph, obj);
+				searchInGraph(graph, obj, ident, label);
 				if (result != null) {
 					type = obj;
 					break;
 				}
 			}
-			if (result != null && !result.equals("")) {
-				Tab tab = new Tab("label", "<" + result + ">", type, graph);
+			if (result != null && ident.size() != 0) {
+				Tab tab = new Tab(label, ident, type, graph);
 				tabList.add(tab);
 				tabbedPane.addTab(graph, tab.scrollPane);
 			}
@@ -660,19 +668,29 @@ public class GUI {
 		 * tab.scrollPane); validateMainPanel(); tabbedPane.addTab("name2",
 		 * tab2.scrollPane); tabbedPane.revalidate();
 		 */
+		ArrayList<String> plus = new ArrayList<String>();
+		plus.add("plus");
 
 		initPlusTab();
 		tabbedPane.addTab("+", plusTab);
-		tabList.add(new Tab("plus", "plus", "plus", "plus"));
+		tabList.add(new Tab(plus, plus, "plus", "plus"));
 	}
 
-	private static String searchInGraph(String graph, String obj) {
-		String queryString = "SELECT ?s WHERE { GRAPH " + graph
-				+ " { ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> " + obj + " } }";
+	private static void searchInGraph(String graph, String obj, ArrayList<String> ident, ArrayList<String> label) {
+		String queryString = "SELECT ?s ?label WHERE { GRAPH " + graph
+				+ " {{ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> " + obj
+				+ " }. {?s <http://www.w3.org/2000/01/rdf-schema#label> ?label }}}";
 		result = Query_Execute.executeQuery(dsLocation, queryString, frame);
-		String sub = result.nextSolution().get("?s").toString();
-		return sub;
-
+		List<QuerySolution> list = ResultSetFormatter.toList(result);
+		for (QuerySolution sol : list) {
+			String sub = sol.get("?s").toString();
+			String lbl = sol.get("?label").toString();
+			if (sub.contains("/"))
+				ident.add("<" + sol.get("?s").toString() + ">");
+			else
+				ident.add("<_:" + sol.get("?s").toString() + ">");
+			label.add(lbl);
+		}
 	}
 
 	private static void initPlusTab() {
@@ -696,7 +714,7 @@ public class GUI {
 		String graphName = "<" + dsLocation + "data/" + name + ">";
 		String updateString = "CREATE GRAPH " + graphName;
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
-		
+
 		updateString = " INSERT DATA { GRAPH " + graphName + " { ";
 		updateString += "<http://localhost:3030/" + name + "> "; // hier muss noch der TextFeld Wert rein ? //TODO
 		updateString += "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ";

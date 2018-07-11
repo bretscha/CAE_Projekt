@@ -12,15 +12,19 @@ import org.apache.jena.update.UpdateRequest;
  * executes a Sparql update command
  */
 public class Update_Execute {
-	
+
 	/**
 	 * executes a Sparql update command
-	 * @param frame main frame gui
-	 * @param updateString String with update command
-	 * @param dsLocation sparql endpoint
+	 * 
+	 * @param frame
+	 *            main frame gui
+	 * @param updateString
+	 *            String with update command
+	 * @param dsLocation
+	 *            sparql endpoint
 	 */
 	public static void executeUpdate(JFrame frame, String updateString, String dsLocation) {
-		
+
 		UpdateRequest req = UpdateFactory.create();
 		try {
 			req.add(updateString);

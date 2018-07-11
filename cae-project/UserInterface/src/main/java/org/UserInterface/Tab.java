@@ -46,9 +46,6 @@ public class Tab {
 	 */
 	public JScrollPane scrollPane;
 	private JPanel mainPanel = new JPanel();
-	private String name;
-	private String label;
-	private String type;
 	private Tab tab;
 	private String graph;
 	/**
@@ -62,6 +59,7 @@ public class Tab {
 	private HashMap<JButton, BttnDataHelper> bttnMap = new HashMap<JButton, BttnDataHelper>();
 	private HashMap<DefaultMutableTreeNode, TreeDataHelper> treeMap = new HashMap<DefaultMutableTreeNode, TreeDataHelper>();
 	private String allResults;
+	private ArrayList<String> subPassed;
 	/**
 	 * HashMap that stores all visible buttons (modules/devices) and the properly
 	 * buttons in the next layer of the plant topology
@@ -76,16 +74,13 @@ public class Tab {
 	 * 
 	 * @param label
 	 *            unambiguously identifier for a button (module/device)
-	 * @param name
+	 * @param ident
 	 *            name of the button (module/device)
 	 * @param type type of the first module
 	 * @param graph dataset graph uri
 	 */
-	public Tab(String label, String name, String type, String graph) {
-
-		this.name = name;
-		this.label = label;
-		this.type = type;
+	public Tab(ArrayList<String> label, ArrayList<String> ident, String type, String graph) {
+		
 		this.tab = this;
 		this.graph = graph;
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
@@ -97,8 +92,8 @@ public class Tab {
 		initUpperPanel();
 		initPopUp();
 		initMouseListener();
-		initLayer1();
-		initTree();
+		initLayer1(label, ident, type);
+		initTree(label, ident, type);
 
 		mainPanel.add(Box.createRigidArea(new Dimension(0, 15)));
 		mainPanel.add(upperPanel);
@@ -122,7 +117,7 @@ public class Tab {
 			}
 
 		});
-		JButton discardBttn = new JButton("geplante Änderungen verwerfen");
+		JButton discardBttn = new JButton("Markierungen verwerfen");
 		discardBttn.addActionListener(new ActionListener() {
 
 			@Override
@@ -136,27 +131,30 @@ public class Tab {
 		upperPanel.add(discardBttn);
 	}
 
-	private void initTree() {
-		topNode = new DefaultMutableTreeNode(name);
-		treeMap.put(topNode, new TreeDataHelper(name, type, tab));
-		tree = new JTree(topNode);
-		tree.setToggleClickCount(1);
-		tree.addMouseListener(mouseListener);
+	private void initTree(ArrayList<String> label, ArrayList<String> name, String type) {
+		for(int i = 0; i<label.size(); i++) {
+			topNode = new DefaultMutableTreeNode(name);
+			treeMap.put(topNode, new TreeDataHelper(name.get(i), type, tab));
+			tree = new JTree(topNode);
+			tree.setToggleClickCount(1);
+			tree.addMouseListener(mouseListener);
+		}
 	}
 
-	private void initLayer1() {
-		JButton module1 = new JButton(name);
-		//module1.setOpaque(false);
-		//module1.setContentAreaFilled(false);
-		module1.setBackground(getColor(type));
-		module1.addMouseListener(mouseListener);
-		module1.setMargin(new Insets(20, 20, 20, 20));
-		module1.setAlignmentX(Component.CENTER_ALIGNMENT);
-		layer11.setAlignmentY(Component.TOP_ALIGNMENT);
-		layer11.add(module1);
-		layer1.add(layer11);
-		bttnMap.put(module1, new BttnDataHelper(label, type, layer11, tab, false));
-
+	private void initLayer1(ArrayList<String> label, ArrayList<String> ident, String type) {
+		for(int i = 0; i<label.size(); i++) {
+			JButton bttn = new JButton(label.get(i));
+			//module1.setOpaque(false);
+			//module1.setContentAreaFilled(false);
+			bttn.setBackground(getColor(type));
+			bttn.addMouseListener(mouseListener);
+			bttn.setMargin(new Insets(20, 20, 20, 20));
+			bttn.setAlignmentX(Component.CENTER_ALIGNMENT);
+			layer11.setAlignmentY(Component.TOP_ALIGNMENT);
+			layer11.add(bttn);
+			layer1.add(layer11);
+			bttnMap.put(bttn, new BttnDataHelper(ident.get(i), type, layer11, tab, false));
+		}
 	}
 
 	private Color getColor(String type) {
@@ -171,42 +169,37 @@ public class Tab {
 
 	private void initPopUp() {
 		popUpMenu = new JPopupMenu();
-		JMenuItem menuItem = new JMenuItem("Diese Komponente hinzufügen...");
+		JMenuItem menuItem = new JMenuItem("Dieses Modul markieren...");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-/*				if (lastRightClick.getClass() == JButton.class) {
-					GUI.newConnMap.put(((JButton) lastRightClick).getText(),
-							GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
-				} else {
-					GUI.newConnMap.put(
-							((DefaultMutableTreeNode) ((JTree) lastRightClick).getSelectionPath()
-									.getLastPathComponent()).toString(),
-							GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
-				}*/
 				GUI.newConnMap.put(lastRightClick, tab);
 			}
 
 		});
 		popUpMenu.add(menuItem);
 
-		menuItem = new JMenuItem("Alle ausgewählten hier hinzufügen");
+		menuItem = new JMenuItem("Alle markierten hier hinzufügen");
 		menuItem.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
 				String type = "";
+				String addSub = "";
 				String sub = "";
 				allResults = "";
 				
-				for (Object key : GUI.newConnMap.keySet()) {
-					if (key.getClass() == JButton.class) {
-						type = GUI.newConnMap.get(key).bttnMap.get(key).type;
-						sub = ((JButton) key).getText();
+				for (Object markedObj : GUI.newConnMap.keySet()) {
+					String oldGraph = GUI.newConnMap.get(markedObj).graph;
+					if (markedObj.getClass() == JButton.class) {
+						type = GUI.newConnMap.get(markedObj).bttnMap.get(markedObj).type;
+						addSub = GUI.newConnMap.get(markedObj).bttnMap.get(markedObj).ident;
+						sub = ((JButton) lastRightClick).getText();
 					} else {
-						type = treeMap.get(key).type;
-						sub = treeMap.get(key).name;
+						type = GUI.newConnMap.get(markedObj).treeMap.get(markedObj).type;
+						addSub = GUI.newConnMap.get(markedObj).treeMap.get(markedObj).ident;
+						sub = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).ident;
 					}
 					String[] parts = type.split("/");//TODO
 					String newType = "";
@@ -215,83 +208,74 @@ public class Tab {
 						newType += parts[i] + "/";
 					}
 					newType += "has" + parts[i];
-					String updateString = "INSERT DATA { GRAPH " + graph + " { " + ((JButton) lastRightClick).getText() + " " + newType + " " + sub + " }}"; //TODO testen
+					String updateString = "INSERT DATA { GRAPH " + graph + " { " + sub + " " + newType + " " + addSub + " }}"; //TODO testen
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
-					findAll(sub);
+					subPassed = new ArrayList<String>();
+					findAll(addSub, oldGraph);
 					try {
-						FileOutputStream outStream = new FileOutputStream(new File("./UserInterface/src/main/resources/newTriples.csv")); //helper file
+						FileOutputStream outStream = new FileOutputStream(new File("./UserInterface/src/main/resources/newTriples.nt")); //helper file
 						PrintWriter p = new PrintWriter(outStream);
 						p.write(allResults);
 						p.close();
 					} catch (FileNotFoundException e) {
 					} 
-					updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.csv> INTO GRAPH " + graph;
+					updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.nt> INTO GRAPH " + graph;
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 				}
 			}
-/*				if (lastRightClick.getClass() == JButton.class) {
-					allResults = "";
-					String graphName = GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex());
-				} else {
-					System.out.println(((DefaultMutableTreeNode) ((JTree) lastRightClick).getSelectionPath()
-							.getLastPathComponent()).toString());
+		});
+		popUpMenu.add(menuItem);
+
+		menuItem = new JMenuItem("Modul aus vorheriger Ebene entfernen");
+		menuItem.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent ae) {
+				String sub;
+				allResults = "";
+				if(lastRightClick.getClass() == JButton.class) {
+					 sub = ((JButton) lastRightClick).getText();
+				}else {
+					sub = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).ident;
 				}
-			}*/
-
+				subPassed = new ArrayList<String>();
+				findAll(sub, graph);
+				
+				try {
+					FileOutputStream outStream = new FileOutputStream(new File("./UserInterface/src/main/resources/newTriples.nt")); //helper file
+					PrintWriter p = new PrintWriter(outStream);
+					p.write(allResults);
+					p.close();
+				} catch (FileNotFoundException e) {
+				} 
+				String updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.nt>";
+				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+				
+				updateString = "DELETE { GRAPH " + graph + " {?s ?p ?o} } WHERE {  { ?s ?p ?o }}";
+				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+				
+				updateString = "DELETE {?s ?p ?o} WHERE {?s ?p ?o}";
+				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+			}
 		});
 		popUpMenu.add(menuItem);
-
-		menuItem = new JMenuItem("Verbindung zu vorheriger Ebene entfernen");
-		menuItem.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent ae) {
-
-			}
-
-		});
-		popUpMenu.add(menuItem);
-
-		menuItem = new JMenuItem("Verbindung zu folgender Ebene entfernen");
-		menuItem.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent ae) {
-
-			}
-
-		});
-		popUpMenu.add(menuItem);
-
-/*		menuItem = new JMenuItem("Mehr Informationen anzeigen");
-		menuItem.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent ae) {
-				if (lastRightClick.getClass() == JButton.class) {
-					System.out.println(((JButton) lastRightClick).getText());
-					System.out.println(GUI.tabbedPane.getTitleAt(GUI.tabbedPane.getSelectedIndex()));
-				} else {
-					System.out.println(((DefaultMutableTreeNode) ((JTree) lastRightClick).getSelectionPath()
-							.getLastPathComponent()).toString());
-				}
-
-			}
-
-		});
-		popUpMenu.add(menuItem);*/
-
 	}
 
-	protected void findAll(String sub) {
-		String queryString = "SELECT ?p ?o WHERE { " + sub + " ?p ?o}";
+	private void findAll(String sub, String graph) {
+		String queryString = "SELECT ?p ?o WHERE{ GRAPH " + graph + " { " + sub + " ?p ?o}}";
 
 		ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 		List<QuerySolution> list = ResultSetFormatter.toList(result);
+		subPassed.add(sub);
 		for(QuerySolution sol : list) {
-			String obj = "< " + sol.get("?o").toString() + ">";
-			findAll(obj);
-			allResults += sub + "," + sol.get("?p") + "," + obj + "\n";
+			//String obj = "< " + sol.get("?o").toString() + ">";
+			String data0 = sol.toString();
+			String[] parts = data0.split("\\?o = ");
+			parts = parts[1].split(" \\)"); // " )"
+			String obj = parts[0];
+			if(obj.charAt(0) == '<' && !subPassed.contains(obj) && !sub.equals(obj)) findAll(obj, graph);
+			
+			allResults += sub + "	" + "<" + sol.get("?p") + ">" + "	" + obj + " . \n";
 		}
 	}
 
@@ -350,10 +334,10 @@ public class Tab {
 		TreePath tp = tree.getSelectionPath();
 		Object lastComponent = tp.getLastPathComponent();
 
-		String sub = lastComponent.toString();
+		String sub = treeMap.get(lastComponent).ident;
 		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/hasPlant>", "<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>", "<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
 		for (String pre : searchFor) {
-			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o }}";
+			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " {{ " + sub + " " + pre + " ?o } . { " + sub + " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> " + " ?label}}"; //TODO
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for(QuerySolution sol : resList) {
@@ -363,9 +347,15 @@ public class Tab {
 				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
 				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; //TODO checken
 
-				String name = "<" + sol.get("?o").toString() + ">";
-				DefaultMutableTreeNode node = new DefaultMutableTreeNode(name);
-				treeMap.put(node, new TreeDataHelper(name, type, tab));
+				String ident = "";
+				if(sub.contains("/"))  ident = "<" + sol.get("?o").toString() + ">";
+				else ident = "<_:" + sol.get("?o").toString() + ">";
+				
+				String label = sol.get("?label").toString();
+				
+
+				DefaultMutableTreeNode node = new DefaultMutableTreeNode(label);
+				treeMap.put(node, new TreeDataHelper(ident, type, tab));
 				((DefaultMutableTreeNode) lastComponent).add(node);
 			}
 		}
@@ -378,12 +368,14 @@ public class Tab {
 
 		JPanel layer = new JPanel();
 		layer.setLayout(new BoxLayout(layer, BoxLayout.X_AXIS));
+		
+		ArrayList<JButton> destBttns = new ArrayList<JButton>();
 
-		String sub = sourceBttn.getText();
+		String sub = bttnMap.get(sourceBttn).ident;
 		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/hasPlant>", "<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>", "<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
-		HashMap<String, String> newBttnMap = new HashMap<String, String>();
+//		HashMap<String, String> newBttnMap = new HashMap<String, String>();
 		for (String pre : searchFor) {
-			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o }}";
+			String queryString = "SELECT ?o ?label WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o . " + sub + " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> ?label }}"; //TODO
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for(QuerySolution sol : resList) {
@@ -393,30 +385,32 @@ public class Tab {
 				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
 				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; //TODO checken
 				
-				newBttnMap.put("<" + sol.get("?o").toString() + ">", type);	
+				String ident = "";
+				if(sub.contains("/")) ident = "<" + sol.get("?o").toString() + ">";
+				else ident = "<_:" + sol.get("?o").toString() + ">";
+				
+				String label = sol.get("?label").toString();
+
+				JPanel subLayer = new JPanel();
+				JButton button = new JButton(label);
+				//button.setOpaque(false);
+				//button.setContentAreaFilled(false);
+				//String type = newBttnMap.get(name);
+				button.setBackground(getColor(type));
+				button.addMouseListener(mouseListener);
+				button.setMargin(new Insets(20, 20, 20, 20));
+				button.setAlignmentX(Component.CENTER_ALIGNMENT);
+				destBttns.add(button);
+				subLayer.setLayout(new BoxLayout(subLayer, BoxLayout.Y_AXIS));
+				subLayer.setAlignmentY(Component.TOP_ALIGNMENT);
+				subLayer.add(button);
+				bttnMap.put(button, new BttnDataHelper(ident, type, subLayer, tab, false));
+				layer.add(subLayer);
+				layer.add(Box.createRigidArea(new Dimension(40, 0)));
+
 			}
 		}
 
-		ArrayList<JButton> destBttns = new ArrayList<JButton>();
-
-		for (String name : newBttnMap.keySet()) {
-			JPanel subLayer = new JPanel();
-			JButton button = new JButton(name);
-			//button.setOpaque(false);
-			//button.setContentAreaFilled(false);
-			String type = newBttnMap.get(name);
-			button.setBackground(getColor(type));
-			button.addMouseListener(mouseListener);
-			button.setMargin(new Insets(20, 20, 20, 20));
-			button.setAlignmentX(Component.CENTER_ALIGNMENT);
-			destBttns.add(button);
-			subLayer.setLayout(new BoxLayout(subLayer, BoxLayout.Y_AXIS));
-			subLayer.setAlignmentY(Component.TOP_ALIGNMENT);
-			subLayer.add(button);
-			bttnMap.put(button, new BttnDataHelper("label aus result", type, subLayer, tab, false));
-			layer.add(subLayer);
-			layer.add(Box.createRigidArea(new Dimension(40, 0)));
-		}
 		bttnMap.get(sourceBttn).inflated = true;
 		sourcePanel.add(Box.createRigidArea(new Dimension(0, 100)));
 		sourcePanel.add(layer);
@@ -452,14 +446,14 @@ public class Tab {
 
 class BttnDataHelper {
 
-	public String label;
+	public String ident;
 	public JPanel parentPanel;
 	public boolean inflated;
 	public String type;
 	public Tab hostTab;
 
-	public BttnDataHelper(String label, String type, JPanel parentPanel, Tab hostTab, boolean inflated) {
-		this.label = label;
+	public BttnDataHelper(String ident, String type, JPanel parentPanel, Tab hostTab, boolean inflated) {
+		this.ident = ident;
 		this.parentPanel = parentPanel;
 		this.hostTab = hostTab;
 		this.inflated = inflated;
@@ -470,11 +464,11 @@ class BttnDataHelper {
 class TreeDataHelper {
 	
 	public String type;
-	public String name;
+	public String ident;
 	public Tab hostTab;
 	
-	public TreeDataHelper(String name, String type, Tab hostTab) {
-		this.name = name;
+	public TreeDataHelper(String ident, String type, Tab hostTab) {
+		this.ident = ident;
 		this.type = type;
 		this.hostTab = hostTab;
 	}

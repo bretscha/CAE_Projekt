@@ -60,6 +60,7 @@ public class Tab {
 	private HashMap<DefaultMutableTreeNode, TreeDataHelper> treeMap = new HashMap<DefaultMutableTreeNode, TreeDataHelper>();
 	private String allResults;
 	private ArrayList<String> subPassed;
+
 	/**
 	 * HashMap that stores all visible buttons (modules/devices) and the properly
 	 * buttons in the next layer of the plant topology
@@ -76,11 +77,13 @@ public class Tab {
 	 *            unambiguously identifier for a button (module/device)
 	 * @param ident
 	 *            name of the button (module/device)
-	 * @param type type of the first module
-	 * @param graph dataset graph uri
+	 * @param type
+	 *            type of the first module
+	 * @param graph
+	 *            dataset graph uri
 	 */
 	public Tab(ArrayList<String> label, ArrayList<String> ident, String type, String graph) {
-		
+
 		this.tab = this;
 		this.graph = graph;
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
@@ -132,7 +135,7 @@ public class Tab {
 	}
 
 	private void initTree(ArrayList<String> label, ArrayList<String> name, String type) {
-		for(int i = 0; i<label.size(); i++) {
+		for (int i = 0; i < label.size(); i++) {
 			topNode = new DefaultMutableTreeNode(name);
 			treeMap.put(topNode, new TreeDataHelper(name.get(i), type, tab));
 			tree = new JTree(topNode);
@@ -142,10 +145,10 @@ public class Tab {
 	}
 
 	private void initLayer1(ArrayList<String> label, ArrayList<String> ident, String type) {
-		for(int i = 0; i<label.size(); i++) {
+		for (int i = 0; i < label.size(); i++) {
 			JButton bttn = new JButton(label.get(i));
-			//module1.setOpaque(false);
-			//module1.setContentAreaFilled(false);
+			// module1.setOpaque(false);
+			// module1.setContentAreaFilled(false);
 			bttn.setBackground(getColor(type));
 			bttn.addMouseListener(mouseListener);
 			bttn.setMargin(new Insets(20, 20, 20, 20));
@@ -158,13 +161,19 @@ public class Tab {
 	}
 
 	private Color getColor(String type) {
-		if(type.equals("<http://eatld.et.tu-dresden.de/mso/ProcessCell>")) return Color.BLUE;
-		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>")) return Color.GREEN;
-		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/SubPlant>")) return Color.MAGENTA; //TODO stimmt das?
-		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>")) return Color.CYAN;
-		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/Equipment>")) return Color.GRAY;
-		//hier noch den rest.... //TODO alles da?
-		else return Color.WHITE;
+		if (type.equals("<http://eatld.et.tu-dresden.de/mso/ProcessCell>"))
+			return Color.BLUE;
+		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>"))
+			return Color.GREEN;
+		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/SubPlant>"))
+			return Color.MAGENTA; // TODO stimmt das?
+		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>"))
+			return Color.CYAN;
+		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Equipment>"))
+			return Color.GRAY;
+		// hier noch den rest.... //TODO alles da?
+		else
+			return Color.WHITE;
 	}
 
 	private void initPopUp() {
@@ -189,7 +198,7 @@ public class Tab {
 				String addSub = "";
 				String sub = "";
 				allResults = "";
-				
+
 				for (Object markedObj : GUI.newConnMap.keySet()) {
 					String oldGraph = GUI.newConnMap.get(markedObj).graph;
 					if (markedObj.getClass() == JButton.class) {
@@ -201,24 +210,26 @@ public class Tab {
 						addSub = GUI.newConnMap.get(markedObj).treeMap.get(markedObj).ident;
 						sub = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).ident;
 					}
-					String[] parts = type.split("/");//TODO
+					String[] parts = type.split("/");
 					String newType = "";
 					int i;
-					for(i=0; i<parts.length-1; i++) {
+					for (i = 0; i < parts.length - 1; i++) {
 						newType += parts[i] + "/";
 					}
 					newType += "has" + parts[i];
-					String updateString = "INSERT DATA { GRAPH " + graph + " { " + sub + " " + newType + " " + addSub + " }}"; //TODO testen
+					String updateString = "INSERT DATA { GRAPH " + graph + " { " + sub + " " + newType + " " + addSub
+							+ " }}"; // TODO testen
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 					subPassed = new ArrayList<String>();
 					findAll(addSub, oldGraph);
 					try {
-						FileOutputStream outStream = new FileOutputStream(new File("./UserInterface/src/main/resources/newTriples.nt")); //helper file
+						FileOutputStream outStream = new FileOutputStream(
+								new File("./UserInterface/src/main/resources/newTriples.nt")); // helper file
 						PrintWriter p = new PrintWriter(outStream);
 						p.write(allResults);
 						p.close();
 					} catch (FileNotFoundException e) {
-					} 
+					}
 					updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.nt> INTO GRAPH " + graph;
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 				}
@@ -233,27 +244,28 @@ public class Tab {
 			public void actionPerformed(ActionEvent ae) {
 				String sub;
 				allResults = "";
-				if(lastRightClick.getClass() == JButton.class) {
-					 sub = ((JButton) lastRightClick).getText();
-				}else {
+				if (lastRightClick.getClass() == JButton.class) {
+					sub = ((JButton) lastRightClick).getText();
+				} else {
 					sub = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).ident;
 				}
 				subPassed = new ArrayList<String>();
 				findAll(sub, graph);
-				
+
 				try {
-					FileOutputStream outStream = new FileOutputStream(new File("./UserInterface/src/main/resources/newTriples.nt")); //helper file
+					FileOutputStream outStream = new FileOutputStream(
+							new File("./UserInterface/src/main/resources/newTriples.nt")); // helper file
 					PrintWriter p = new PrintWriter(outStream);
 					p.write(allResults);
 					p.close();
 				} catch (FileNotFoundException e) {
-				} 
+				}
 				String updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.nt>";
 				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
-				
+
 				updateString = "DELETE { GRAPH " + graph + " {?s ?p ?o} } WHERE {  { ?s ?p ?o }}";
 				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
-				
+
 				updateString = "DELETE {?s ?p ?o} WHERE {?s ?p ?o}";
 				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 			}
@@ -267,14 +279,15 @@ public class Tab {
 		ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 		List<QuerySolution> list = ResultSetFormatter.toList(result);
 		subPassed.add(sub);
-		for(QuerySolution sol : list) {
-			//String obj = "< " + sol.get("?o").toString() + ">";
+		for (QuerySolution sol : list) {
+			// String obj = "< " + sol.get("?o").toString() + ">";
 			String data0 = sol.toString();
 			String[] parts = data0.split("\\?o = ");
 			parts = parts[1].split(" \\)"); // " )"
 			String obj = parts[0];
-			if(obj.charAt(0) == '<' && !subPassed.contains(obj) && !sub.equals(obj)) findAll(obj, graph);
-			
+			if (obj.charAt(0) == '<' && !subPassed.contains(obj) && !sub.equals(obj))
+				findAll(obj, graph);
+
 			allResults += sub + "	" + "<" + sol.get("?p") + ">" + "	" + obj + " . \n";
 		}
 	}
@@ -287,7 +300,20 @@ public class Tab {
 					moduleClicked(me.getComponent());
 				} else if (SwingUtilities.isRightMouseButton(me)) {
 					lastRightClick = me.getComponent();
-					popUpMenu.show(lastRightClick, me.getX(), me.getY());
+					if (lastRightClick.getClass() == JButton.class) {
+						String type = bttnMap.get(lastRightClick).type;
+						if (type.equals("<http://eatld.et.tu-dresden.de/mso/ProcessCell>")
+								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Plant>")
+								|| type.equals("<http://eatld.et.tu-dresden.de/mso/SubPlant>"))
+							popUpMenu.show(lastRightClick, me.getX(), me.getY());
+					} else {
+						String type = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).type;
+						if (type.equalsIgnoreCase("<http://eatld.et.tu-dresden.de/mso/ProcessCell>")
+								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Plant>")
+								|| type.equals("<http://eatld.et.tu-dresden.de/mso/SubPlant>"))
+							popUpMenu.show(lastRightClick, me.getX(), me.getY());
+					}
+
 				}
 			}
 
@@ -299,7 +325,7 @@ public class Tab {
 
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				//Auto-generated method stub
+				// Auto-generated method stub
 
 			}
 
@@ -335,24 +361,32 @@ public class Tab {
 		Object lastComponent = tp.getLastPathComponent();
 
 		String sub = treeMap.get(lastComponent).ident;
-		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/hasPlant>", "<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>", "<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
+		String[] searchFor = { "<http://eatld.et.tu-dresden.de/mso/hasPlant>",
+				"<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>",
+				"<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
 		for (String pre : searchFor) {
-			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " {{ " + sub + " " + pre + " ?o } . { " + sub + " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> " + " ?label}}"; //TODO
+			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " {{ " + sub + " " + pre + " ?o } . { " + sub
+					+ " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> " + " ?label}}"; // TODO
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
-			for(QuerySolution sol : resList) {
+			for (QuerySolution sol : resList) {
 				String type = "";
-				if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasUnit>")) type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
-				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>")) type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
-				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
-				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; //TODO checken
+				if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasUnit>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; // TODO checken
 
 				String ident = "";
-				if(sub.contains("/"))  ident = "<" + sol.get("?o").toString() + ">";
-				else ident = "<_:" + sol.get("?o").toString() + ">";
-				
+				if (sub.contains("/"))
+					ident = "<" + sol.get("?o").toString() + ">";
+				else
+					ident = "<_:" + sol.get("?o").toString() + ">";
+
 				String label = sol.get("?label").toString();
-				
 
 				DefaultMutableTreeNode node = new DefaultMutableTreeNode(label);
 				treeMap.put(node, new TreeDataHelper(ident, type, tab));
@@ -368,34 +402,43 @@ public class Tab {
 
 		JPanel layer = new JPanel();
 		layer.setLayout(new BoxLayout(layer, BoxLayout.X_AXIS));
-		
+
 		ArrayList<JButton> destBttns = new ArrayList<JButton>();
 
 		String sub = bttnMap.get(sourceBttn).ident;
-		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/hasPlant>", "<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>", "<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
-//		HashMap<String, String> newBttnMap = new HashMap<String, String>();
+		String[] searchFor = { "<http://eatld.et.tu-dresden.de/mso/hasPlant>",
+				"<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>",
+				"<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
+		// HashMap<String, String> newBttnMap = new HashMap<String, String>();
 		for (String pre : searchFor) {
-			String queryString = "SELECT ?o ?label WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o . " + sub + " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> ?label }}"; //TODO
+			String queryString = "SELECT ?o ?label WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o . " + sub
+					+ " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> ?label }}"; // TODO
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
-			for(QuerySolution sol : resList) {
+			for (QuerySolution sol : resList) {
 				String type = "";
-				if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasUnit>")) type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
-				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>")) type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
-				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
-				else if(pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>")) type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; //TODO checken
-				
+				if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasUnit>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; // TODO checken
+
 				String ident = "";
-				if(sub.contains("/")) ident = "<" + sol.get("?o").toString() + ">";
-				else ident = "<_:" + sol.get("?o").toString() + ">";
-				
+				if (sub.contains("/"))
+					ident = "<" + sol.get("?o").toString() + ">";
+				else
+					ident = "<_:" + sol.get("?o").toString() + ">";
+
 				String label = sol.get("?label").toString();
 
 				JPanel subLayer = new JPanel();
 				JButton button = new JButton(label);
-				//button.setOpaque(false);
-				//button.setContentAreaFilled(false);
-				//String type = newBttnMap.get(name);
+				// button.setOpaque(false);
+				// button.setContentAreaFilled(false);
+				// String type = newBttnMap.get(name);
 				button.setBackground(getColor(type));
 				button.addMouseListener(mouseListener);
 				button.setMargin(new Insets(20, 20, 20, 20));
@@ -462,11 +505,11 @@ class BttnDataHelper {
 }
 
 class TreeDataHelper {
-	
+
 	public String type;
 	public String ident;
 	public Tab hostTab;
-	
+
 	public TreeDataHelper(String ident, String type, Tab hostTab) {
 		this.ident = ident;
 		this.type = type;

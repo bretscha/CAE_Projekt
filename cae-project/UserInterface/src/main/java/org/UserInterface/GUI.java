@@ -254,7 +254,7 @@ public class GUI {
 	private void buildExportPanel() {
 		JButton expBttn = new JButton("Export!");
 		expBttn.setActionCommand("expBttn");
-		String[] expChoice = { "XML", "GraphML" };
+		String[] expChoice = { "GraphML" }; //weitere theoretisch möglich
 		expBox = new JComboBox<String>(expChoice);
 		exportPanel.setLayout(new FlowLayout());
 		exportPanel.add(new JLabel("Speichern unter: "));
@@ -268,7 +268,7 @@ public class GUI {
 		graphBox.addItem("All");
 		for (String name : graphList)
 			graphBox.addItem(name);
-		graphPanel.add(new JLabel("verfügbare Graphen im Dataset"));
+		graphPanel.add(new JLabel("Graph aus Dataset für SPARQL Befehle auswählen: "));
 		graphPanel.add(graphBox);
 	}
 
@@ -278,7 +278,8 @@ public class GUI {
 	public static void actExport() {
 		expLocation = expTxtField.getText().toString();
 		String outType = expBox.getSelectedItem().toString();
-		exporterBase.doExport(dsLocation, outType, expLocation, frame);
+		String graph = graphBox.getSelectedItem().toString();
+		exporterBase.doExport(dsLocation, outType, expLocation, graph, frame);
 	}
 
 	private static void buildQueryPanel() {
@@ -459,7 +460,7 @@ public class GUI {
 	}
 
 	private static void buildTablePanel() {
-		tablePanel.add(new JLabel("Ergebnis: "));
+		tablePanel.add(new JLabel("Ergebnis: (Zeilen und Spaltennummern beginnen mit \"0\")"));
 		tablePanel.setLayout(new FlowLayout());
 
 		DefaultTableModel tableModel = new DefaultTableModel(
@@ -508,6 +509,10 @@ public class GUI {
 
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(frame, "Nur Zahlen eingeben!");
+			return;
+		}
+		if(intCol == 0) {
+			JOptionPane.showMessageDialog(frame, "Graphnamen können nicht auf diese Weise geändert werden.");
 			return;
 		}
 		String oldValue = table.getValueAt(intRow, intCol).toString();

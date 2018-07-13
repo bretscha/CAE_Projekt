@@ -60,6 +60,9 @@ public class Tab {
 	private HashMap<DefaultMutableTreeNode, TreeDataHelper> treeMap = new HashMap<DefaultMutableTreeNode, TreeDataHelper>();
 	private String allResults;
 	private ArrayList<String> subPassed;
+	private String[] searchForPredicate = { "<http://eatld.et.tu-dresden.de/mso/hasProcessCell>",
+			"<http://eatld.et.tu-dresden.de/mso/hasArmature>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>",
+			"<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
 
 	/**
 	 * HashMap that stores all visible buttons (modules/devices) and the properly
@@ -155,9 +158,9 @@ public class Tab {
 			bttn.setAlignmentX(Component.CENTER_ALIGNMENT);
 			layer11.setAlignmentY(Component.TOP_ALIGNMENT);
 			layer11.add(bttn);
-			layer1.add(layer11);
 			bttnMap.put(bttn, new BttnDataHelper(ident.get(i), type, layer11, tab, false));
 		}
+		layer1.add(layer11);
 	}
 
 	private Color getColor(String type) {
@@ -165,13 +168,12 @@ public class Tab {
 			return Color.BLUE;
 		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>"))
 			return Color.GREEN;
-		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/SubPlant>"))
-			return Color.MAGENTA; // TODO stimmt das?
-		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>"))
+		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Site>"))
+			return Color.MAGENTA;
+		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Armature>"))
 			return Color.CYAN;
 		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Equipment>"))
 			return Color.GRAY;
-		// hier noch den rest.... //TODO alles da?
 		else
 			return Color.WHITE;
 	}
@@ -204,7 +206,7 @@ public class Tab {
 					if (markedObj.getClass() == JButton.class) {
 						type = GUI.newConnMap.get(markedObj).bttnMap.get(markedObj).type;
 						addSub = GUI.newConnMap.get(markedObj).bttnMap.get(markedObj).ident;
-						sub = ((JButton) lastRightClick).getText();
+						sub = bttnMap.get(lastRightClick).ident;
 					} else {
 						type = GUI.newConnMap.get(markedObj).treeMap.get(markedObj).type;
 						addSub = GUI.newConnMap.get(markedObj).treeMap.get(markedObj).ident;
@@ -221,7 +223,7 @@ public class Tab {
 							+ " }}"; // TODO testen
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 					subPassed = new ArrayList<String>();
-					findAll(addSub, oldGraph);
+					findAllDependencies(addSub, oldGraph);
 					try {
 						FileOutputStream outStream = new FileOutputStream(
 								new File("./UserInterface/src/main/resources/newTriples.nt")); // helper file
@@ -250,7 +252,7 @@ public class Tab {
 					sub = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).ident;
 				}
 				subPassed = new ArrayList<String>();
-				findAll(sub, graph);
+				findAllDependencies(sub, graph);
 
 				try {
 					FileOutputStream outStream = new FileOutputStream(
@@ -273,7 +275,7 @@ public class Tab {
 		popUpMenu.add(menuItem);
 	}
 
-	private void findAll(String sub, String graph) {
+	private void findAllDependencies(String sub, String graph) {
 		String queryString = "SELECT ?p ?o WHERE{ GRAPH " + graph + " { " + sub + " ?p ?o}}";
 
 		ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
@@ -286,7 +288,7 @@ public class Tab {
 			parts = parts[1].split(" \\)"); // " )"
 			String obj = parts[0];
 			if (obj.charAt(0) == '<' && !subPassed.contains(obj) && !sub.equals(obj))
-				findAll(obj, graph);
+				findAllDependencies(obj, graph);
 
 			allResults += sub + "	" + "<" + sol.get("?p") + ">" + "	" + obj + " . \n";
 		}
@@ -300,17 +302,17 @@ public class Tab {
 					moduleClicked(me.getComponent());
 				} else if (SwingUtilities.isRightMouseButton(me)) {
 					lastRightClick = me.getComponent();
-					if (lastRightClick.getClass() == JButton.class) {
+					if (lastRightClick.getClass() == JButton.class) {	
 						String type = bttnMap.get(lastRightClick).type;
 						if (type.equals("<http://eatld.et.tu-dresden.de/mso/ProcessCell>")
-								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Plant>")
-								|| type.equals("<http://eatld.et.tu-dresden.de/mso/SubPlant>"))
+								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>")
+								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Site>"))
 							popUpMenu.show(lastRightClick, me.getX(), me.getY());
 					} else {
 						String type = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).type;
 						if (type.equalsIgnoreCase("<http://eatld.et.tu-dresden.de/mso/ProcessCell>")
-								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Plant>")
-								|| type.equals("<http://eatld.et.tu-dresden.de/mso/SubPlant>"))
+								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>")
+								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Site>"))
 							popUpMenu.show(lastRightClick, me.getX(), me.getY());
 					}
 
@@ -361,12 +363,9 @@ public class Tab {
 		Object lastComponent = tp.getLastPathComponent();
 
 		String sub = treeMap.get(lastComponent).ident;
-		String[] searchFor = { "<http://eatld.et.tu-dresden.de/mso/hasPlant>",
-				"<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>",
-				"<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
-		for (String pre : searchFor) {
+		for (String pre : searchForPredicate) {
 			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " {{ " + sub + " " + pre + " ?o } . { " + sub
-					+ " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> " + " ?label}}"; // TODO
+					+ " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> " + " ?label}}"; // TODO checken
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for (QuerySolution sol : resList) {
@@ -375,10 +374,10 @@ public class Tab {
 					type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
 				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>"))
 					type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; // TODO checken
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasArmature"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Armature>";
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasProcessCell>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/ProcessCell>"; // TODO fehlt was
 
 				String ident = "";
 				if (sub.contains("/"))
@@ -397,7 +396,6 @@ public class Tab {
 
 	private void inflateBttn(JButton sourceBttn) {
 
-		bttnMap.get(sourceBttn);
 		JPanel sourcePanel = bttnMap.get(sourceBttn).parentPanel;
 
 		JPanel layer = new JPanel();
@@ -406,13 +404,9 @@ public class Tab {
 		ArrayList<JButton> destBttns = new ArrayList<JButton>();
 
 		String sub = bttnMap.get(sourceBttn).ident;
-		String[] searchFor = { "<http://eatld.et.tu-dresden.de/mso/hasPlant>",
-				"<http://eatld.et.tu-dresden.de/mso/hasSubPlant>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>",
-				"<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
-		// HashMap<String, String> newBttnMap = new HashMap<String, String>();
-		for (String pre : searchFor) {
-			String queryString = "SELECT ?o ?label WHERE { GRAPH " + graph + " { " + sub + " " + pre + " ?o . " + sub
-					+ " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> ?label }}"; // TODO
+		for (String pre : searchForPredicate) {
+			String queryString = "SELECT ?o ?label WHERE { GRAPH " + graph + " { " + sub + " " + pre
+					+ " ?o . ?o <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> ?label }}"; // TODO checken
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for (QuerySolution sol : resList) {
@@ -421,10 +415,10 @@ public class Tab {
 					type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
 				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>"))
 					type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasPlant>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Plant>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasSubPlant>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Sub_Plant>"; // TODO checken
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasProcessCell>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/ProcessCell>";
+				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasArmature>"))
+					type = "<http://eatld.et.tu-dresden.de/mso/Armature>"; // TODO fehlt was?
 
 				String ident = "";
 				if (sub.contains("/"))

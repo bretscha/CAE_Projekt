@@ -55,7 +55,7 @@ public class ExporterBase {
 		}
 
 		try {
-			String queryString = "SELECT ?s ?p ?o WHERE { GRAPH " + graph + " {?s ?p ?o}";
+			String queryString = "SELECT ?s ?p ?o WHERE { GRAPH " + graph + " {?s ?p ?o} }";
 			ResultSet result = Query_Execute.executeQuery(dsLocation, queryString, frame);
 			FileOutputStream outStream = new FileOutputStream(new File("./Exporter/src/main/resources/in.xml"));
 

@@ -254,7 +254,7 @@ public class GUI {
 	private void buildExportPanel() {
 		JButton expBttn = new JButton("Export!");
 		expBttn.setActionCommand("expBttn");
-		String[] expChoice = { "GraphML" }; //weitere theoretisch möglich
+		String[] expChoice = { "GraphML" }; // weitere theoretisch möglich
 		expBox = new JComboBox<String>(expChoice);
 		exportPanel.setLayout(new FlowLayout());
 		exportPanel.add(new JLabel("Speichern unter: "));
@@ -511,7 +511,7 @@ public class GUI {
 			JOptionPane.showMessageDialog(frame, "Nur Zahlen eingeben!");
 			return;
 		}
-		if(intCol == 0) {
+		if (intCol == 0) {
 			JOptionPane.showMessageDialog(frame, "Graphnamen können nicht auf diese Weise geändert werden.");
 			return;
 		}
@@ -647,8 +647,9 @@ public class GUI {
 		for (int i = tabbedPane.getTabCount() - 1; i > 0; i--) {
 			tabbedPane.remove(i);
 		}
-		String[] searchFor = { "<http://eatld.et.tu-dresden.de/mso/ProcessCell>", "plant", "sub_plant" }; // hierarchical
-																											// //TODO
+		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/Site>", "<http://eatld.et.tu-dresden.de/mso/ProcessCell>", "<http://eatld.et.tu-dresden.de/mso/Unit>" }; // hierarchical
+		
+
 		for (String graph : graphList) {
 			ArrayList<String> ident = new ArrayList<String>();
 			ArrayList<String> label = new ArrayList<String>();
@@ -667,12 +668,6 @@ public class GUI {
 			}
 		}
 
-		/*
-		 * Tab tab = new Tab("label", "name"); tabList.add(tab); Tab tab2 = new
-		 * Tab("label2", "name2"); tabList.add(tab2); tabbedPane.addTab("name",
-		 * tab.scrollPane); validateMainPanel(); tabbedPane.addTab("name2",
-		 * tab2.scrollPane); tabbedPane.revalidate();
-		 */
 		ArrayList<String> plus = new ArrayList<String>();
 		plus.add("plus");
 
@@ -684,7 +679,7 @@ public class GUI {
 	private static void searchInGraph(String graph, String obj, ArrayList<String> ident, ArrayList<String> label) {
 		String queryString = "SELECT ?s ?label WHERE { GRAPH " + graph
 				+ " {{ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> " + obj
-				+ " }. {?s <http://www.w3.org/2000/01/rdf-schema#label> ?label }}}";
+				+ " }. {?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> ?label }}}";
 		result = Query_Execute.executeQuery(dsLocation, queryString, frame);
 		List<QuerySolution> list = ResultSetFormatter.toList(result);
 		for (QuerySolution sol : list) {
@@ -694,6 +689,7 @@ public class GUI {
 				ident.add("<" + sol.get("?s").toString() + ">");
 			else
 				ident.add("<_:" + sol.get("?s").toString() + ">");
+			
 			label.add(lbl);
 		}
 	}
@@ -721,17 +717,18 @@ public class GUI {
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 
 		updateString = " INSERT DATA { GRAPH " + graphName + " { ";
-		updateString += "<http://localhost:3030/" + name + "> "; // hier muss noch der TextFeld Wert rein ? //TODO
-		updateString += "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ";
+		updateString += "[] "; 
+		updateString += "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> "; // TODO
 		if (newModuleBox.getSelectedItem().toString().equals("Werk"))
-			updateString += "<http://eatld.et.tu-dresden.de/mso/ProcessCell> ";
+			updateString += "<http://eatld.et.tu-dresden.de/mso/Site> ";
 		else
-			updateString += "<http://eatld.et.tu-dresden.de/mso/Plant> ";
-		updateString += " } }";
-
+			updateString += "<http://eatld.et.tu-dresden.de/mso/ProcessCell> ";
+		
+		updateString += " ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> \"0\"}}";
+		
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 		graphList.add(graphName);
-
+				
 		updateTabs();
 
 	}

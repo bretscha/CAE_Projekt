@@ -2,20 +2,95 @@
   <Site name="=0" label="0" description="Werk/Gebäude/Produktion nach EN Standard">
     <ProcessCell label="H1" description="Anlage">
       <Unit label="T1" description="Teilanlage">
-        <Equipment label="C1" description="Einraumbehälter" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" InnerDiameter="" aggregateState="" Quality="100   %" />
-        <Armature label="Q1" description="Durchgangsventil (allg)" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Hand" Quality="100   %" material="" />
-        <Armature label="Q2" description="Magnetventil" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Magnet" Quality="100   %" material="" />
-        <Armature label="R1" description="2-Wege-Regelventil" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Kolben" Quality="100   %" material="" />
-        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
-        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
-        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
-        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
+        <Equipment comosUid="A42CNDOMLO" plantID="=0.H1.T1C1" label="C1" description="Einraumbehälter" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" ProceedingTemperature="" AllowableTemperature="" InnerDiameter="" aggregateState="" Quality="100   %">
+          <ConnectionObject comosUid="A43L1WG1MD" plantID="=0.H1.T1C1N01" label="N01" description="Stutzen, gerade">
+            <Flow comosUid="A42CNIPJLO" plantID="=0.H1.T1C1N01" label="001" description="001" ioType="Neutral" isConnectedTo="=0.H1.T1.W2.01SEG1:I1" />
+            <Flow comosUid="A42CNIPJLO" plantID="=0.H1.T1C1N01" label="I1" description="I1" ioType="Neutral" isConnectedTo="=0.H1.T1.W1.01SEG1:I1" />
+          </ConnectionObject>
+          <ConnectionObject comosUid="A43L2IXEMD" plantID="=0.H1.T1C1N02" label="N02" description="Stutzen, gerade">
+            <Flow comosUid="A42CNZFOLO" plantID="=0.H1.T1C1N02" label="I1" description="I1" ioType="Neutral" isConnectedTo="=0.H1.T2.W2.01SEG2:O1" />
+          </ConnectionObject>
+          <ConnectionObject comosUid="A43L2IXFMD" plantID="=0.H1.T1C1N03" label="N03" description="Stutzen, gerade">
+            <Flow comosUid="A42KCVSSXP" plantID="=0.H1.T1C1N03" label="I1" description="I1" ioType="Neutral" isConnectedTo="=0.H1.T1.L001.LIC:I" />
+          </ConnectionObject>
+          <ConnectionObject comosUid="A43L2IXGMD" plantID="=0.H1.T1C1N04" label="N04" description="Stutzen, gerade">
+            <Flow comosUid="A42KD9TSXP" plantID="=0.H1.T1C1N04" label="I1" description="I1" ioType="Neutral" isConnectedTo="" />
+          </ConnectionObject>
+        </Equipment>
+        <Armature comosUid="A43L020PMD" plantID="=0.H1.T1-Q1" label="Q1" description="Durchgangsventil (allg)" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Hand" Quality="100   %" material="">
+          <Flow comosUid="A42CNGMQLO" plantID="=0.H1.T1-Q1" label="I1" description="I1" ioType="Eingang" isConnectedTo="=0.H1.T1.W1.01SEG1:O1" />
+          <Flow comosUid="A42CNGMQLO" plantID="=0.H1.T1-Q1" label="O1" description="O1" ioType="Ausgang" isConnectedTo="=0.H1.T1.W1.01SEG2:I1" />
+        </Armature>
+        <Armature comosUid="A43L020XMD" plantID="=0.H1.T1-Q2" label="Q2" description="Magnetventil" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Magnet" Quality="100   %" material="">
+          <Flow comosUid="A42CNOL4LO" plantID="=0.H1.T1-Q2" label="I1" description="I1" ioType="Eingang" isConnectedTo="=0.H1.T1.W2.01SEG1:O1" />
+          <Flow comosUid="A42CNOL4LO" plantID="=0.H1.T1-Q2" label="O1" description="O1" ioType="Ausgang" isConnectedTo="=0.H1.T1.W2.01SEG2:I1" />
+          <Flow comosUid="A42CNOL4LO" plantID="=0.H1.T1-Q2" label="O2" description="O2" ioType="Neutral" isConnectedTo="" />
+          <Flow comosUid="A42CNOL4LO" plantID="=0.H1.T1-Q2" label="W" description="W" ioType="Neutral" isConnectedTo="" />
+          <Flow comosUid="A42CNOL4LO" plantID="=0.H1.T1-Q2" label="W1" description="W1" ioType="Neutral" isConnectedTo="" />
+        </Armature>
+        <Armature comosUid="A43L0212MD" plantID="=0.H1.T1-R1" label="R1" description="2-Wege-Regelventil" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" aggregateState="" drive="Kolben" Quality="100   %" material="">
+          <Flow comosUid="A42KCYB2XP" plantID="=0.H1.T1-R1" label="I1" description="I1" ioType="Eingang" isConnectedTo="" />
+          <Flow comosUid="A42KCYB2XP" plantID="=0.H1.T1-R1" label="O1" description="O1" ioType="Ausgang" isConnectedTo="" />
+        </Armature>
+        <Conduit comosUid="A43L0216MD" plantID="=0.H1.T1.W1.01" label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" from="=0.H1.T1C1" isConnectedTo="=0.H1.T1-Q1">
+          <Pipe comosUid="A42CO9NMLO" label="SEG1" description="Rohrleitungssegment">
+            <Flow comosUid="A42CO9NMLO" plantID="=0.H1.T1.W1.01SEG1" label="I1" description="I1" i="Eingang" isConnectedTo="=0.H1.T1C1N01:I1" />
+            <Flow comosUid="A42CO9NMLO" plantID="=0.H1.T1.W1.01SEG1" label="O1" description="O1" i="Ausgang" isConnectedTo="=0.H1.T1-Q1:I1" />
+          </Pipe>
+          <Pipe comosUid="A42COB3GLO" label="SEG2" description="Rohrleitungssegment">
+            <Flow comosUid="A42COB3GLO" plantID="=0.H1.T1.W1.01SEG2" label="I1" description="I1" i="Eingang" isConnectedTo="=0.H1.T1-Q1:O1" />
+            <Flow comosUid="A42COB3GLO" plantID="=0.H1.T1.W1.01SEG2" label="O1" description="O1" i="Ausgang" isConnectedTo="" />
+          </Pipe>
+          <Pipe comosUid="A42COBM5LO" label="SEG3" description="Rohrleitungssegment">
+            <Flow comosUid="A42COBM5LO" plantID="=0.H1.T1.W1.01SEG3" label="I1" description="I1" i="Eingang" isConnectedTo="" />
+            <Flow comosUid="A42COBM5LO" plantID="=0.H1.T1.W1.01SEG3" label="O1" description="O1" i="Ausgang" isConnectedTo="=0.H1.T2C1N02:I1" />
+          </Pipe>
+        </Conduit>
+        <Conduit comosUid="A43L0218MD" plantID="=0.H1.T1.W2.01" label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" from="=0.H1.T1C1" isConnectedTo="=0.H1.T1-Q2">
+          <Pipe comosUid="A42COAB8LO" label="SEG1" description="Rohrleitungssegment">
+            <Flow comosUid="A42COAB8LO" plantID="=0.H1.T1.W2.01SEG1" label="I1" description="I1" i="Eingang" isConnectedTo="=0.H1.T1C1N01:001" />
+            <Flow comosUid="A42COAB8LO" plantID="=0.H1.T1.W2.01SEG1" label="O1" description="O1" i="Ausgang" isConnectedTo="=0.H1.T1-Q2:I1" />
+          </Pipe>
+          <Pipe comosUid="A42COCEALO" label="SEG2" description="Rohrleitungssegment">
+            <Flow comosUid="A42COCEALO" plantID="=0.H1.T1.W2.01SEG2" label="I1" description="I1" i="Eingang" isConnectedTo="=0.H1.T1-Q2:O1" />
+            <Flow comosUid="A42COCEALO" plantID="=0.H1.T1.W2.01SEG2" label="O1" description="O1" i="Ausgang" isConnectedTo="" />
+          </Pipe>
+          <Pipe comosUid="A42COCWYLO" label="SEG3" description="Rohrleitungssegment">
+            <Flow comosUid="A42COCWYLO" plantID="=0.H1.T1.W2.01SEG3" label="I1" description="I1" i="Eingang" isConnectedTo="" />
+            <Flow comosUid="A42COCWYLO" plantID="=0.H1.T1.W2.01SEG3" label="O1" description="O1" i="Ausgang" isConnectedTo="=0.H1.T2C1N02:001" />
+          </Pipe>
+        </Conduit>
+        <Conduit comosUid="A43L021CMD" plantID="=0.H1.T1.W3.01" label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" from="" isConnectedTo="=0.H1.T1C1" />
+        <Conduit comosUid="A43L021GMD" plantID="=0.H1.T1.W4.01" label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" from="=0.H1.T1C1" isConnectedTo="" />
       </Unit>
       <Unit label="T2" description="Teilanlage">
-        <Equipment label="C1" description="Einraumbehälter" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" InnerDiameter="" aggregateState="" Quality="100   %" />
-        <Equipment label="G1" description="Kreiselpumpe" ProceedingTemperature="" AllowableTemperature="" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" InnerDiameter="" aggregateState="" Quality="100   %" />
-        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
-        <Pipe label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" />
+        <Equipment comosUid="A42CNQIKLO" plantID="=0.H1.T2C1" label="C1" description="Einraumbehälter" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" ProceedingTemperature="" AllowableTemperature="" InnerDiameter="" aggregateState="" Quality="100   %">
+          <ConnectionObject comosUid="A43L2M26MD" plantID="=0.H1.T2C1N01" label="N01" description="Stutzen, gerade">
+            <Flow comosUid="A42CNRGNLO" plantID="=0.H1.T2C1N01" label="I1" description="I1" ioType="Neutral" isConnectedTo="=0.H1.T2.W1.01SEG1:I1" />
+          </ConnectionObject>
+          <ConnectionObject comosUid="A43L2M27MD" plantID="=0.H1.T2C1N02" label="N02" description="Stutzen, gerade">
+            <Flow comosUid="A42CO687LO" plantID="=0.H1.T2C1N02" label="001" description="001" ioType="Neutral" isConnectedTo="=0.H1.T1.W2.01SEG3:O1" />
+            <Flow comosUid="A42CO687LO" plantID="=0.H1.T2C1N02" label="I1" description="I1" ioType="Neutral" isConnectedTo="=0.H1.T1.W1.01SEG3:O1" />
+          </ConnectionObject>
+        </Equipment>
+        <Equipment comosUid="A42CNQUILO" plantID="=0.H1.T2G1" label="G1" description="Kreiselpumpe" ProceedingPressure="" AllowablePressure="" material="" Height="" Volume="" ProceedingTemperature="" AllowableTemperature="" InnerDiameter="" aggregateState="" Quality="100   %" />
+        <Conduit comosUid="A43L021SMD" plantID="=0.H1.T2.W1.01" label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" from="=0.H1.T2C1" isConnectedTo="=0.H1.T2G1">
+          <Pipe comosUid="A42CO8ZVLO" label="SEG1" description="Rohrleitungssegment">
+            <Flow comosUid="A42CO8ZVLO" plantID="=0.H1.T2.W1.01SEG1" label="I1" description="I1" i="Eingang" isConnectedTo="=0.H1.T2C1N01:I1" />
+            <Flow comosUid="A42CO8ZVLO" plantID="=0.H1.T2.W1.01SEG1" label="O1" description="O1" i="Ausgang" isConnectedTo="=0.H1.T2G1:I1" />
+          </Pipe>
+        </Conduit>
+        <Conduit comosUid="A43L021WMD" plantID="=0.H1.T2.W2.01" label="01" description="Rohrleitungsabschnitt" AllowableTemperature="" AllowablePressure="" Quality="100   %" from="=0.H1.T2G1" isConnectedTo="=0.H1.T2.W2.01">
+          <Pipe comosUid="A42COJTTLO" label="SEG1" description="Rohrleitungssegment">
+            <Flow comosUid="A42COJTTLO" plantID="=0.H1.T2.W2.01SEG1" label="I1" description="I1" i="Eingang" isConnectedTo="=0.H1.T2G1:O1" />
+            <Flow comosUid="A42COJTTLO" plantID="=0.H1.T2.W2.01SEG1" label="O1" description="O1" i="Ausgang" isConnectedTo="" />
+          </Pipe>
+          <Pipe comosUid="A42COHDOLO" label="SEG2" description="Rohrleitungssegment">
+            <Flow comosUid="A42COHDOLO" plantID="=0.H1.T2.W2.01SEG2" label="001" description="001" i="Neutral" isConnectedTo="" />
+            <Flow comosUid="A42COHDOLO" plantID="=0.H1.T2.W2.01SEG2" label="I1" description="I1" i="Eingang" isConnectedTo="" />
+            <Flow comosUid="A42COHDOLO" plantID="=0.H1.T2.W2.01SEG2" label="O1" description="O1" i="Ausgang" isConnectedTo="=0.H1.T1C1N02:I1" />
+          </Pipe>
+        </Conduit>
       </Unit>
     </ProcessCell>
   </Site>

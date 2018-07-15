@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="https://www.w3.org/TR/xmlschema11-2/#" xmlns:mso="http://eatld.et.tu-dresden.de/mso/"
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="https://www.w3.org/TR/xmlschema11-2/#" xmlns:mso="http://eatld.et.tu-dresden.de/mso/" xmlns:hmi="http://eatld.et.tu-dresden.de/mo/hmi#"
 	xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 	xmlns:caepa="http://eatld.et.tu-dresden.de/mso/caepaEntities/">
+
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
 
 	<!-- Template: ComosExport -->
@@ -24,9 +25,9 @@
 				<rdfs:label>
 					<xsl:value-of select="./@label" />
 				</rdfs:label>
-				<xsd:string>
+				<rdfs:comment>
 					<xsl:value-of select="./@description" />
-				</xsd:string>
+				</rdfs:comment>
 				<xsl:apply-templates select="./ProcessCell" />
 			</mso:Site>
 
@@ -42,17 +43,24 @@
 					<rdfs:label>
 						<xsl:value-of select="./@label" />
 					</rdfs:label>
-					<xsd:string>
+					<rdfs:comment>
 						<xsl:value-of select="./@description" />
-					</xsd:string>
+					</rdfs:comment>
 					<xsl:apply-templates select="./Unit" />
+				
+					<hmi:hasPicture>
+
+
+					</hmi:hasPicture>
+
 				</mso:ProcessCell>
 			</mso:hasProcessCell>
+
 
 		</xsl:for-each>
 	</xsl:template>
 
-	<!-- Template Unit -->
+	<!-- Template Unit - Teilanlage -->
 
 	<xsl:template match="Unit">
 		<xsl:for-each select=".">
@@ -62,12 +70,14 @@
 					<rdfs:label>
 						<xsl:value-of select="./@label" />
 					</rdfs:label>
-					<xsd:string>
+					<rdfs:comment>
 						<xsl:value-of select="./@description" />
-					</xsd:string>
+					</rdfs:comment>
+
 					<xsl:apply-templates select="./Equipment" />
 					<xsl:apply-templates select="./Armature" />
 					<xsl:apply-templates select="./Pipe" />
+
 				</mso:Unit>
 			</mso:hasUnit>
 
@@ -83,9 +93,9 @@
 					<rdf:type>
 						<xsl:value-of select="./@label" />
 					</rdf:type>
-					<rdf:label>
+					<rdfs:label>
 						<xsl:value-of select="./@description" />
-					</rdf:label>
+					</rdfs:label>
 					<mso:hasProceedingTemperature>
 						<xsl:value-of select="./@ProceedingTemperature" />
 					</mso:hasProceedingTemperature>
@@ -110,7 +120,6 @@
 					<mso:hasInnerDiameter>
 						<xsl:value-of select="./@InnerDiameter" />
 					</mso:hasInnerDiameter>
-					<!-- <mso:reserve><xsl:value-of select="./@"/></mso:reserve> -->
 				</mso:Equipment>
 			</mso:hasEquipment>
 
@@ -126,9 +135,9 @@
 					<rdf:type>
 						<xsl:value-of select="./@label" />
 					</rdf:type>
-					<rdf:label>
+					<rdfs:label>
 						<xsl:value-of select="./@description" />
-					</rdf:label>
+					</rdfs:label>
 					<mso:hasAllowableOperatingPressure>
 						<xsl:value-of select="./@ProceedingTemperature" />
 					</mso:hasAllowableOperatingPressure>
@@ -151,19 +160,19 @@
 		</xsl:for-each>
 	</xsl:template>
 
-	<!-- <xsl:template match="Vessel"> <rdfs:label><xsl:value-of select="./@label"/></rdfs:label> <xsd:string><xsl:value-of select="./@description"/></xsd:string> </xsl:template> -->
+	<!-- <xsl:template match="Vessel"> <rdfs:label><xsl:value-of select="./@label"/></rdfs:label> <rdfs:comment><xsl:value-of select="./@description"/></rdfs:comment> </xsl:template> -->
 	<xsl:template match="Pipe">
 		<!-- for each equipment > Scan for name > Set Template -->
 		<xsl:for-each select=".">
 		
 			<mso:has>
 				<mso:Pipe>
-						<rdf:label>
+						<rdfs:label>
 							<xsl:value-of select="./@label" />
-						</rdf:label>
-						<rdf:label>
+						</rdfs:label>
+						<rdfs:label>
 							<xsl:value-of select="./@description" />
-						</rdf:label>
+						</rdfs:label>
 						<mso:hasAllowableTemperature>
 							<xsl:value-of select="./@AllowableTemperature" />
 						</mso:hasAllowableTemperature>

@@ -19,6 +19,7 @@
 		<xsl:for-each select=".">
 
 			<mso:Site>
+				<!-- <xsl:attribute name="rdf:about" select="./@name" /> -->
 				<vcard:hasName>
 					<xsl:value-of select="./@name" />
 				</vcard:hasName>
@@ -90,12 +91,23 @@
 
 			<mso:hasEquipment>
 				<mso:Equipment>
+					
+					<!-- <xsl:attribute name="{name()}">
+						<xsl:value-of select=""/>
+					</xsl:attribute> -->
+
+					<mso:comosUid>
+						<xsl:value-of select="./@comosUid" />
+					</mso:comosUid>
+					<!-- <mso:plantID>
+						<xsl:value-of select="./@plantID" />
+					</mso:plantID> -->
 					<rdf:type>
 						<xsl:value-of select="./@label" />
 					</rdf:type>
-					<rdfs:label>
+					<rdfs:comment>
 						<xsl:value-of select="./@description" />
-					</rdfs:label>
+					</rdfs:comment>
 					<mso:hasProceedingTemperature>
 						<xsl:value-of select="./@ProceedingTemperature" />
 					</mso:hasProceedingTemperature>
@@ -120,6 +132,10 @@
 					<mso:hasInnerDiameter>
 						<xsl:value-of select="./@InnerDiameter" />
 					</mso:hasInnerDiameter>
+				
+					<xsl:apply-templates select="./ConnectionObject" />
+
+
 				</mso:Equipment>
 			</mso:hasEquipment>
 
@@ -135,9 +151,9 @@
 					<rdf:type>
 						<xsl:value-of select="./@label" />
 					</rdf:type>
-					<rdfs:label>
+					<rdfs:comment>
 						<xsl:value-of select="./@description" />
-					</rdfs:label>
+					</rdfs:comment>	
 					<mso:hasAllowableOperatingPressure>
 						<xsl:value-of select="./@ProceedingTemperature" />
 					</mso:hasAllowableOperatingPressure>
@@ -170,9 +186,9 @@
 						<rdfs:label>
 							<xsl:value-of select="./@label" />
 						</rdfs:label>
-						<rdfs:label>
+						<rdfs:comment>
 							<xsl:value-of select="./@description" />
-						</rdfs:label>
+						</rdfs:comment>
 						<mso:hasAllowableTemperature>
 							<xsl:value-of select="./@AllowableTemperature" />
 						</mso:hasAllowableTemperature>
@@ -184,5 +200,35 @@
 
 		</xsl:for-each>
 	</xsl:template>
+
+
+	<xsl:template match="ConnectionObject">
+			<xsl:for-each select=".">
+			
+				<mso:ConnectionObject>
+					<mso:comosUid>
+						<xsl:value-of select="./@comosUid" />
+					</mso:comosUid>
+					<mso:plantID>
+						<xsl:value-of select="./@plantID" />
+					</mso:plantID>
+					<rdfs:label>
+							<xsl:value-of select="./@label" />
+					</rdfs:label>
+					<rdfs:comment>
+						<xsl:value-of select="./@description" />
+					</rdfs:comment>
+					
+					<!-- <xsl:apply-templates select="./Flow" /> -->
+
+				</mso:ConnectionObject>
+
+			</xsl:for-each>
+	</xsl:template>
+
+	<!-- <xsl:template match="Flow">
+		<xsl:for-each select=".">
+
+	</xsl:template> -->
 
 </xsl:stylesheet>

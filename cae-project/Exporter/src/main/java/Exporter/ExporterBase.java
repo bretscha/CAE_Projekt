@@ -5,6 +5,8 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -43,13 +45,18 @@ public class ExporterBase {
 		setXslPath(mapping);
 	}
 
-	public void doExport(String dsLocation, String type, String expLocation) {
+	public void doExport(String dsLocation, String type, String expLocation, String graph, JFrame frame) {
 		
 		outputPath = expLocation;
+		
+		if(graph.equals("All")) {
+			JOptionPane.showMessageDialog(frame, "Bitte expliziten Graph auswählen.");
+			return;
+		}
 
 		try {
-			String queryString = "SELECT ?s ?p ?o WHERE {?s ?p ?o}"; // TODO abfrage graph hinzufügen
-			ResultSet result = Query_Execute.executeQuery(dsLocation, queryString);
+			String queryString = "SELECT ?s ?p ?o WHERE { GRAPH " + graph + " {?s ?p ?o} }";
+			ResultSet result = Query_Execute.executeQuery(dsLocation, queryString, frame);
 			FileOutputStream outStream = new FileOutputStream(new File("./Exporter/src/main/resources/in.xml"));
 
 			PrintWriter p = new PrintWriter(outStream);

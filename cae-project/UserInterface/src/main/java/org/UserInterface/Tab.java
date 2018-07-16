@@ -27,6 +27,7 @@ import javax.swing.JTree;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
 
 import org.apache.jena.query.QuerySolution;
@@ -61,7 +62,7 @@ public class Tab {
 	private String allResults;
 	private ArrayList<String> subPassed;
 	private String[] searchForPredicate = { "<http://eatld.et.tu-dresden.de/mso/hasProcessCell>",
-			"<http://eatld.et.tu-dresden.de/mso/hasArmature>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>",
+			"<http://eatld.et.tu-dresden.de/mso/has>", "<http://eatld.et.tu-dresden.de/mso/hasUnit>",
 			"<http://eatld.et.tu-dresden.de/mso/hasEquipment>" };
 
 	/**
@@ -137,10 +138,10 @@ public class Tab {
 		upperPanel.add(discardBttn);
 	}
 
-	private void initTree(ArrayList<String> label, ArrayList<String> name, String type) {
+	private void initTree(ArrayList<String> label, ArrayList<String> ident, String type) {
 		for (int i = 0; i < label.size(); i++) {
-			topNode = new DefaultMutableTreeNode(name);
-			treeMap.put(topNode, new TreeDataHelper(name.get(i), type, tab));
+			topNode = new DefaultMutableTreeNode(label.get(i));
+			treeMap.put(topNode, new TreeDataHelper(ident.get(i), type, tab, false));
 			tree = new JTree(topNode);
 			tree.setToggleClickCount(1);
 			tree.addMouseListener(mouseListener);
@@ -174,6 +175,10 @@ public class Tab {
 			return Color.CYAN;
 		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Equipment>"))
 			return Color.GRAY;
+		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/Valve>"))
+			return Color.YELLOW;
+		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/ConnectionObject>"))
+			return Color.ORANGE;
 		else
 			return Color.WHITE;
 	}
@@ -206,12 +211,19 @@ public class Tab {
 					if (markedObj.getClass() == JButton.class) {
 						type = GUI.newConnMap.get(markedObj).bttnMap.get(markedObj).type;
 						addSub = GUI.newConnMap.get(markedObj).bttnMap.get(markedObj).ident;
+					} else {
+						type = GUI.newConnMap.get(markedObj).treeMap
+								.get(((JTree) markedObj).getLastSelectedPathComponent()).type;
+						addSub = GUI.newConnMap.get(markedObj).treeMap
+								.get(((JTree) markedObj).getLastSelectedPathComponent()).ident;
+					}
+
+					if (!tree.isVisible()) {
 						sub = bttnMap.get(lastRightClick).ident;
 					} else {
-						type = GUI.newConnMap.get(markedObj).treeMap.get(markedObj).type;
-						addSub = GUI.newConnMap.get(markedObj).treeMap.get(markedObj).ident;
 						sub = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).ident;
 					}
+
 					String[] parts = type.split("/");
 					String newType = "";
 					int i;
@@ -220,7 +232,7 @@ public class Tab {
 					}
 					newType += "has" + parts[i];
 					String updateString = "INSERT DATA { GRAPH " + graph + " { " + sub + " " + newType + " " + addSub
-							+ " }}"; // TODO testen
+							+ " }}";
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 					subPassed = new ArrayList<String>();
 					findAllDependencies(addSub, oldGraph);
@@ -234,6 +246,16 @@ public class Tab {
 					}
 					updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.nt> INTO GRAPH " + graph;
 					Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+				}
+				GUI.newConnMap.clear();
+				if (lastRightClick.getClass() == JButton.class) {
+					deflateBttn((JButton) lastRightClick);
+					inflateBttn((JButton) lastRightClick);
+				} else {
+					DefaultMutableTreeNode marked = (DefaultMutableTreeNode) ((JTree) lastRightClick)
+							.getLastSelectedPathComponent();
+					treeMap.get(marked).inflated = false;
+					inflateTree(lastRightClick);
 				}
 			}
 		});
@@ -262,7 +284,11 @@ public class Tab {
 					p.close();
 				} catch (FileNotFoundException e) {
 				}
-				String updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.nt>";
+
+				String updateString = "DELETE {?s ?p ?o} WHERE {?s ?p ?o}";
+				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+
+				updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.nt>";
 				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 
 				updateString = "DELETE { GRAPH " + graph + " {?s ?p ?o} } WHERE {  { ?s ?p ?o }}";
@@ -270,6 +296,15 @@ public class Tab {
 
 				updateString = "DELETE {?s ?p ?o} WHERE {?s ?p ?o}";
 				Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+
+				if (lastRightClick.getClass() == JButton.class) {
+					deflateBttn((JButton) layer11.getComponent(0));
+					inflateBttn((JButton) layer11.getComponent(0));
+				} else {
+					DefaultTreeModel model = (DefaultTreeModel) tree.getModel();
+					model.removeNodeFromParent(
+							(DefaultMutableTreeNode) ((JTree) lastRightClick).getLastSelectedPathComponent());
+				}
 			}
 		});
 		popUpMenu.add(menuItem);
@@ -302,7 +337,7 @@ public class Tab {
 					moduleClicked(me.getComponent());
 				} else if (SwingUtilities.isRightMouseButton(me)) {
 					lastRightClick = me.getComponent();
-					if (lastRightClick.getClass() == JButton.class) {	
+					if (lastRightClick.getClass() == JButton.class) {
 						String type = bttnMap.get(lastRightClick).type;
 						if (type.equals("<http://eatld.et.tu-dresden.de/mso/ProcessCell>")
 								|| type.equals("<http://eatld.et.tu-dresden.de/mso/Unit>")
@@ -359,39 +394,35 @@ public class Tab {
 	}
 
 	private void inflateTree(Component source) {
+
 		TreePath tp = tree.getSelectionPath();
 		Object lastComponent = tp.getLastPathComponent();
 
+		if (treeMap.get(lastComponent).inflated == true) {
+			treeMap.get(lastComponent).inflated = false;
+			return;
+		}
+
 		String sub = treeMap.get(lastComponent).ident;
 		for (String pre : searchForPredicate) {
-			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " {{ " + sub + " " + pre + " ?o } . { " + sub
-					+ " <http://www.w3.org/2000/01/rdf-schema#comment> " + " ?label}}"; // TODO checken
+			String queryString = "SELECT ?o ?label ?type WHERE { GRAPH " + graph + " { " + sub + " " + pre
+					+ " ?o . ?o <http://www.w3.org/2000/01/rdf-schema#comment> " + " ?label . ?o a ?type }}";
+			
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for (QuerySolution sol : resList) {
-				String type = "";
-				if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasUnit>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasArmature"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Armature>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasProcessCell>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/ProcessCell>"; // TODO fehlt was
-
-				String ident = "";
-				if (sub.contains("/"))
-					ident = "<" + sol.get("?o").toString() + ">";
-				else
-					ident = "<_:" + sol.get("?o").toString() + ">";
-
+				
+				String type = "<" + sol.get("?type") + ">";			
+				String ident = "<" + sol.get("?o").toString() + ">";
 				String label = sol.get("?label").toString();
 
 				DefaultMutableTreeNode node = new DefaultMutableTreeNode(label);
-				treeMap.put(node, new TreeDataHelper(ident, type, tab));
+				treeMap.put(node, new TreeDataHelper(ident, type, tab, false));
 				((DefaultMutableTreeNode) lastComponent).add(node);
 			}
 		}
+		tree.expandPath(tp);
+		treeMap.get(lastComponent).inflated = true;
 	}
 
 	private void inflateBttn(JButton sourceBttn) {
@@ -405,22 +436,14 @@ public class Tab {
 
 		String sub = bttnMap.get(sourceBttn).ident;
 		for (String pre : searchForPredicate) {
-			String queryString = "SELECT ?o ?label WHERE { GRAPH " + graph + " { " + sub + " " + pre
-					+ " ?o . ?o <http://www.w3.org/2000/01/rdf-schema#comment> ?label }}"; // TODO checken
+			String queryString = "SELECT ?o ?label ?type WHERE { GRAPH " + graph + " { " + sub + " " + pre
+					+ " ?o . ?o <http://www.w3.org/2000/01/rdf-schema#comment> ?label . ?o a ?type}}";
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for (QuerySolution sol : resList) {
-				String type = "";
-				if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasUnit>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Unit>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasEquipment>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Equipment>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasProcessCell>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/ProcessCell>";
-				else if (pre.equals("<http://eatld.et.tu-dresden.de/mso/hasArmature>"))
-					type = "<http://eatld.et.tu-dresden.de/mso/Armature>"; // TODO fehlt was?
-
+				String type = "<" + sol.get("?type") + ">";
 				String ident = "";
+				
 				if (sub.contains("/"))
 					ident = "<" + sol.get("?o").toString() + ">";
 				else
@@ -503,10 +526,12 @@ class TreeDataHelper {
 	public String type;
 	public String ident;
 	public Tab hostTab;
+	public boolean inflated;
 
-	public TreeDataHelper(String ident, String type, Tab hostTab) {
+	public TreeDataHelper(String ident, String type, Tab hostTab, boolean inflated) {
 		this.ident = ident;
 		this.type = type;
 		this.hostTab = hostTab;
+		this.inflated = inflated;
 	}
 }

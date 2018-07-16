@@ -132,6 +132,7 @@ public class GUI {
 	private static JComboBox<String> newModuleBox;
 	private static JTable table;
 	private static JTextField newModuleName = new JTextField("Neuer Name der Anlage");
+	private static JTextField newModuleGraph = new JTextField("Neuer Name des Graphen");
 	/**
 	 * CheckBox for applying a "LIMIT"-filter for the SPARQL query generator
 	 */
@@ -243,10 +244,13 @@ public class GUI {
 			return;
 		}
 		
+		String updateString = "DELETE {?s ?p ?o} WHERE {?s ?p ?o}";
+		Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+
 		String[] parts = impLocation.split("/");
 		String name = parts[parts.length - 1].split("\\.")[0];
 		String graphName = "<" + dsLocation + "data/" + name + ">";
-		String updateString = "  LOAD <file:" + ImporterBase.getRdfOutputPath() + ">";
+		updateString = "  LOAD <file:" + ImporterBase.getRdfOutputPath() + ">";
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 		String queryString = "SELECT ?s ?newS ?p ?o ?next WHERE { ?s ?p ?o . OPTIONAL {?s <http://eatld.et.tu-dresden.de/mso/comosUid> ?newS } . OPTIONAL {?o <http://eatld.et.tu-dresden.de/mso/comosUid> ?next }}";
 		result = Query_Execute.executeQuery(dsLocation, queryString, frame);
@@ -254,16 +258,17 @@ public class GUI {
 
 		HashMap<String, String> hMap = new HashMap<String, String>();
 		String newID = "";
-		for(QuerySolution sol : list) {
-			
+		for (QuerySolution sol : list) {
+
 			try {
 				newID = sol.get("?newS").toString();
-			}catch(NullPointerException e) {
-				newID = String.valueOf(UUID.randomUUID());
+			} catch (NullPointerException e) {
+				newID = UUID.randomUUID().toString();
 			}
-			if(!hMap.containsKey(sol.get("?s").toString())) hMap.put(sol.get("?s").toString(), newID);
+			if (!hMap.containsKey(sol.get("?s").toString()))
+				hMap.put(sol.get("?s").toString(), newID);
 		}
-		
+
 		String allResults = "";
 		for (QuerySolution sol : list) {
 			RDFNode node = sol.get("?o");
@@ -271,14 +276,16 @@ public class GUI {
 			if (node.isLiteral())
 				obj = "\"" + node.toString() + "\"";
 			else {
-				if(node.asNode().isBlank()) {
-					if(sol.get("?next") == null) obj = "<" + hMap.get(sol.get("?o").toString()) + ">";
-					else obj = "<" + sol.get("?next") + ">";
-				}
-				else obj = "<" + node.toString() + ">";
+				if (node.asNode().isBlank()) {
+					if (sol.get("?next") == null)
+						obj = "<http://localhost:3030/ds/" + hMap.get(sol.get("?o").toString()) + ">";
+					else
+						obj = "<http://localhost:3030/ds/" + sol.get("?next") + ">";
+				} else
+					obj = "<" + node.toString() + ">";
 			}
-			
-			allResults += "<" + hMap.get(sol.get("?s").toString()) + "> <" + sol.get("?p") + "> " + obj + " . \n";
+
+			allResults += "<http://localhost:3030/ds/" + hMap.get(sol.get("?s").toString()) + "> <" + sol.get("?p") + "> " + obj + " . \n";
 		}
 
 		try {
@@ -296,6 +303,8 @@ public class GUI {
 		Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 
 		graphList.add(graphName);
+		
+		graphBox.addItem(graphName);
 
 		updateTabs();
 	}
@@ -733,11 +742,7 @@ public class GUI {
 		for (QuerySolution sol : list) {
 			String sub = sol.get("?s").toString();
 			String lbl = sol.get("?label").toString();
-/*			if (sub.contains("/"))
-				ident.add("<" + sub + ">");
-			else
-				ident.add("<_:" + sub + ">"); */
-			
+
 			ident.add("<" + sub + ">");
 			label.add(lbl);
 		}
@@ -746,11 +751,13 @@ public class GUI {
 	private static void initPlusTab() {
 		plusTab = new JPanel();
 		plusTab.setLayout(new FlowLayout());
+		newModuleGraph.setToolTipText("Keine Leerzeichen erlaubt!");
 		String[] moduleType = { "Werk", "Anlage" };
 		newModuleBox = new JComboBox<String>(moduleType);
 		JButton assumeNewBttn = new JButton("Neu erstellen");
 		assumeNewBttn.setActionCommand("assumeNewCell");
 		assumeNewBttn.addActionListener(onClickListener);
+		plusTab.add(newModuleGraph);
 		plusTab.add(newModuleName);
 		plusTab.add(newModuleBox);
 		plusTab.add(assumeNewBttn);
@@ -761,19 +768,18 @@ public class GUI {
 	 */
 	public static void actNewCell() {
 		String name = newModuleName.getText();
-		String graphName = "<" + dsLocation + "data/" + name + ">";
-		String updateString = "CREATE GRAPH " + graphName;
-		Update_Execute.executeUpdate(frame, updateString, dsLocation);
+		String graph = newModuleGraph.getText();
+		String graphName = "<" + dsLocation + "data/" + graph + ">";
 
-		updateString = " INSERT DATA { GRAPH " + graphName + " { ";
-		updateString += "[] ";
-		updateString += "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> "; // TODO
+		String updateString = " INSERT DATA { GRAPH " + graphName + " { ";
+		updateString += "<http://localhost:3030/ds/" + UUID.randomUUID().toString() + "> ";
+		updateString += "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ";
 		if (newModuleBox.getSelectedItem().toString().equals("Werk"))
 			updateString += "<http://eatld.et.tu-dresden.de/mso/Site> ";
 		else
 			updateString += "<http://eatld.et.tu-dresden.de/mso/ProcessCell> ";
 
-		updateString += " ; <http://www.w3.org/2000/01/rdf-schema#comment> \"0\"}}";
+		updateString += " ; <http://www.w3.org/2000/01/rdf-schema#comment> \"" + name + "\"}}";
 
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 		graphList.add(graphName);

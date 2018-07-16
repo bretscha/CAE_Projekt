@@ -6,35 +6,7 @@
   <rs:ResultSet>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowablePressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>N04</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -42,73 +14,17 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/9f43777b-7c04-410d-a4a1-db0e3b15bd0f"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/material"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/73e620cf-3d26-4f3f-b544-de99e7fe4c24"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingPressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasInnerDiameter"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -118,35 +34,7 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>N02</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/b6e28a69-94a2-40ca-9471-02863915bd07"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>A43L2M26MD</rs:value>
+        <rs:value>A42KD9TSXP</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -154,7 +42,21 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KD9TSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/9f43777b-7c04-410d-a4a1-db0e3b15bd0f"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasUnit"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/71d8aa7b-1dfe-4423-835f-18c6471e2222"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -174,6 +76,272 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/9f43777b-7c04-410d-a4a1-db0e3b15bd0f"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Stutzen, gerade</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A43L2IXFMD</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXFMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KD9TSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>G1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingTemperature"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/3e775f27-8423-4e24-b467-0c581a45c46a"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasUnit"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/71d8aa7b-1dfe-4423-835f-18c6471e2222"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2006/vcard/ns#hasName"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/6321abb6-f13e-4342-91d2-c945c981aca0"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Unit"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/3e775f27-8423-4e24-b467-0c581a45c46a"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNZFOLO"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mo/hmi#isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T1C1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>C1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNZFOLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/material"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>H1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/71d8aa7b-1dfe-4423-835f-18c6471e2222"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Unit"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/9f43777b-7c04-410d-a4a1-db0e3b15bd0f"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
         <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
@@ -188,15 +356,43 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableTemperature"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mo/hmi#isConnectedTo"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Stutzen, gerade</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXFMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Q2</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -211,399 +407,6 @@
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
         <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Valve"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/b6e28a69-94a2-40ca-9471-02863915bd07"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Stutzen, gerade</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>=0.H1.T1C1N01</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Stutzen, gerade</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/73e620cf-3d26-4f3f-b544-de99e7fe4c24"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:resultVariable>p</rs:resultVariable>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasCapacity"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Equipment"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingPressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/73e620cf-3d26-4f3f-b544-de99e7fe4c24"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Anlage</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/8845d3d6-8456-4149-8ea5-b9f25f15e099"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>T2</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/a496c4c7-6206-4e27-86d7-22778c666932"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasCapacity"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingPressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Stutzen, gerade</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/9fbfdd1b-fe47-4421-9655-873c95ca4ad3"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignPressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/73e620cf-3d26-4f3f-b544-de99e7fe4c24"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasHeight"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>=0.H1.T2C1</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingPressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/9fbfdd1b-fe47-4421-9655-873c95ca4ad3"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>N01</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Stutzen, gerade</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>H1</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/8845d3d6-8456-4149-8ea5-b9f25f15e099"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/b6e28a69-94a2-40ca-9471-02863915bd07"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Armature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/47b1a779-25cc-4a4b-ba9c-2c05d497d6dd"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Durchgangsventil (allg)</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/b6e28a69-94a2-40ca-9471-02863915bd07"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -623,7 +426,35 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>A43L2IXGMD</rs:value>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNZFOLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignPressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A43L1WG1MD</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -631,7 +462,357 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingTemperature"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Equipment"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNRGNLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/material"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/material"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignPressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T1C1N04</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
         <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>001</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Site"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/6321abb6-f13e-4342-91d2-c945c981aca0"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingPressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>N01</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingPressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A42CO687LO</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasHeight"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignTemperature"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Teilanlage</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/3e775f27-8423-4e24-b467-0c581a45c46a"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowablePressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasHeight"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Equipment"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T1C1N01</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T2.W1.01SEG1:I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNRGNLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Equipment"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>001</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>T2</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/3e775f27-8423-4e24-b467-0c581a45c46a"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -651,6 +832,48 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
+        <rs:value>A42KCVSSXP</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KCVSSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasHeight"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T2C1N02</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
         <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
@@ -659,7 +882,259 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/47b1a779-25cc-4a4b-ba9c-2c05d497d6dd"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/9f43777b-7c04-410d-a4a1-db0e3b15bd0f"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingTemperature"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNZFOLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingTemperature"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignPressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A43L2M26MD</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ProcessCell"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/71d8aa7b-1dfe-4423-835f-18c6471e2222"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingTemperature"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KD9TSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Einraumbehälter</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T1.L001.LIC:I</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KCVSSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Valve"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>T1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/9f43777b-7c04-410d-a4a1-db0e3b15bd0f"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Einraumbehälter</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Valve"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KCVSSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>R1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>N01</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -687,11 +1162,208 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Stutzen, gerade</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KD9TSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>001</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A42CNIPJLO</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Anlage</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/71d8aa7b-1dfe-4423-835f-18c6471e2222"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:resultVariable>s</rs:resultVariable>
+    <rs:resultVariable>p</rs:resultVariable>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A43L2IXEMD</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasEquipment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/3e775f27-8423-4e24-b467-0c581a45c46a"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Kreiselpumpe</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
         <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
-    <rs:resultVariable>o</rs:resultVariable>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KCVSSXP"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mo/hmi#isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXFMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasCapacity"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>2-Wege-Regelventil</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasCapacity"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KD9TSXP"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mo/hmi#isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
         <rs:value>Stutzen, gerade</rs:value>
@@ -706,91 +1378,6 @@
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
-    <rs:resultVariable>s</rs:resultVariable>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/73e620cf-3d26-4f3f-b544-de99e7fe4c24"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Armature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/47b1a779-25cc-4a4b-ba9c-2c05d497d6dd"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/material"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/9fbfdd1b-fe47-4421-9655-873c95ca4ad3"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/8845d3d6-8456-4149-8ea5-b9f25f15e099"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProcessCell"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/dc604e79-76ed-4bb3-8cc8-84de06218e7f"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Magnetventil</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/73e620cf-3d26-4f3f-b544-de99e7fe4c24"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingPressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/b6e28a69-94a2-40ca-9471-02863915bd07"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ProcessCell"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/8845d3d6-8456-4149-8ea5-b9f25f15e099"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
         <rs:value></rs:value>
@@ -807,15 +1394,71 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
+        <rs:value></rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableTemperature"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXFMD"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A43L2IXGMD</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T1.W1.01SEG3:O1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T2.W2.01SEG2:O1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNZFOLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -829,35 +1472,51 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:size rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >169</rs:size>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingPressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>A42CNDOMLO</rs:value>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KD9TSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
         <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasEquipment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/a496c4c7-6206-4e27-86d7-22778c666932"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -871,63 +1530,7 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>=0.H1.T2C1N01</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Equipment"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignPressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/9fbfdd1b-fe47-4421-9655-873c95ca4ad3"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/73e620cf-3d26-4f3f-b544-de99e7fe4c24"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -941,17 +1544,73 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KD9TSXP"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
+        <rs:value>I1</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowablePressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Werk/Gebäude/Produktion nach EN Standard</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/6321abb6-f13e-4342-91d2-c945c981aca0"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignTemperature"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A42CNDOMLO</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -975,15 +1634,85 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/a496c4c7-6206-4e27-86d7-22778c666932"/>
+        <rs:value>Teilanlage</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasUnit"/>
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/8845d3d6-8456-4149-8ea5-b9f25f15e099"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/9f43777b-7c04-410d-a4a1-db0e3b15bd0f"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingPressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>C1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasInnerDiameter"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasEquipment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/3e775f27-8423-4e24-b467-0c581a45c46a"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingPressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -997,69 +1726,27 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>A43L1WG1MD</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>A42CNQIKLO</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
         <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXFMD"/>
+        <rs:value>N02</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>A43L2IXFMD</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXFMD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>2-Wege-Regelventil</rs:value>
+        <rs:value>Durchgangsventil (allg)</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1067,7 +1754,21 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/9fbfdd1b-fe47-4421-9655-873c95ca4ad3"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>0</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/6321abb6-f13e-4342-91d2-c945c981aca0"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -1077,35 +1778,7 @@
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/b6e28a69-94a2-40ca-9471-02863915bd07"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>=0.H1.T1C1</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingPressure"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasCapacity"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1129,71 +1802,29 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Unit"/>
+        <rs:value>=0.H1.T1.W2.01SEG1:I1</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/isConnectedTo"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/47b1a779-25cc-4a4b-ba9c-2c05d497d6dd"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>A43L2IXEMD</rs:value>
+        <rs:value>=0.H1.T1C1N02</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/9fbfdd1b-fe47-4421-9655-873c95ca4ad3"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Armature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/47b1a779-25cc-4a4b-ba9c-2c05d497d6dd"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasHeight"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProceedingTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNZFOLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -1213,55 +1844,11 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>Stutzen, gerade</rs:value>
+        <rs:value>=0.H1.T2C1</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXFMD"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:size rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-    >115</rs:size>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Site"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/dc604e79-76ed-4bb3-8cc8-84de06218e7f"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Valve"/>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/73e620cf-3d26-4f3f-b544-de99e7fe4c24"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasInnerDiameter"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1271,91 +1858,21 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>0</rs:value>
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/has"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/dc604e79-76ed-4bb3-8cc8-84de06218e7f"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/9f43777b-7c04-410d-a4a1-db0e3b15bd0f"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>Teilanlage</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/a496c4c7-6206-4e27-86d7-22778c666932"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Teilanlage</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/47b1a779-25cc-4a4b-ba9c-2c05d497d6dd"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignPressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/b6e28a69-94a2-40ca-9471-02863915bd07"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingTemperature"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/9fbfdd1b-fe47-4421-9655-873c95ca4ad3"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>Werk/Gebäude/Produktion nach EN Standard</rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/dc604e79-76ed-4bb3-8cc8-84de06218e7f"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value>A42CNQUILO</rs:value>
+        <rs:value>A42CNQIKLO</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1363,21 +1880,35 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>T1</rs:value>
+        <rs:value>001</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/47b1a779-25cc-4a4b-ba9c-2c05d497d6dd"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNRGNLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -1397,21 +1928,63 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
+        <rs:value>=0.H1.T1.W2.01SEG3:O1</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowablePressure"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/isConnectedTo"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Valve"/>
+        <rs:value>A42CNRGNLO</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNRGNLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNRGNLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T2C1N01</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1419,13 +1992,41 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/9fbfdd1b-fe47-4421-9655-873c95ca4ad3"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXEMD"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>Einraumbehälter</rs:value>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mo/hmi#isConnectedTo"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1433,17 +2034,31 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KCVSSXP"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>Kreiselpumpe</rs:value>
+        <rs:value>Magnetventil</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
         <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/55842953-ab17-4f7a-aa87-7ae071eb9318"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableTemperature"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1453,21 +2068,49 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Unit"/>
+        <rs:value></rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowableOperatingPressure"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/a496c4c7-6206-4e27-86d7-22778c666932"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>Einraumbehälter</rs:value>
+        <rs:value>=0.H1.T2C1N01</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNRGNLO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>=0.H1.T1C1N03</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KCVSSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1475,17 +2118,17 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNDOMLO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CO687LO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>N01</rs:value>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNRGNLO"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mo/hmi#isConnectedTo"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1499,45 +2142,17 @@
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasCapacity"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasDesignTemperature"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowablePressure"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
-        <rs:variable>o</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasHeight"/>
-        <rs:variable>p</rs:variable>
-      </rs:binding>
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
-        <rs:variable>s</rs:variable>
-      </rs:binding>
-    </rs:solution>
-    <rs:solution rdf:parseType="Resource">
-      <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Equipment"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
@@ -1545,35 +2160,35 @@
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/47b1a779-25cc-4a4b-ba9c-2c05d497d6dd"/>
+        <rs:value>=0.H1.T1.W1.01SEG1:I1</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasUnit"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/isConnectedTo"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/8845d3d6-8456-4149-8ea5-b9f25f15e099"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNIPJLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQIKLO"/>
+        <rs:value>A42CNZFOLO</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasEquipment"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/a496c4c7-6206-4e27-86d7-22778c666932"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNZFOLO"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
@@ -1593,29 +2208,170 @@
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value></rs:value>
+        <rs:value>=0.H1.T1C1N01</rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/material"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/plantID"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/b6e28a69-94a2-40ca-9471-02863915bd07"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>
     <rs:solution rdf:parseType="Resource">
       <rs:binding rdf:parseType="Resource">
-        <rs:value>=0</rs:value>
+        <rs:value></rs:value>
         <rs:variable>o</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://www.w3.org/2006/vcard/ns#hasName"/>
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasInnerDiameter"/>
         <rs:variable>p</rs:variable>
       </rs:binding>
       <rs:binding rdf:parseType="Resource">
-        <rs:value rdf:resource="http://localhost:3030/ds/dc604e79-76ed-4bb3-8cc8-84de06218e7f"/>
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Stutzen, gerade</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L1WG1MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/ConnectionObject"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M27MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Stutzen, gerade</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2M26MD"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>Q1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/875cfed6-4094-42dc-b219-bf7cc62b623e"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/71d8aa7b-1dfe-4423-835f-18c6471e2222"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasProcessCell"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/6321abb6-f13e-4342-91d2-c945c981aca0"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/Valve"/>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/a6913861-1b90-496d-979a-a9d0d6f8c602"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>A42CNQUILO</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/comosUid"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>I1</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42KCVSSXP"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:resultVariable>o</rs:resultVariable>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value></rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://eatld.et.tu-dresden.de/mso/hasAllowablePressure"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A42CNQUILO"/>
+        <rs:variable>s</rs:variable>
+      </rs:binding>
+    </rs:solution>
+    <rs:solution rdf:parseType="Resource">
+      <rs:binding rdf:parseType="Resource">
+        <rs:value>N04</rs:value>
+        <rs:variable>o</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rs:variable>p</rs:variable>
+      </rs:binding>
+      <rs:binding rdf:parseType="Resource">
+        <rs:value rdf:resource="http://localhost:3030/ds/A43L2IXGMD"/>
         <rs:variable>s</rs:variable>
       </rs:binding>
     </rs:solution>

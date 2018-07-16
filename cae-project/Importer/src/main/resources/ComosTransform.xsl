@@ -16,7 +16,7 @@
 
 	<!-- Template: Site -->
 	<xsl:template match="Site">
-			<rdf:Description rdf:about="http://eatld.et.tu-dresden.de/mso/Site">
+			<mso:Site>
 			
 				<!-- <xsl:attribute name="rdf:about" select="./@name" /> -->
 				<vcard:hasName>
@@ -30,7 +30,7 @@
 				</rdfs:comment>
 				<xsl:apply-templates select="./ProcessCell" />
 
-			</rdf:Description>
+			</mso:Site>
 	</xsl:template>
 
 	<!-- Template ProcessCell -->
@@ -88,12 +88,10 @@
 		<xsl:for-each select=".">
 
 			<mso:hasEquipment>
-						<!-- <xsl:attribute name="rdf:about">
-							<xsl:value-of select="./@plantID"/>
-						</xsl:attribute> -->
 				<mso:Equipment>
-
-
+					<rdfs:label>
+						<xsl:value-of select="./@label" />
+					</rdfs:label>
 					<mso:comosUid>
 							<xsl:value-of select="./@comosUid" />
 					</mso:comosUid>
@@ -142,9 +140,9 @@
 
 			<mso:Armature>
 				<mso:Valve>
-					<!-- <rdf:type>
+					<rdfs:label>
 						<xsl:value-of select="./@label" />
-					</rdf:type> -->
+					</rdfs:label>
 					<rdfs:comment>
 						<xsl:value-of select="./@description" />
 					</rdfs:comment>	

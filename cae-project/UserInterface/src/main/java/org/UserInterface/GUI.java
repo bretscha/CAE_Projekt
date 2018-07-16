@@ -7,11 +7,15 @@ import java.awt.Graphics2D;
 import java.awt.GridLayout;
 import java.awt.Window;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 import java.util.Vector;
-
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -32,6 +36,7 @@ import javax.swing.table.DefaultTableModel;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
+import org.apache.jena.rdf.model.RDFNode;
 import Exporter.ExporterBase;
 import Importer.ImporterBase;
 import utilities.Query_Execute;
@@ -237,14 +242,58 @@ public class GUI {
 			JOptionPane.showMessageDialog(frame, "Fehler beim Importieren (transformieren)");
 			return;
 		}
-
+		
 		String[] parts = impLocation.split("/");
 		String name = parts[parts.length - 1].split("\\.")[0];
 		String graphName = "<" + dsLocation + "data/" + name + ">";
-		String updateString = "CREATE GRAPH " + graphName;
+		String updateString = "  LOAD <file:" + ImporterBase.getRdfOutputPath() + ">";
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
-		updateString = " LOAD <file:" + ImporterBase.getRdfOutputPath() + "> INTO GRAPH " + graphName;
-		Update_Execute.executeUpdate(frame, updateString, dsLocation);
+		String queryString = "SELECT ?s ?newS ?p ?o ?next WHERE { ?s ?p ?o . OPTIONAL {?s <http://eatld.et.tu-dresden.de/mso/comosUid> ?newS } . OPTIONAL {?o <http://eatld.et.tu-dresden.de/mso/comosUid> ?next }}";
+		result = Query_Execute.executeQuery(dsLocation, queryString, frame);
+		List<QuerySolution> list = ResultSetFormatter.toList(result);
+
+		HashMap<String, String> hMap = new HashMap<String, String>();
+		String newID = "";
+		for(QuerySolution sol : list) {
+			
+			try {
+				newID = sol.get("?newS").toString();
+			}catch(NullPointerException e) {
+				newID = String.valueOf(UUID.randomUUID());
+			}
+			if(!hMap.containsKey(sol.get("?s").toString())) hMap.put(sol.get("?s").toString(), newID);
+		}
+		
+		String allResults = "";
+		for (QuerySolution sol : list) {
+			RDFNode node = sol.get("?o");
+			String obj;
+			if (node.isLiteral())
+				obj = "\"" + node.toString() + "\"";
+			else {
+				if(node.asNode().isBlank()) {
+					if(sol.get("?next") == null) obj = "<" + hMap.get(sol.get("?o").toString()) + ">";
+					else obj = "<" + sol.get("?next") + ">";
+				}
+				else obj = "<" + node.toString() + ">";
+			}
+			
+			allResults += "<" + hMap.get(sol.get("?s").toString()) + "> <" + sol.get("?p") + "> " + obj + " . \n";
+		}
+
+		try {
+			FileOutputStream outStream = new FileOutputStream(
+					new File("./UserInterface/src/main/resources/newTriples.nt")); // helper file
+			PrintWriter p = new PrintWriter(outStream);
+			p.write(allResults);
+			p.close();
+		} catch (FileNotFoundException e) {
+		}
+		updateString = "LOAD <file:./UserInterface/src/main/resources/newTriples.nt> INTO GRAPH " + graphName;
+		Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
+
+		updateString = "DELETE {?s ?p ?o} WHERE {?s ?p ?o}";
+		Update_Execute.executeUpdate(GUI.frame, updateString, GUI.dsLocation);
 
 		graphList.add(graphName);
 
@@ -612,7 +661,6 @@ public class GUI {
 		JButton deleteBttn = new JButton("Triple löschen");
 		deleteBttn.addActionListener(onClickListener);
 		deleteBttn.setActionCommand("deleteTriple");
-		// insertPanel.setLayout();
 		insertPanel.add(newSubTxtField);
 		insertPanel.add(newPreTxtField);
 		insertPanel.add(newObjTxtField);
@@ -647,8 +695,8 @@ public class GUI {
 		for (int i = tabbedPane.getTabCount() - 1; i > 0; i--) {
 			tabbedPane.remove(i);
 		}
-		String[] searchFor = {"<http://eatld.et.tu-dresden.de/mso/Site>", "<http://eatld.et.tu-dresden.de/mso/ProcessCell>", "<http://eatld.et.tu-dresden.de/mso/Unit>" }; // hierarchical
-		
+		String[] searchFor = { "<http://eatld.et.tu-dresden.de/mso/Site>",
+				"<http://eatld.et.tu-dresden.de/mso/ProcessCell>", "<http://eatld.et.tu-dresden.de/mso/Unit>" }; // hierarchical
 
 		for (String graph : graphList) {
 			ArrayList<String> ident = new ArrayList<String>();
@@ -679,17 +727,18 @@ public class GUI {
 	private static void searchInGraph(String graph, String obj, ArrayList<String> ident, ArrayList<String> label) {
 		String queryString = "SELECT ?s ?label WHERE { GRAPH " + graph
 				+ " {{ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> " + obj
-				+ " }. {?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> ?label }}}";
+				+ " }. {?s <http://www.w3.org/2000/01/rdf-schema#comment> ?label }}}";
 		result = Query_Execute.executeQuery(dsLocation, queryString, frame);
 		List<QuerySolution> list = ResultSetFormatter.toList(result);
 		for (QuerySolution sol : list) {
 			String sub = sol.get("?s").toString();
 			String lbl = sol.get("?label").toString();
-			if (sub.contains("/"))
-				ident.add("<" + sol.get("?s").toString() + ">");
+/*			if (sub.contains("/"))
+				ident.add("<" + sub + ">");
 			else
-				ident.add("<_:" + sol.get("?s").toString() + ">");
+				ident.add("<_:" + sub + ">"); */
 			
+			ident.add("<" + sub + ">");
 			label.add(lbl);
 		}
 	}
@@ -717,18 +766,18 @@ public class GUI {
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 
 		updateString = " INSERT DATA { GRAPH " + graphName + " { ";
-		updateString += "[] "; 
+		updateString += "[] ";
 		updateString += "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> "; // TODO
 		if (newModuleBox.getSelectedItem().toString().equals("Werk"))
 			updateString += "<http://eatld.et.tu-dresden.de/mso/Site> ";
 		else
 			updateString += "<http://eatld.et.tu-dresden.de/mso/ProcessCell> ";
-		
-		updateString += " ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> \"0\"}}";
-		
+
+		updateString += " ; <http://www.w3.org/2000/01/rdf-schema#comment> \"0\"}}";
+
 		Update_Execute.executeUpdate(frame, updateString, dsLocation);
 		graphList.add(graphName);
-				
+
 		updateTabs();
 
 	}

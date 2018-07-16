@@ -247,7 +247,7 @@ public class Tab {
 				String sub;
 				allResults = "";
 				if (lastRightClick.getClass() == JButton.class) {
-					sub = ((JButton) lastRightClick).getText();
+					sub = bttnMap.get((JButton) lastRightClick).ident;
 				} else {
 					sub = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).ident;
 				}
@@ -365,7 +365,7 @@ public class Tab {
 		String sub = treeMap.get(lastComponent).ident;
 		for (String pre : searchForPredicate) {
 			String queryString = "SELECT ?o WHERE { GRAPH " + graph + " {{ " + sub + " " + pre + " ?o } . { " + sub
-					+ " <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> " + " ?label}}"; // TODO checken
+					+ " <http://www.w3.org/2000/01/rdf-schema#comment> " + " ?label}}"; // TODO checken
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for (QuerySolution sol : resList) {
@@ -406,7 +406,7 @@ public class Tab {
 		String sub = bttnMap.get(sourceBttn).ident;
 		for (String pre : searchForPredicate) {
 			String queryString = "SELECT ?o ?label WHERE { GRAPH " + graph + " { " + sub + " " + pre
-					+ " ?o . ?o <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> ?label }}"; // TODO checken
+					+ " ?o . ?o <http://www.w3.org/2000/01/rdf-schema#comment> ?label }}"; // TODO checken
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for (QuerySolution sol : resList) {

@@ -75,7 +75,7 @@
 
 					<xsl:apply-templates select="./Equipment" />
 					<xsl:apply-templates select="./Armature" />
-					<xsl:apply-templates select="./Pipe" />
+					<xsl:apply-templates select="./Conduit" />
 
 				</mso:Unit>
 			</mso:hasUnit>
@@ -168,6 +168,43 @@
 		</xsl:for-each>
 	</xsl:template>
 
+
+	<xsl:template match="Conduit">
+			<!-- for each equipment > Scan for name > Set Template -->
+			<xsl:for-each select=".">
+			
+				<mso:has>
+					<mso:Conduit>
+						<rdfs:label>
+							<xsl:value-of select="./@label" />
+						</rdfs:label>
+						<mso:comosUid>
+								<xsl:value-of select="./@comosUid" />
+						</mso:comosUid>
+						<mso:plantID>
+							<xsl:value-of select="./@plantID" />
+						</mso:plantID>
+						<rdfs:comment>
+							<xsl:value-of select="./@description" />
+						</rdfs:comment>
+						<mso:hasAllowableTemperature>
+							<xsl:value-of select="./@AllowableTemperature" />
+						</mso:hasAllowableTemperature>
+						<mso:hasAllowablePressure>
+							<xsl:value-of select="./@AllowablePressure" />
+						</mso:hasAllowablePressure>
+						<mso:isConnectedTo>
+							<xsl:value-of select="./@isConnectedTo" />
+						</mso:isConnectedTo>
+
+						<xsl:apply-templates select="./Pipe" />
+
+					</mso:Conduit>
+				</mso:has>
+
+			</xsl:for-each>
+		</xsl:template>
+
 	<!-- <xsl:template match="Vessel"> <rdfs:label><xsl:value-of select="./@label"/></rdfs:label> <rdfs:comment><xsl:value-of select="./@description"/></rdfs:comment> </xsl:template> -->
 	<xsl:template match="Pipe">
 		<!-- for each equipment > Scan for name > Set Template -->
@@ -181,12 +218,12 @@
 						<rdfs:comment>
 							<xsl:value-of select="./@description" />
 						</rdfs:comment>
-						<mso:hasAllowableTemperature>
-							<xsl:value-of select="./@AllowableTemperature" />
-						</mso:hasAllowableTemperature>
-						<mso:hasAllowablePressure>
-							<xsl:value-of select="./@AllowablePressure" />
-						</mso:hasAllowablePressure>
+						<mso:comosUid>
+								<xsl:value-of select="./@comosUid" />
+						</mso:comosUid>
+						<xsl:apply-templates select="./Flow" />
+
+
 				</mso:Pipe>
 			</mso:has>
 
@@ -241,7 +278,7 @@
 					<mso:isConnectedTo>
 						<xsl:value-of select="./@isConnectedTo" />
 					</mso:isConnectedTo>
-					
+
 				</mso:ConnectionObject>
 			</hmi:isConnectedTo>
 

@@ -137,33 +137,33 @@
 	<xsl:template match="Armature">
 		<!-- for each equipment > Scan for name > Set Template -->
 		<xsl:for-each select=".">
-
-			<mso:Armature>
-				<mso:Valve>
-					<rdfs:label>
-						<xsl:value-of select="./@label" />
-					</rdfs:label>
-					<rdfs:comment>
-						<xsl:value-of select="./@description" />
-					</rdfs:comment>	
-					<mso:hasAllowableOperatingPressure>
-						<xsl:value-of select="./@ProceedingTemperature" />
-					</mso:hasAllowableOperatingPressure>
-					<mso:hasAllowableOperatingTemperature>
-						<xsl:value-of select="./@AllowableTemperature" />
-					</mso:hasAllowableOperatingTemperature>
-					<mso:hasDesignPressure>
-						<xsl:value-of select="./@ProceedingPressure" />
-					</mso:hasDesignPressure>
-					<mso:hasDesignTemperature>
-						<xsl:value-of select="./@AllowablePressure" />
-					</mso:hasDesignTemperature>
-					<mso:material>
-						<xsl:value-of select="./@material" />
-					</mso:material>
-					<!-- <mso:positionFeedback><xsl:value-of select="./@"/></mso:positionFeedback> <mso:safetyPosition><xsl:value-of select="./@"/></mso:safetyPosition> -->
-				</mso:Valve>
-			</mso:Armature>
+				<mso:has>
+					<mso:Valve>
+						<rdfs:label>
+							<xsl:value-of select="./@label" />
+						</rdfs:label>
+						<rdfs:comment>
+							<xsl:value-of select="./@description" />
+						</rdfs:comment>	
+						<mso:hasAllowableOperatingPressure>
+							<xsl:value-of select="./@ProceedingTemperature" />
+						</mso:hasAllowableOperatingPressure>
+						<mso:hasAllowableOperatingTemperature>
+							<xsl:value-of select="./@AllowableTemperature" />
+						</mso:hasAllowableOperatingTemperature>
+						<mso:hasDesignPressure>
+							<xsl:value-of select="./@ProceedingPressure" />
+						</mso:hasDesignPressure>
+						<mso:hasDesignTemperature>
+							<xsl:value-of select="./@AllowablePressure" />
+						</mso:hasDesignTemperature>
+						<mso:material>
+							<xsl:value-of select="./@material" />
+						</mso:material>
+						<!-- <mso:positionFeedback><xsl:value-of select="./@"/></mso:positionFeedback> <mso:safetyPosition><xsl:value-of select="./@"/></mso:safetyPosition> -->
+					</mso:Valve>
+				</mso:has>
+			
 
 		</xsl:for-each>
 	</xsl:template>

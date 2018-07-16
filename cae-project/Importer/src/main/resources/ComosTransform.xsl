@@ -212,8 +212,8 @@
 						<rdfs:comment>
 							<xsl:value-of select="./@description" />
 						</rdfs:comment>
-						
-						<!-- <xsl:apply-templates select="./Flow" /> -->
+
+						<xsl:apply-templates select="./Flow" />
 
 					</mso:ConnectionObject>
 				
@@ -221,9 +221,32 @@
 			</xsl:for-each>
 	</xsl:template>
 
-	<!-- <xsl:template match="Flow">
+	<xsl:template match="Flow">
 		<xsl:for-each select=".">
+			<hmi:isConnectedTo>
+				<mso:ConnectionObject>
 
-	</xsl:template> -->
+					<mso:comosUid>
+						<xsl:value-of select="./@comosUid" />
+					</mso:comosUid>
+					<mso:plantID>
+						<xsl:value-of select="./@plantID" />
+					</mso:plantID>
+					<rdfs:label>
+							<xsl:value-of select="./@label" />
+					</rdfs:label>
+					<rdfs:comment>
+						<xsl:value-of select="./@description" />
+					</rdfs:comment>
+					<mso:isConnectedTo>
+						<xsl:value-of select="./@isConnectedTo" />
+					</mso:isConnectedTo>
+					
+				</mso:ConnectionObject>
+			</hmi:isConnectedTo>
+
+
+		</xsl:for-each>
+	</xsl:template>
 
 </xsl:stylesheet>

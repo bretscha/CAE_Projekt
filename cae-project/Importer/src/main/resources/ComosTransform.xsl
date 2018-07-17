@@ -142,6 +142,9 @@
 						<rdfs:label>
 							<xsl:value-of select="./@label" />
 						</rdfs:label>
+						<mso:plantID>
+							<xsl:value-of select="./@plantID" />
+						</mso:plantID>
 						<rdfs:comment>
 							<xsl:value-of select="./@description" />
 						</rdfs:comment>	

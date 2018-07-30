@@ -55,9 +55,6 @@ public class SPARQL_Select {
 		if (GUI.limCheck.isSelected()) {
 			queryString += "LIMIT " + GUI.limTxtField.getText() + " ";
 		}
-		if (GUI.sortCheck.isSelected()) {
-			queryString += "SORTBY " + GUI.sortBox.getSelectedItem();
-		}
 
 		return queryString;
 	}

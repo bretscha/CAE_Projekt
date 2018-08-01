@@ -18,14 +18,29 @@ import org.apache.jena.sparql.resultset.ResultsFormat;
 
 import utilities.Query_Execute;
 
+/**
+ * implements the call for the exporter
+ */
 public class ExporterBase {
 	private String inputPath = "./Exporter/src/main/resources/exporter_in.xml";
 	private static final String xslPath = "./Exporter/src/main/resources/rdfToGraphML.xsl";
 
+	/**
+	 * constructor to create an instance
+	 */
 	public ExporterBase() {
 	}
 
-	public void doExport(String dsLocation, String type, String expLocation, String graph, JFrame frame) {
+	/**
+	 * querys all triple from the defined graph and makes an transformation to the specified output format
+	 * 
+	 * @param dsLocation Sparql Endpoint Location
+	 * @param outForm format in which the output file should be transformed (for later developments)
+	 * @param expLocation path to output file
+	 * @param graph graph which should be transformed
+	 * @param frame main frame gui
+	 */
+	public void doExport(String dsLocation, String outForm, String expLocation, String graph, JFrame frame) {
 
 		String outputPath = expLocation;
 

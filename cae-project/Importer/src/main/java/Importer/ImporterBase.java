@@ -9,6 +9,9 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
+/**
+ * implements the class for the importer
+ */
 public class ImporterBase {
 	private static final String xslPath = "./Importer/src/main/resources/ComosTransform.xsl";
 	private static final String rdfOutputPath = "./Importer/src/main/resources/importer_out.xml";
@@ -21,6 +24,10 @@ public class ImporterBase {
 	public ImporterBase() {
 	}
 
+	/**
+	 * reads the specified file and makes a transformation to a triple structure
+	 * @param xmlPath path to the comos exported file which should be transformed
+	 */
 	public void doImport(String xmlPath) {
 		try {
 
@@ -39,7 +46,7 @@ public class ImporterBase {
 	/**
 	 * Gets the relative Path to the into RDF Transformed XML.
 	 * 
-	 * @return - The path ./Importer/src/main/resources/{fileName}.xml
+	 * @return the path
 	 */
 	public static String getRdfOutputPath() {
 		return rdfOutputPath;

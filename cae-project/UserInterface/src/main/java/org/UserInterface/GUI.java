@@ -236,9 +236,9 @@ public class GUI {
 	 */
 	public static void actExport() {
 		expLocation = expTxtField.getText().toString();
-		String outType = expBox.getSelectedItem().toString();
+		String outForm = expBox.getSelectedItem().toString();
 		String graph = graphBox.getSelectedItem().toString();
-		exporterBase.doExport(dsLocation, outType, expLocation, graph, frame);
+		exporterBase.doExport(dsLocation, outForm, expLocation, graph, frame);
 	}
 
 	/**

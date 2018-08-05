@@ -65,13 +65,13 @@ public class GUI {
     /**
      * path to the SPARQL endpoint
      */
-    protected static String dsLocation = new String("http://localhost:3030/ds/");
+    protected static String dsLocation = new String("http://localhost:3030/caex/");
     // Bitte Pfad angeben...
-    protected static String impLocation = "./Importer/src/main/resources/Comos.xml";
+    protected static String impLocation = "Importer/src/main/resources/Comos.xml";
     // Bitte Pfad angeben...
-    protected static String expLocation = "./Exporter/src/main/resources/exporter_out.xml";
+    protected static String expLocation = "Exporter/src/main/resources/exporter_out.xml";
     // Bitte Pfad angeben...
-    protected static String mappingLocation = "./Importer/src/main/resources/ComosTransform.xsl";
+    protected static String mappingLocation = "Importer/src/main/resources/ComosTransform.xsl";
     // private static String rdfImportLocation =
     // "C:/Users/abpma/Desktop/rdfOutput.xml";
     protected static int filterNumber = 1;

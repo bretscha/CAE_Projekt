@@ -2,7 +2,6 @@ package Exporter;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.OutputStream;
 import java.io.PrintWriter;
 
 import javax.swing.JFrame;
@@ -19,37 +18,33 @@ import org.apache.jena.sparql.resultset.ResultsFormat;
 
 import utilities.Query_Execute;
 
+/**
+ * implements the call for the exporter
+ */
 public class ExporterBase {
 	private String inputPath = "./Exporter/src/main/resources/exporter_in.xml";
-	private String xslPath = "./Exporter/src/main/resources/rdfToGraphML.xsl";
-	private String outputPath = "./Exporter/src/main/resources/exporter_out.xml";
-	// private static final String graphMLPath =
-	// "./Exporter/src/main/resources/Manifestout.xml";
+	private static final String xslPath = "./Exporter/src/main/resources/rdfToGraphML.xsl";
 
 	/**
-	 * ImportBase reads the file in the <b>Output</b> and the <b>mapping</b> path as
-	 * an OutputStream {@link #outputPath} and {@link #xslPath} and gives an RDF
-	 * file as output on the {@link #rdfOutputPath}
-	 * 
-	 * @param Output
-	 *            - the path to the file to transform (leave Blank for Standard
-	 *            Star-Universe Tripliser example)
-	 * @param mapping
-	 *            - the path to the mapping file (leave Blank for Standard
-	 *            Star-Universe Tripliser example)
-	 * @param rdfOutputPath
-	 *            - the path to the directory to save the RDF file to as RDF/XML
+	 * constructor to create an instance
 	 */
-	public ExporterBase(String outputPath, String mapping) {
-		setOutputPath(outputPath);
-		setXslPath(mapping);
+	public ExporterBase() {
 	}
 
-	public void doExport(String dsLocation, String type, String expLocation, String graph, JFrame frame) {
-		
-		outputPath = expLocation;
-		
-		if(graph.equals("All")) {
+	/**
+	 * querys all triple from the defined graph and makes an transformation to the specified output format
+	 * 
+	 * @param dsLocation Sparql Endpoint Location
+	 * @param outForm format in which the output file should be transformed (for later developments)
+	 * @param expLocation path to output file
+	 * @param graph graph which should be transformed
+	 * @param frame main frame gui
+	 */
+	public void doExport(String dsLocation, String outForm, String expLocation, String graph, JFrame frame) {
+
+		String outputPath = expLocation;
+
+		if (graph.equals("All")) {
 			JOptionPane.showMessageDialog(frame, "Bitte expliziten Graph auswählen.");
 			return;
 		}
@@ -57,13 +52,13 @@ public class ExporterBase {
 		try {
 			String queryString = "SELECT ?s ?p ?o WHERE { GRAPH " + graph + " {?s ?p ?o} }";
 			ResultSet result = Query_Execute.executeQuery(dsLocation, queryString, frame);
-			FileOutputStream outStream = new FileOutputStream(new File("./Exporter/src/main/resources/in.xml"));
+			FileOutputStream outStream = new FileOutputStream(new File(inputPath));
 
 			PrintWriter p = new PrintWriter(outStream);
 			p.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n");
 			p.close();
 
-			outStream = new FileOutputStream("./Exporter/src/main/resources/in.xml", true);
+			outStream = new FileOutputStream(inputPath, true);
 			ResultSetFormatter.output(outStream, result, ResultsFormat.FMT_RDF_XML);
 
 		} catch (Exception e) {
@@ -81,36 +76,5 @@ public class ExporterBase {
 		} catch (Exception e) {
 			System.out.println(e.getStackTrace());
 		}
-
 	}
-
-	public void setExportProperties(String outputPath, String xsltPath) {
-		setOutputPath(outputPath);
-		setXslPath(xsltPath);
-	}
-
-	public String getInputPath() {
-		return outputPath;
-	}
-
-	public String getOutputPath() {
-		return outputPath;
-	}
-
-	public String getXslPath() {
-		return xslPath;
-	}
-
-	public void setInputPath(String inputPath) {
-		this.inputPath = inputPath;
-	}
-
-	public void setOutputPath(String outputPath) {
-		this.outputPath = outputPath;
-	}
-
-	public void setXslPath(String mappingXml) {
-		this.xslPath = mappingXml;
-	}
-
 }

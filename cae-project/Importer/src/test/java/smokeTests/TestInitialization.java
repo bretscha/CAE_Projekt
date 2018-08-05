@@ -6,6 +6,9 @@ import javax.xml.bind.JAXBException;
 
 import org.testng.annotations.Test;
 
+/**
+ *
+ */
 public class TestInitialization {
 
     /**

@@ -175,9 +175,9 @@ public class Tab {
 			return Color.CYAN;
 		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Equipment>"))
 			return Color.GRAY;
-		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/Valve>"))
+		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/Valve>"))
 			return Color.YELLOW;
-		else if(type.equals("<http://eatld.et.tu-dresden.de/mso/ConnectionObject>"))
+		else if (type.equals("<http://eatld.et.tu-dresden.de/mso/ConnectionObject>"))
 			return Color.ORANGE;
 		else
 			return Color.WHITE;
@@ -266,15 +266,40 @@ public class Tab {
 
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				String sub;
+				String sub = "";
+				String type = "";
+				String parentSub = "";
 				allResults = "";
 				if (lastRightClick.getClass() == JButton.class) {
 					sub = bttnMap.get((JButton) lastRightClick).ident;
+					type = bttnMap.get(lastRightClick).type;
+					for (JButton source : connMap.keySet()) {
+						for (JButton dest : connMap.get(source)) {
+							if (lastRightClick == dest) {
+								parentSub = bttnMap.get(source).ident;
+							}
+						}
+					}
 				} else {
 					sub = treeMap.get(((JTree) lastRightClick).getLastSelectedPathComponent()).ident;
+					DefaultMutableTreeNode parentNode = (DefaultMutableTreeNode) ((DefaultMutableTreeNode) (tree
+							.getLastSelectedPathComponent())).getParent();
+					parentSub = treeMap.get(parentNode).ident;
+					type = treeMap.get(parentNode).type;
 				}
-				subPassed = new ArrayList<String>();
-				findAllDependencies(sub, graph);
+
+				String[] parts = type.split("/");
+				type = parts[parts.length - 1];
+
+				String queryString = "SELECT ?sub WHERE { GRAPH " + graph + " { ?sub ?x " + sub + " }}";
+				ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
+
+				if (ResultSetFormatter.toList(result).size() > 1) {
+					allResults = parentSub + " <http://eatld.et.tu-dresden.de/mso/has" + type + " " + sub + ".";
+				} else {
+					subPassed = new ArrayList<String>();
+					findAllDependencies(sub, graph);
+				}
 
 				try {
 					FileOutputStream outStream = new FileOutputStream(
@@ -317,7 +342,6 @@ public class Tab {
 		List<QuerySolution> list = ResultSetFormatter.toList(result);
 		subPassed.add(sub);
 		for (QuerySolution sol : list) {
-			// String obj = "< " + sol.get("?o").toString() + ">";
 			String data0 = sol.toString();
 			String[] parts = data0.split("\\?o = ");
 			parts = parts[1].split(" \\)"); // " )"
@@ -407,12 +431,12 @@ public class Tab {
 		for (String pre : searchForPredicate) {
 			String queryString = "SELECT ?o ?label ?type WHERE { GRAPH " + graph + " { " + sub + " " + pre
 					+ " ?o . ?o <http://www.w3.org/2000/01/rdf-schema#comment> " + " ?label . ?o a ?type }}";
-			
+
 			ResultSet result = Query_Execute.executeQuery(GUI.dsLocation, queryString, GUI.frame);
 			List<QuerySolution> resList = ResultSetFormatter.toList(result);
 			for (QuerySolution sol : resList) {
-				
-				String type = "<" + sol.get("?type") + ">";			
+
+				String type = "<" + sol.get("?type") + ">";
 				String ident = "<" + sol.get("?o").toString() + ">";
 				String label = sol.get("?label").toString();
 
@@ -443,7 +467,7 @@ public class Tab {
 			for (QuerySolution sol : resList) {
 				String type = "<" + sol.get("?type") + ">";
 				String ident = "";
-				
+
 				if (sub.contains("/"))
 					ident = "<" + sol.get("?o").toString() + ">";
 				else
@@ -501,37 +525,5 @@ public class Tab {
 				bttnMap.remove(btn);
 			}
 		}
-	}
-}
-
-class BttnDataHelper {
-
-	public String ident;
-	public JPanel parentPanel;
-	public boolean inflated;
-	public String type;
-	public Tab hostTab;
-
-	public BttnDataHelper(String ident, String type, JPanel parentPanel, Tab hostTab, boolean inflated) {
-		this.ident = ident;
-		this.parentPanel = parentPanel;
-		this.hostTab = hostTab;
-		this.inflated = inflated;
-		this.type = type;
-	}
-}
-
-class TreeDataHelper {
-
-	public String type;
-	public String ident;
-	public Tab hostTab;
-	public boolean inflated;
-
-	public TreeDataHelper(String ident, String type, Tab hostTab, boolean inflated) {
-		this.ident = ident;
-		this.type = type;
-		this.hostTab = hostTab;
-		this.inflated = inflated;
 	}
 }

@@ -21,11 +21,9 @@ public class ImporterBase {
      * output on the {@link #rdfOutputPath}
      * 
      * @param input
-     *            - the path to the file to transform (leave Blank for Standard
-     *            Star-Universe Tripliser example)
+     *            - the path to the file to transform
      * @param mapping
-     *            - the path to the mapping file (leave Blank for Standard
-     *            Star-Universe Tripliser example)
+     *            - the path to the mapping file
      * @param rdfOutputPath
      *            - the path to the directory to save the RDF file to as RDF/XML
      */
@@ -33,12 +31,35 @@ public class ImporterBase {
 	setImportProperties(input, mapping);
     }
 
-    public void doImport() {
+    /**
+     * ImportBase reads the file in the <b>input</b> and the <b>mapping</b> path as
+     * an InputStream {@link #xmlPath} and {@link #xslPath} and gives an RDF file as
+     * output on the {@link #rdfOutputPath}
+     * 
+     * @param input
+     *            - the path to the file to transform
+     * @param mapping
+     *            - the path to the mapping file
+     * @param rdfOutputPath
+     *            - the path to the directory to save the RDF file to as RDF/XML
+     */
+    public ImporterBase() {
+    }
+
+    public void doImport(String impLocation) {
 	try {
 
 	    System.out.println("Writing RDF on new File: " + rdfOutputPath);
 	    Source xslt = new StreamSource(new File(xslPath));
-	    Source text = new StreamSource(new File(xmlPath));
+	    Source text;
+	    if (impLocation != null && impLocation != "") {
+		text = new StreamSource(new File(impLocation));
+	    } else {
+		xslt = new StreamSource(new File(xslPath));
+		text = new StreamSource(new File(xmlPath));
+	    }
+	    xslt = new StreamSource(new File(xslPath));
+	    text = new StreamSource(new File(xmlPath));
 	    TransformerFactory factory = TransformerFactory.newInstance();
 	    Transformer transformer = factory.newTransformer(xslt);
 	    File file = new File(rdfOutputPath);

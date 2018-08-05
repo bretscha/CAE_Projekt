@@ -1,20 +1,15 @@
 package projectLauncher;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-
 import org.UserInterface.GUI;
 
+/**
+ * start class
+ */
 public class projectLauncher {
 
     /**
      * start method
-     * 
-     * @param args
-     *            start arguments
-     * @throws TripliserException
-     * @throws IOException
-     * @throws MalformedURLException
+     * @param args 
      */
     public static void main(String[] args) {
 	new GUI();

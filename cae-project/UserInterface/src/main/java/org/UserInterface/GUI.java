@@ -127,17 +127,9 @@ public class GUI {
      */
     public static JCheckBox limCheck = new JCheckBox("LIMIT: ");
     /**
-     * heckBox for applying a "SORT-BY"-filter for the SPARQL query generator
-     */
-    public static JCheckBox sortCheck = new JCheckBox("SORT BY: ");
-    /**
      * TextField to define the "LIMIT"-filter value
      */
     public static JTextField limTxtField = new JTextField("Limit eintragen");
-    /**
-     * ComboBox for some "SORT-BY" possibilities
-     */
-    public static JComboBox<String> sortBox;
     protected static ResultSet result;
 
     /**
@@ -148,8 +140,8 @@ public class GUI {
 
 	GUIBuildHelper.buildMainPanel();
 
-	importerBase = new ImporterBase(impLocation, mappingLocation);
-	exporterBase = new ExporterBase(expLocation, mappingLocation);
+	importerBase = new ImporterBase();
+	exporterBase = new ExporterBase();
     }
 
     /**
@@ -166,7 +158,7 @@ public class GUI {
     public static void actImport() {
 	impLocation = impTxtField.getText().toString();
 	try {
-	    importerBase.doImport();
+	    importerBase.doImport(impLocation);
 	} catch (Exception e) {
 	    System.err.println(e);
 	    JOptionPane.showMessageDialog(frame, "Fehler beim Importieren (transformieren)");
@@ -242,9 +234,9 @@ public class GUI {
      */
     public static void actExport() {
 	expLocation = expTxtField.getText().toString();
-	String outType = expBox.getSelectedItem().toString();
+	String outForm = expBox.getSelectedItem().toString();
 	String graph = graphBox.getSelectedItem().toString();
-	exporterBase.doExport(dsLocation, outType, expLocation, graph, frame);
+	exporterBase.doExport(dsLocation, outForm, expLocation, graph, frame);
     }
 
     /**
